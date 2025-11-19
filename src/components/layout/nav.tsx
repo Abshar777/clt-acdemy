@@ -1,0 +1,139 @@
+"use client";
+import Image from "next/image";
+import logo from "@/../public/logo.png";
+import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Button } from "../ui/button";
+import { TiThMenu } from "react-icons/ti";
+import { RiMenu2Line } from "react-icons/ri";
+import { FaPhoneAlt } from "react-icons/fa";
+import { phoneNumber } from "@/const/data";
+
+const navItems = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "About CLT",
+    href: "/about",
+  },
+  {
+    name: "Our Courses",
+    href: "/contact",
+  },
+  {
+    name: "Our team",
+    href: "/contact",
+  },
+  {
+    name: "addons",
+    href: "/contact",
+  },
+  {
+    name: "tools",
+    href: "/contact",
+  },
+];
+
+const navButtons = [
+  {
+    name: "SHOP NOW",
+    href: "/contact",
+    className: "hover:border-primary",
+  },
+  {
+    name: "BOOK YOUR CLASSES",
+    href: "/contact",
+    className: "hover:border-primary",
+  },
+  {
+    name: "LOGIN",
+    href: "/contact",
+    className: "bg-primary text-white border-primary",
+  },
+];
+
+const Nav = () => {
+  const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div className={`fixed flex flex-row ${!isScrolled ? "border-[#ffffff1f]  border-b" : "backdrop-blur-sm border-transparent bg-black/90 rounded-b-3xl"} transition-all duration-300  items-center   w-full  md:px-4 top-0 z-50`}>
+      <div className="first_part py-3  md:border-r border-white/20 md:px-8 px-3 flex items-center md:justify-start justify-between md:w-auto w-full md:gap-6 gap-2">
+        <div className="logo">
+          <div className="fit-image  md:w-20  w-10">
+            <Image src={logo} alt="logo" width={100} height={100} />
+          </div>
+        </div>
+        <div className="md:flex hidden ml-4 items-center  gap-8 ">
+          {navItems.map((item) => (
+            <Link href={item.href} key={item.name}>
+              <p
+                className={`uppercase text-nowrap font-semibold text-sm ${
+                  item.href === pathname ? "text-primary" : "text-white"
+                }`}
+              >
+                {item.name}
+              </p>
+            </Link>
+          ))}
+        </div>
+        <div className="md:flex hidden items-center ml-8 gap-4">
+          {navButtons.map((button) => (
+            <Button
+              variant="outline"
+              className={button.className + "  ease-in duration-200"}
+            >
+              {button.name}
+            </Button>
+          ))}
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="py-1 px-2 rounded-sm cursor-pointer text-xs font-semibold md:hidden flex items-center justify-center bg-white text-black">
+            <p>shop now</p>
+          </div>
+          <div className="py-1 px-2 rounded-sm cursor-pointer text-xs font-semibold md:hidden flex items-center justify-center bg-white text-black">
+            <p>book classes</p>
+          </div>
+        </div>
+        <div className="   flex items-center gap-2">
+          <RiMenu2Line className="text-white cursor-pointer hover:text-primary md:text-4xl text-2xl " />
+        </div>
+      </div>
+      <div
+        onClick={() => window.open(`tel:${phoneNumber}`, "_blank")}
+        className=" px-3 group cursor-pointer h-full   md:flex hidden items-center justify-center gap-4"
+      >
+        <div className="p-4 rounded-full relative bg-white/10 group-hover:bg-primary ease-in duration-200 flex items-center justify-center">
+          <FaPhoneAlt className="text-white text-2xl" />
+          <div className="absolute rounded-full p-4 bg-primary/50 w-full h-full animate-ping duration-[2000]"></div>
+        </div>
+        <div className="flex flex-col ">
+          <p className="font-semibold text-sm text-white uppercase">
+            Hotline Number
+          </p>
+          <p className="text-xl  font-semibold text-nowrap text-white">
+            {phoneNumber}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Nav;
