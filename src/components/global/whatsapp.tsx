@@ -1,11 +1,12 @@
 "use client";
+import { phoneNumber } from "@/const/data";
 import React from "react";
 
 const WhatsappButton = () => {
   return (
     <>
       <a
-        href="https://wa.me/+971507528009?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20this.%20Could%20you%20please%20provide%20details?"
+        href={`https://wa.me/${phoneNumber}?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20this.%20Could%20you%20please%20provide%20details?`}
         className="align-items-center"
         style={{
           display: "flex",
@@ -20,11 +21,14 @@ const WhatsappButton = () => {
         <button id="btn-message" className="button-message">
           <div className="content-avatar">
             <div className="status-user"></div>
-            <div style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }} className="avatar flex itemd-center justify-center">
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              className="avatar flex itemd-center justify-center"
+            >
               <svg
                 className="whatsapp"
                 xmlns="http://www.w3.org/2000/svg"

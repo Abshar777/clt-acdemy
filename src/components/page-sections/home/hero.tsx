@@ -1,11 +1,14 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { phoneNumber } from "@/const/data";
+import dynamic from "next/dynamic";
+import Image from "next/image";
 import React from "react";
 import { FaArrowRight, FaPhoneAlt } from "react-icons/fa";
 import { IoCalculator } from "react-icons/io5";
 import { LuNotebookPen } from "react-icons/lu";
 import { TbTargetArrow } from "react-icons/tb";
+import poster from "@/../public/poster.png";
 
 const heroCta = [
   {
@@ -31,12 +34,38 @@ const heroCta = [
   },
 ];
 
+const HeroVideo = dynamic(() => import("@/components/global/heroVideo"), {
+  ssr: false,
+  loading: () => (
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100%",
+      }}
+    >
+      <Image
+        style={{
+          // position:"relative",
+          objectFit: "cover",
+          width: "100%",
+          height: "100%",
+        }}
+        fill
+        src={poster}
+        alt="Logo"
+      />
+    </div>
+  ),
+});
 const Hero = () => {
   return (
     <div className="w-screen relative flex  flex-col pb-18 justify-center  md:px-20 px-5 md:gap-14 gap-4 min-h-screen ">
-      <div className="flex relative z-10 h-[90vh] pt-25 md:px-6 px-2 flex-col md:w-1/2 w-full md:items-start items-center justify-center gap-4">    
+      <div className="flex relative z-10 h-[90vh] pt-25 md:px-6 px-2 flex-col md:w-1/2 w-full md:items-start items-center justify-center gap-4">
         <div className="px-5 rounded-full border border-white text-white text-center py-2">
-          <p className="md:text-sm text-xs uppercase text-nowrap">Learn Trading from Elite Mentors</p>
+          <p className="md:text-sm text-xs uppercase text-nowrap">
+            Learn Trading from Elite Mentors
+          </p>
         </div>
         <h1 className="md:text-8xl text-5xl md:text-start text-center  text-white font-bold">
           <span className="text-nowrap">Learn Freely</span> <br />
@@ -61,7 +90,9 @@ const Hero = () => {
             <div className="bg-white/5 cursor-pointer hover:-translate-y-1 hover:scale-105 duration-500 group  flex items-center  justify-center gap-4  py-10 backdrop-blur-sm md:px-6 px-3 rounded-lg">
               {item.icon}
               <div className="flex flex-col ">
-                <h1 className="text-2xl text-nowrap text-white font-bold">{item.title}</h1>
+                <h1 className="text-2xl text-nowrap text-white font-bold">
+                  {item.title}
+                </h1>
                 <p className="text-sm  text-white/90">{item.description}</p>
               </div>
             </div>
@@ -82,8 +113,12 @@ const Hero = () => {
           <div className="flex relative md:px-10 px-2 pt-4 z-10 mb-6 items-center gap-5">
             <FaPhoneAlt className="text-white md:flex hidden  md:text-4xl text-xl" />
             <div className="flex text-white flex-col gap-1">
-              <h3 className="md:text-md text-xs uppercase">CLARITY STARTS HERE</h3>
-              <h1 className="md:text-2xl text-xl text-nowrap font-bold">{phoneNumber}</h1>
+              <h3 className="md:text-md text-xs uppercase">
+                CLARITY STARTS HERE
+              </h3>
+              <h1 className="md:text-2xl text-xl text-nowrap font-bold">
+                {phoneNumber}
+              </h1>
             </div>
           </div>
           <div className="bg-primary z-0 w-[30rem] h-[20rem] absolute md:right-[-10%] right-[-5%] md:top-[-20%] top-[70%] rounded-full px-4 py-2"></div>
@@ -91,16 +126,7 @@ const Hero = () => {
       </div>
 
       <div className="absolute z-0 top-0 left-0 w-full h-full bg-black">
-        <video
-          loop
-          muted
-          autoPlay
-          playsInline
-          preload="none"
-          className="w-full h-full object-cover opacity-20"
-        >
-          <source src={"/heroBg1.mp4"} type="video/mp4" />
-        </video>
+        <HeroVideo />
       </div>
     </div>
   );

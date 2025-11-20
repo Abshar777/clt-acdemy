@@ -1,7 +1,9 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import awward from "@/../public/awward.png";
 
 // 1000 +
 // Active Courses
@@ -74,10 +76,12 @@ const Jorney = () => {
             <FaArrowRight className="group-hover:translate-x-1 duration-900" />
           </Button>
         </div>
-        <div className="absolute z-0 top-0 left-0 w-full h-full flex items-center justify-center">
-          <img
-            src="/awward.JPG"
+        <div className="absolute fit-image z-0 top-0 left-0 w-full h-full flex items-center justify-center">
+          <Image
+            src={awward}
             alt="awward"
+            width={1000}
+            height={1000}
             className="w-full opacity-20 object-cover  h-full "
           />
         </div>

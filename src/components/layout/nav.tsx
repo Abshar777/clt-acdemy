@@ -9,6 +9,13 @@ import { TiThMenu } from "react-icons/ti";
 import { RiMenu2Line } from "react-icons/ri";
 import { FaPhoneAlt } from "react-icons/fa";
 import { phoneNumber } from "@/const/data";
+import {
+  Sheet,
+  SheetTitle,
+  SheetHeader,
+  SheetContent,
+  SheetTrigger,
+} from "../ui/sheet";
 
 const navItems = [
   {
@@ -21,18 +28,20 @@ const navItems = [
   },
   {
     name: "Our Courses",
-    href: "/contact",
+    href: "/courses",
   },
   {
     name: "Our team",
-    href: "/contact",
+    href: "/team",
   },
   {
-    name: "addons",
-    href: "/contact",
+    name: "Contact Us",
+    // hidden: true,
+    href: `whatsapp://send?phone=${phoneNumber}&text=Hello, I have a question about the courses.`,
   },
   {
     name: "tools",
+    hidden: true,
     href: "/contact",
   },
 ];
@@ -40,17 +49,17 @@ const navItems = [
 const navButtons = [
   {
     name: "SHOP NOW",
-    href: "/contact",
+    href: "/courses",
     className: "hover:border-primary",
   },
   {
     name: "BOOK YOUR CLASSES",
-    href: "/contact",
+    href: "https://course.clt-academy.com/",
     className: "hover:border-primary",
   },
   {
     name: "LOGIN",
-    href: "/contact",
+    href: "https://course.clt-academy.com/",
     className: "bg-primary text-white border-primary",
   },
 ];
@@ -73,7 +82,13 @@ const Nav = () => {
   }, []);
 
   return (
-    <div className={`fixed flex flex-row ${!isScrolled ? "border-[#ffffff1f]  border-b" : "backdrop-blur-sm border-transparent bg-black/90 rounded-b-3xl"} transition-all duration-300  items-center   w-full  md:px-4 top-0 z-50`}>
+    <div
+      className={`fixed flex flex-row ${
+        !isScrolled
+          ? "border-[#ffffff1f]  border-b"
+          : "backdrop-blur-sm border-transparent bg-black/90 rounded-b-3xl"
+      } transition-all duration-300  items-center   w-full  md:px-4 top-0 z-50`}
+    >
       <div className="first_part py-5  md:border-r border-white/20 md:px-8 px-3 flex items-center md:justify-start justify-between md:w-auto w-full md:gap-6 gap-2">
         <div className="logo">
           <div className="fit-image  md:w-20  w-13">
@@ -84,7 +99,9 @@ const Nav = () => {
           {navItems.map((item) => (
             <Link href={item.href} key={item.name}>
               <p
-                className={`uppercase text-nowrap font-semibold text-sm ${
+                className={`uppercase ${
+                  item?.hidden ? "opacity-0 pointer-events-none" : ""
+                } text-nowrap font-semibold text-sm ${
                   item.href === pathname ? "text-primary" : "text-white"
                 }`}
               >
@@ -112,7 +129,27 @@ const Nav = () => {
           </div>
         </div>
         <div className="   flex items-center gap-2">
-          <RiMenu2Line className="text-white cursor-pointer hover:text-primary md:text-4xl text-2xl " />
+          <Sheet>
+            <SheetTrigger>
+              <RiMenu2Line className="text-white cursor-pointer hover:text-primary md:text-4xl text-2xl " />
+            </SheetTrigger>
+            <SheetContent className="bg-black  text-white border-transparent">
+              <SheetHeader className="border-b border-white/20 broder-dashed">
+                <div className="logo">
+                  <div className="fit-image  md:w-20  w-13">
+                    <Image src={logo} alt="logo" width={100} height={100} />
+                  </div>
+                </div>
+              </SheetHeader>
+              <div className="flex px-4 flex-col gap-4">
+                {navItems.map((item) => (
+                  <Link href={item.href} key={item.name}>
+                    <p className="text-white py-3 border-b border-white/20 broder-dashed  ">{item.name}</p>
+                  </Link>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
       <div

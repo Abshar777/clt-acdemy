@@ -6,33 +6,49 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { FaStar } from "react-icons/fa";
+import Image from "next/image";
+import test1 from "@/../public/test1.png";
+import test2 from "@/../public/test2.png";
+import test4 from "@/../public/test4.png";
+import test3 from "@/../public/test3.png";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Olivia R. Bennett  ",
-      title: "USA",
-      description: "CLT CHANGED MY TRADING GAME Before CLT, I was jumping between strategies with no structure. The mentorship helped me focus, stay disciplined, and actually enjoy the process of trading. I finally feel like I’m",
+      name: "Salma Shaikh  ",
+      title: "",
+      image: test1,
+      link: "https://maps.app.goo.gl/7diMSetWDaxdznMp7",
+      description:
+        "I joined with zero knowledge about trading, but the academy made everything so easy to understand. The classes are interactive, and the mentors give real-time examples that make learning fun and practical. Highly recommend for anyone starting their trading journey!",
     },
     {
-      name: "Jasmine P",
-      title: "India",
-      description: "FINALLY FOUND WHAT WORKS I've tried multiple courses before CLT, but none were this structured. The mentors don’t just teach — they hold you accountable.",
+      name: "Nisham Nishu",
+      title: "",
+      image: test2,
+      link: "https://maps.app.goo.gl/FnH6sKtQEbzFt9Ur7",
+      description:
+        "I am truly grateful for the learning experience at CLT Trading Academy. The course structure was clear, practical, and well-organized, making it easy to follow even for someone without a financial background. The instructors are highly knowledgeable, patient, and always willing to provide support whenever needed.",
     },
     {
-      name: "Aarav M.",
-      title: "India",
-      description: "MENTORSHIP THAT’s ACTUALLY REAL Weekly reviews with my mentor made all the difference. I was making rookie mistakes, and now I catch them myself.",
+      name: "YAHIYA M V",
+      title: "",
+      image: test3,
+      link: "https://maps.app.goo.gl/JfWFCdDHv7SX54997",
+      description:
+        "CLT Academy is one of the best places for anyone who wants to build a strong career in the trading industry. The instructors are highly knowledgeable and explain even complex topics in a simple, practical way. The training sessions are very interactive, and real-time trading examples make learning much easier.",
     },
     {
-      name: "Aarav M.",
-      title: "India",
-      description: "FINALLY FOUND WHAT WORKS I’ve tried multiple courses before CLT, but none were this structured. The mentors don’t just teach — they hold you accountable.",
+      name: "Nidha Farzeen",
+      title: "",
+      link: "https://maps.app.goo.gl/Lmb26pVMazGsS41D6",
+      description:
+        "CLT was a life changer. Mentor's are so friendly and experienced . Sir: AMJAD took class for me his class was amazing and he teach from the basic level to profitable trader and he make sure every student understood the topic very clearly . I also appreciate the community support .",
+      image: test4,
     },
   ];
   return (
     <div className="relative   bg-primary -mt-40 md:min-h-[70vh] w-full  gap-10">
       <div className="md:px-20 px-5 flex items-center justify-center  py-20">
-     
         <div className="w-full mt-20 md:px-10 px-2">
           <div className="px-5 mb-4 rounded-full w-fit font-semibold border border-white text-white text-center py-2">
             <p className="md:text-sm text-xs uppercase text-nowrap">
@@ -42,6 +58,7 @@ const Testimonials = () => {
           <h1 className="text-white text-4xl font-bold">
             We’re Happy to get Our Happy Customer Feedback
           </h1>
+          <p className="text-white text-lg font-semibold capitalize">from google reviews</p>
           <div className="mt-10">
             <Swiper
               modules={[Autoplay, Navigation, Pagination]}
@@ -59,39 +76,43 @@ const Testimonials = () => {
                   slidesPerView: 3,
                 },
                 1024: {
-                  slidesPerView: 3, 
+                  slidesPerView: 3,
                 },
               }}
               className="py-10"
             >
               {testimonials.map((card, index) => (
                 <SwiperSlide
-                  className="rounded-2xl bg-white w-full min-h-[23rem] py-6 px-5  gap-4 overflow-hidden"
+                onClick={() => window.open(card.link, "_blank")}
+                  className="rounded-2xl bg-white w-full cursor-pointer min-h-[23rem] py-6 px-5  gap-4 overflow-hidden"
                   key={index}
                 >
                   <div className="flex w-full items-start justify-start px-4 flex-col gap-4">
                     <div className="flex items-center justify-center gap-2">
-                      <img
-                        src="/ts.png"
-                        alt="testimonial"
-                        className="w-20 h-20 rounded-full object-cover"
-                      />
+                      <div className="w-10 h-10 fit-image rounded-full overflow-hidden">
+                        <Image
+                          src={card.image}
+                          alt="testimonial"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                       <div className="flex flex-col">
-                        <h1 className="text-black text-2xl font-bold">
+                        <h1 className="text-black text-xl font-bold">
                           {card.name}
                         </h1>
-                        <p className="text-black border-b-4 border-primary  w-fit py-2 text-sm">
-                          {card.title}
-                        </p>
+                        <div className="flex items-center gap-1">
+                          {[1, 2, 3, 4, 5].map((item, index) => (
+                            <FaStar
+                              key={index}
+                              className="text-yellow-500 text-lg"
+                            />
+                          ))}
+                        </div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      {[1, 2, 3, 4, 5].map((item, index) => (
-                        <FaStar key={index} className="text-yellow-500 text-xl" />
-                      ))}
-                    </div>
+
                     <p className="text-black/90 border-l-4 border-primary px-4 text-lg">
-                        {card.description}
+                      {card.description}
                     </p>
                   </div>
                 </SwiperSlide>

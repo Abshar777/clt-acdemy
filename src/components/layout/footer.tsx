@@ -5,12 +5,13 @@ import { FaYoutube } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdEmail } from "react-icons/md";
+import Link from "next/link";
+import { phoneNumber } from "@/const/data";
 
 const Footer = () => {
   return (
     <footer className="w-full bg-[#1f1f1f] rounded-t-3xl -mt-6 relative z-10 text-white py-16 px-6 md:px-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-
         {/* Left Section */}
         <div>
           <img src="/logo.png" alt="logo" className="w-20 mb-6" />
@@ -24,13 +25,22 @@ const Footer = () => {
           </p>
 
           <div className="flex items-center gap-4 mt-6">
-            <a className="w-10 h-10 flex items-center justify-center rounded-md bg-white text-black hover:bg-primary transition">
+            <a
+              href="https://www.linkedin.com/in/clt-academy/"
+              className="w-10 h-10 flex items-center justify-center rounded-md bg-white text-black hover:bg-primary transition"
+            >
               <FaLinkedinIn />
             </a>
-            <a className="w-10 h-10 flex items-center justify-center rounded-md bg-white text-black hover:bg-primary transition">
+            <a
+              href="https://www.youtube.com/@CLTACADEMY-p8s"
+              className="w-10 h-10 flex items-center justify-center rounded-md bg-white text-black hover:bg-primary transition"
+            >
               <FaYoutube />
             </a>
-            <a className="w-10 h-10 flex items-center justify-center rounded-md bg-white text-black hover:bg-primary transition">
+            <a
+              href="https://www.instagram.com/clt_academy.ae/?hl=en"
+              className="w-10 h-10 flex items-center justify-center rounded-md bg-white text-black hover:bg-primary transition"
+            >
               <FaInstagram />
             </a>
           </div>
@@ -41,13 +51,26 @@ const Footer = () => {
           <h3 className="text-2xl font-semibold mb-3">Quick Links</h3>
           <div className="w-10 h-[3px] bg-red-500 mb-4"></div>
 
-          <ul className="space-y-3 text-gray-300">
-            <li className="hover:text-white cursor-pointer">Home</li>
-            <li className="hover:text-white cursor-pointer">About</li>
-            <li className="hover:text-white cursor-pointer">Gallery</li>
-            <li className="hover:text-white cursor-pointer">Success Stories</li>
-            <li className="hover:text-white cursor-pointer">Course</li>
-            <li className="hover:text-white cursor-pointer">Blogs</li>
+          <ul className="space-y-3 flex flex-col gap-2 text-gray-300">
+            <Link href="/" className="hover:text-white cursor-pointer">
+              Home
+            </Link>
+            <Link href="/about" className="hover:text-white cursor-pointer">
+              About
+            </Link>
+
+            <Link href="/courses" className="hover:text-white cursor-pointer">
+              Our Courses
+            </Link>
+            <Link href="/team" className="hover:text-white cursor-pointer">
+              Our Team
+            </Link>
+            <Link
+              href={`whatsapp://send?phone=${phoneNumber}&text=Hello, I have a question about the courses.`}
+              className="hover:text-white cursor-pointer"
+            >
+              Contact Us
+            </Link>
           </ul>
         </div>
 
@@ -59,8 +82,7 @@ const Footer = () => {
           <div className="space-y-4 text-gray-300">
             <p className="flex items-start gap-3">
               <IoLocationSharp className="text-xl mt-1" />
-              Hyatt Regency Dubai, Al khaleej street,  
-              Deira, Dubai — Office #239
+              Hyatt Regency Dubai, Al khaleej street, Deira, Dubai — Office #239
             </p>
             <p className="flex items-center gap-3">
               <FiPhoneCall className="text-xl" /> +971 557454523
@@ -73,19 +95,18 @@ const Footer = () => {
 
         {/* Gallery */}
         <div>
-          <h3 className="text-2xl font-semibold mb-3">Gallery</h3>
+          <h3 className="text-2xl font-semibold mb-3">Classes</h3>
           <div className="w-10 h-[3px] bg-red-500 mb-4"></div>
 
-          <div className="grid grid-cols-3 gap-3">
-            <img src="https://clt-academy.com/wp-content/uploads/al_opt_content/IMAGE/clt-academy.com/wp-content/uploads/2025/06/Untitled-design-7-150x150.jpg.bv.webp?bv_host=clt-academy.com" className="w-20 h-20 object-cover rounded-md" />
-            <img src="https://clt-academy.com/wp-content/uploads/al_opt_content/IMAGE/clt-academy.com/wp-content/uploads/2025/06/Untitled-design-6-150x150.jpg.bv.webp?bv_host=clt-academy.com" className="w-20 h-20 object-cover rounded-md" />
-            <img src="https://clt-academy.com/wp-content/uploads/al_opt_content/IMAGE/clt-academy.com/wp-content/uploads/2025/06/Untitled-design-8-150x150.jpg.bv.webp?bv_host=clt-academy.com" className="w-20 h-20 object-cover rounded-md" />
-            <img src="https://clt-academy.com/wp-content/uploads/al_opt_content/IMAGE/clt-academy.com/wp-content/uploads/2025/05/Untitled-design-18-150x150.png.bv.webp?bv_host=clt-academy.com" className="w-20 h-20 object-cover rounded-md" />
-            <img src="https://clt-academy.com/wp-content/uploads/al_opt_content/IMAGE/clt-academy.com/wp-content/uploads/2025/05/3-150x150.png.bv.webp?bv_host=clt-academy.com" className="w-20 h-20 object-cover rounded-md" />
-            <img src="https://clt-academy.com/wp-content/uploads/al_opt_content/IMAGE/clt-academy.com/wp-content/uploads/2025/05/3-150x150.png.bv.webp?bv_host=clt-academy.com" className="w-20 h-20 object-cover rounded-md" />
-          </div>
+          <ul className="space-y-3 flex flex-col gap-2 text-gray-300">
+            <Link href="/" className="hover:text-white cursor-pointer">
+              Book Your Classes
+            </Link>
+            <Link href="/" className="hover:text-white cursor-pointer">
+              Login
+            </Link>
+          </ul>
         </div>
-
       </div>
     </footer>
   );

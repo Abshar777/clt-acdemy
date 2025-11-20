@@ -11,23 +11,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { phoneNumber } from "@/const/data";
 
 export default function Faq() {
-  //   Why should I choose CLT Academy over other trading institutions?
-  // CLT offers real trading strategies, lifetime mentorship, and a results-driven approach used by professionals and institutions.
-
-  // What programs do you offer for beginners?
-  // Our beginner-friendly courses include Forex Foundations, Crypto Basics, and Financial Literacy — all with live support.
-
-  // How does CLT support students after course completion?
-  // We provide ongoing trade reviews, access to mentorship calls, community groups, and continuous strategy updates.
-
-  // How do I upgrade or switch courses later?
-  // You can upgrade anytime. Your existing payment or course access will be adjusted accordingly.
-
-  // Can I make a career in trading through CLT’s programs?
-  // Absolutely. Many students have gone from beginners to consistent traders with CLT’s structured roadmap.
-
-  // What’s the fastest way to enroll and get started?
-  // Tap on “Enroll Now” or speak directly to our support on WhatsApp for instant onboarding and payment setup.
+  
   const faqItems = [
     {
       q: "Why should I choose CLT Academy over other trading institutions?",
@@ -70,9 +54,10 @@ export default function Faq() {
   return (
     <div className="py-20 gridAnim relative md:px-20 px-5 w-full">
       <div className="w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 relative lg:grid-cols-2 gap-10">
           {/* LEFT SIDE */}
-          <div className=" top-12 space-y-5">
+          <div className="top-12 space-y-5">
+
             <div className="px-5 mb-4 rounded-full w-fit font-semibold border border-primary text-primary text-center py-2">
               <p className="md:text-sm text-xs uppercase text-nowrap">
                 Our FAQs
@@ -89,11 +74,11 @@ export default function Faq() {
             </p>
 
             <a
-              href="https://wa.me/+971507528009?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20this.%20Could%20you%20please%20provide%20details?"
+              href={`https://wa.me/${phoneNumber}?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20this.%20Could%20you%20please%20provide%20details?`}
               className="inline-block bg-primary text-white px-6 py-3 rounded-lg font-medium shadow wow fadeInUp"
               data-wow-delay="0.4s"
             >
-              View All FAQs
+             Enroll Now
             </a>
           </div>
 
@@ -118,7 +103,7 @@ export default function Faq() {
                   <AccordionTrigger className="md:text-lg text-md font-semibold text-white ">
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/90">
+                  <AccordionContent className="text-white/90 font-semibold ">
                     {item.a}
                   </AccordionContent>
                 </AccordionItem>
