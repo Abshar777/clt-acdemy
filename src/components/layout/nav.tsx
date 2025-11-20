@@ -74,9 +74,9 @@ const Nav = () => {
 
   return (
     <div className={`fixed flex flex-row ${!isScrolled ? "border-[#ffffff1f]  border-b" : "backdrop-blur-sm border-transparent bg-black/90 rounded-b-3xl"} transition-all duration-300  items-center   w-full  md:px-4 top-0 z-50`}>
-      <div className="first_part py-3  md:border-r border-white/20 md:px-8 px-3 flex items-center md:justify-start justify-between md:w-auto w-full md:gap-6 gap-2">
+      <div className="first_part py-5  md:border-r border-white/20 md:px-8 px-3 flex items-center md:justify-start justify-between md:w-auto w-full md:gap-6 gap-2">
         <div className="logo">
-          <div className="fit-image  md:w-20  w-10">
+          <div className="fit-image  md:w-20  w-13">
             <Image src={logo} alt="logo" width={100} height={100} />
           </div>
         </div>

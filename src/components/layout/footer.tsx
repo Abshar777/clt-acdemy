@@ -8,7 +8,7 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#1f1f1f] text-white py-16 px-6 md:px-16">
+    <footer className="w-full bg-[#1f1f1f] rounded-t-3xl -mt-6 relative z-10 text-white py-16 px-6 md:px-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
 
         {/* Left Section */}

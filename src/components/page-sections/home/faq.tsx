@@ -112,10 +112,10 @@ export default function Faq() {
                 <AccordionItem
                   key={index}
                   value={item.q}
-                  className="border-b border-white/20 py-4 wow fadeInUp"
+                  className="border-b border-white/20 md:py-4 py-2 wow fadeInUp"
                   data-wow-delay={item.delay}
                 >
-                  <AccordionTrigger className="md:text-lg text-md font-medium text-white ">
+                  <AccordionTrigger className="md:text-lg text-md font-semibold text-white ">
                     {item.q}
                   </AccordionTrigger>
                   <AccordionContent className="text-white/90">
