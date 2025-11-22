@@ -55,7 +55,7 @@ const page = () => {
           disabled={Number(id) === course?.tabs.length}
           onClick={() => router.push(`/courses/${Number(id) + 1}`)}
         >
-          {courseData[Number(id) + 1]?.name || "Next Course"}
+          {"Next Course"}
           <FaArrowRight />
         </Button>
       </div>

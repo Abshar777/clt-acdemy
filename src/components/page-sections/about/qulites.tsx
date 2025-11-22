@@ -25,7 +25,7 @@ const qulites = [
     },
 ]
   return (
-    <div className='w-screen mb-20 md:px-15 px-3 min-h-[40vh] grid grid-cols-2 md:grid-cols-4 gap-1'>
+    <div className='w-screen  md:px-15 px-3 md:min-h-[40vh] min-h-[50vh] grid grid-cols-2 md:grid-cols-4 gap-1'>
         {qulites.map((qulite) => (
            <FlipCard key={qulite.title} title={qulite.title} description={qulite.description} icon={<FaArrowRight />} />
         ))}

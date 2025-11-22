@@ -37,12 +37,12 @@ const navItems = [
   {
     name: "Contact Us",
     // hidden: true,
-    href: `whatsapp://send?phone=${phoneNumber}&text=Hello, I have a question about the courses.`,
+    href: `/contact`,
   },
   {
-    name: "tools",
-    hidden: true,
-    href: "/contact",
+    name: "Add Ons",
+    // hidden: true,
+    href: "/addons",
   },
 ];
 
@@ -99,9 +99,7 @@ const Nav = () => {
           {navItems.map((item) => (
             <Link href={item.href} key={item.name}>
               <p
-                className={`uppercase ${
-                  item?.hidden ? "opacity-0 pointer-events-none" : ""
-                } text-nowrap font-semibold text-sm ${
+                className={`uppercase  text-nowrap font-semibold text-sm ${
                   item.href === pathname ? "text-primary" : "text-white"
                 }`}
               >
@@ -128,7 +126,7 @@ const Nav = () => {
             <p>book classes</p>
           </div>
         </div>
-        <div className="   flex items-center gap-2">
+        <div className="md:hidden   flex items-center gap-2">
           <Sheet>
             <SheetTrigger>
               <RiMenu2Line className="text-white cursor-pointer hover:text-primary md:text-4xl text-2xl " />
@@ -164,7 +162,7 @@ const Nav = () => {
           <p className="font-semibold text-sm text-white uppercase">
             Hotline Number
           </p>
-          <p className="text-xl  font-semibold text-nowrap text-white">
+          <p className="text-xl  font-semibold  text-white">
             {phoneNumber}
           </p>
         </div>

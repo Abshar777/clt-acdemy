@@ -1,4 +1,4 @@
-export const phoneNumber = "+971 557454523";
+export const phoneNumber = "+971557454523";
 
 
 export const courseData = [
