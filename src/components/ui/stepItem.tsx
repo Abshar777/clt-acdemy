@@ -104,7 +104,7 @@ const StepItem: React.FC<StepItemProps> = ({ step, index, total }) => {
       </div>
 
       {/* Text Content */}
-      <div ref={textRef} className="max-w-[280px] mx-auto relative z-20">
+      <div ref={textRef} className="max-w-[280px] md:bg-transparent bg-white  mx-auto relative z-20">
         <div className="inline-block md:mt-0 mt-3 mb-3 px-3 py-1 rounded-full bg-primary border border-primary text-white text-[10px] font-mono text-brand-400 uppercase tracking-widest">
           Step 0{index + 1}
         </div>
