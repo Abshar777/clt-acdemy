@@ -178,10 +178,10 @@ const Loader: React.FC<AnimationProps> = ({ onComplete }) => {
             preserveAspectRatio="none"
           >
             <path
-              className="main-path"
+              className="main-path stroke-white/40"
               d="M 40 300 C 100 280, 150 320, 200 250 S 300 100, 400 180 S 550 250, 600 150 S 750 200, 850 50"
               fill="none"
-              stroke="#ffffff"
+              
               strokeWidth="4"
               strokeLinecap="round"
             />
