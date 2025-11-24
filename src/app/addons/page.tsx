@@ -1,3 +1,4 @@
+"use client";
 import PageTitleContainer from "@/components/global/pageTitleContainer";
 import About from "@/components/page-sections/about/about";
 import Qulites from "@/components/page-sections/about/qulites";

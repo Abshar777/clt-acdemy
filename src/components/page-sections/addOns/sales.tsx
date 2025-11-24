@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { whatsappLink } from "@/components/global/whatsapp";
 
 export default function SalesSection() {
   return (
@@ -24,13 +25,17 @@ export default function SalesSection() {
 
         {/* Right Buttons */}
         <div className="flex flex-col items-center gap-4">
-          <button className="bg-primary text-white font-semibold px-8 py-4 rounded-md flex items-center gap-3 hover:opacity-90 transition">
+          <button onClick={() => {
+            window.location.href = whatsappLink;
+          }} className="bg-primary text-white font-semibold px-8 py-4 rounded-md flex items-center gap-3 hover:opacity-90 transition">
             UPGRADE TO FULL ACCESS <ArrowRight size={18} />
           </button>
 
           <span className="font-bold">OR</span>
 
-          <button className="bg-primary text-white font-semibold px-8 py-4 rounded-md flex items-center gap-3 hover:opacity-90 transition">
+          <button onClick={() => {
+            window.location.href = whatsappLink;
+          }} className="bg-primary text-white font-semibold px-8 py-4 rounded-md flex items-center gap-3 hover:opacity-90 transition">
             JOIN THE ACADEMY NOW <ArrowRight size={18} />
           </button>
         </div>

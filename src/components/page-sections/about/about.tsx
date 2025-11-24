@@ -57,6 +57,9 @@ const About = () => {
           </p>
         </div>
         <Button
+        onClick={() => {
+          window.location.href = "/courses";
+        }}
           size={"lg"}
           className="md:text-[.8rem] mt-2 font-bold group rounded-2xl"
         >
