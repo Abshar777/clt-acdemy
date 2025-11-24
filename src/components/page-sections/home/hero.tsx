@@ -12,6 +12,7 @@ import poster from "@/../public/poster.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useUIStore } from "@/store/uiStore";
+import { whatsappLink } from "@/components/global/whatsapp";
 
 const heroCta = [
   {
@@ -69,8 +70,12 @@ const splitText = (text: string) =>
     </span>
   ));
 
-  const splitWords = (text: string, className?: string) => text.split(" ").map((word, index) => (
-    <span key={index} className={`word inline-block whitespace-pre ${className}`}>
+const splitWords = (text: string, className?: string) =>
+  text.split(" ").map((word, index) => (
+    <span
+      key={index}
+      className={`word inline-block whitespace-pre ${className}`}
+    >
       {word}&nbsp;
     </span>
   ));
@@ -148,9 +153,14 @@ const Hero = () => {
           {splitText("Lead Fully")}
         </h1>
         <p className="text-white/90 overflow-hidden hero-desc md:text-base text-sm md:text-start text-center">
-          {splitWords("Join a global community of traders learning directly from professionals. No fluff, no shortcuts just real world financial education that works.")}
+          {splitWords(
+            "Join a global community of traders learning directly from professionals. No fluff, no shortcuts just real world financial education that works."
+          )}
         </p>
         <Button
+          onClick={() => {
+            window.location.href = whatsappLink;
+          }}
           size={"lg"}
           className="md:text-[.8rem] hero-button font-bold group rounded-2xl"
         >
@@ -190,7 +200,9 @@ const Hero = () => {
               <h3 className="md:text-md text-xs uppercase">
                 CLARITY STARTS HERE
               </h3>
-              <h1 className="md:text-2xl text-xl text-nowrap font-bold">
+              <h1 onClick={() => {
+                window.location.href = `tel:${phoneNumber.replace("+", "").replace(" ", "")}`;
+              }} className="md:text-2xl cursor-pointer text-xl text-nowrap font-bold">
                 {phoneNumber}
               </h1>
             </div>

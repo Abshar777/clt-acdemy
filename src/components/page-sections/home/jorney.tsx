@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import awward from "@/../public/awward.png";
+import { whatsappLink } from "@/components/global/whatsapp";
 
 // 1000 +
 // Active Courses
@@ -69,6 +70,9 @@ const Jorney = () => {
             ))}
           </div>
           <Button
+          onClick={() => {
+            window.location.href = whatsappLink;
+          }}
             size={"lg"}
             className="md:text-[.8rem] font-bold group rounded-2xl"
           >

@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { whatsappLink } from "@/components/global/whatsapp";
 
 const Service = () => {
   const cards = [
@@ -35,19 +36,20 @@ const Service = () => {
   return (
     <div className="w-screen flex justify-center md:px-20 md:py-25 py-10 min-h-screen">
       <div className="w-[90%] ">
-        <div className="w-full flex items-center justify-center">
-          <div className="px-5 rounded-full border border-primary text-primary font-semibold w-fit text-center py-2">
-            <p className="md:text-sm text-xs uppercase text-nowrap">
-              CLT ACADEMY SERVICES
-            </p>
-          </div>
-        </div>
+        <div className="w-full flex items-center justify-center"></div>
 
         <div className="grid mt-3 justify-center items-center md:grid-cols-2 grid-cols-1 gap-6">
-          <h1 className="md:text-5xl text-4xl text-center md:text-start text-black/90 font-bold">
-            Our Signature Programs, Tailored for Every Trader’s Journey
-          </h1>
-          <p className="text-black/60 text-md">
+          <div className="flex flex-col gap-2">
+            <div className="px-5 rounded-full mb-2 border border-primary text-primary font-semibold w-fit text-center py-2">
+              <p className="md:text-sm text-xs uppercase text-nowrap">
+                CLT ACADEMY SERVICES
+              </p>
+            </div>
+            <h1 className="md:text-5xl text-4xl text-center md:text-start text-black/90 font-bold">
+              Our Signature Programs, Tailored for Every Trader’s Journey
+            </h1>
+          </div>
+          <p className="text-black/60 md:mt-4 text-md">
             From complete beginners to seasoned traders, our training programs
             are designed to elevate your strategy, sharpen your skills, and
             position you for long-term trading success.
@@ -86,7 +88,9 @@ const Service = () => {
                   <p className="text-white w-[80%] text-md text-center">
                     {card.desc}
                   </p>
-                  <Button className="bg-white mt-3 md:px-6 md:py-1 rounded-full text-primary hover:bg-white/80">
+                  <Button onClick={() => {
+                    window.location.href = whatsappLink;
+                  }} className="bg-white mt-3 md:px-6 md:py-1 rounded-full text-primary hover:bg-white/80">
                     Learn More
                   </Button>
                 </div>

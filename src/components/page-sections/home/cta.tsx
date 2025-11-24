@@ -1,3 +1,5 @@
+"use client";
+import { whatsappLink } from "@/components/global/whatsapp";
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
@@ -13,6 +15,9 @@ const Cta = () => {
         <Button
           size={"lg"}
           className="md:text-[.8rem] md:mt-0 mt-10 scale-[1.3] bg-white hover:bg-white/90 text-primary font-bold group rounded-2xl"
+          onClick={() => {
+            window.location.href = whatsappLink;
+          }}
         >
           Start Your Journey{" "}
           <FaArrowRight className="group-hover:translate-x-1 duration-900" />

@@ -2,11 +2,14 @@
 import { phoneNumber } from "@/const/data";
 import React from "react";
 
+
+
+export const whatsappLink = `https://wa.me/${phoneNumber.replace("+", "").replace(" ", "")}?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20this.%20Could%20you%20please%20provide%20details?`;
 const WhatsappButton = () => {
   return (
     <>
       <a
-        href={`https://wa.me/${phoneNumber}?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20this.%20Could%20you%20please%20provide%20details?`}
+        href={whatsappLink}
         className="align-items-center"
         style={{
           display: "flex",
