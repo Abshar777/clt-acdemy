@@ -6,9 +6,10 @@ import { Suspense, useState } from "react";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "sonner";
 import Loader from "@/components/global/prelodaer";
+import { useUIStore } from "@/store/uiStore";
 
 const IndexLayout = ({ children }: { children: React.ReactNode }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const { isLoading, setIsLoading } = useUIStore();
 
   const handleLoadingComplete = () => {
     // The Loader component handles the exit animation visually.

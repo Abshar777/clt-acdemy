@@ -10,6 +10,8 @@ import { LuNotebookPen } from "react-icons/lu";
 import { TbTargetArrow } from "react-icons/tb";
 import poster from "@/../public/poster.png";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useUIStore } from "@/store/uiStore";
 
 const heroCta = [
   {
@@ -59,8 +61,76 @@ const HeroVideo = dynamic(() => import("@/components/global/heroVideo"), {
     </div>
   ),
 });
+
+const splitText = (text: string) =>
+  text.split("").map((char, index) => (
+    <span key={index} className="char text-nowrap inline-block whitespace-pre">
+      {char}
+    </span>
+  ));
+
+  const splitWords = (text: string, className?: string) => text.split(" ").map((word, index) => (
+    <span key={index} className={`word inline-block whitespace-pre ${className}`}>
+      {word}&nbsp;
+    </span>
+  ));
+
 const Hero = () => {
+  const { isLoading } = useUIStore();
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (isLoading) {
+      gsap.set(".char", { y: 100, opacity: 0 });
+      gsap.set(".word", { y: 100, opacity: 0 });
+      gsap.set(".hero-pill", { opacity: 0, y: 100 });
+      gsap.set(".hero-button", { opacity: 0, y: 100 });
+      return;
+    }
+    const tl = gsap.timeline();
+    tl.to(
+      ".hero-pill",
+      {
+        opacity: 100,
+        y: 0,
+        duration: 1,
+        ease: "back.out(1.7)",
+      },
+      "<"
+    );
+    tl.to(
+      ".char",
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.05,
+        ease: "power4.out",
+      },
+      "<"
+    );
+    tl.to(
+      ".word",
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        stagger: 0.05,
+        ease: "power4.out",
+      },
+      "-0.5"
+    );
+    tl.to(
+      ".hero-button",
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: "ease.inOut(0.5)",
+      },
+      ""
+    );
+  }, [isLoading]);
 
   return (
     <div
@@ -68,23 +138,21 @@ const Hero = () => {
       className="w-screen relative flex  flex-col pb-18 justify-center  md:px-20 px-5 md:gap-14 gap-4 min-h-screen "
     >
       <div className="flex relative z-10 h-[90vh] pt-25 md:px-6 px-2 flex-col md:w-1/2 w-full md:items-start items-center justify-center gap-4">
-        <div className="px-5 hero-pill rounded-full border border-white text-white text-center py-2">
+        <div className="px-5   hero-pill rounded-full border border-white text-white text-center py-2">
           <p className="md:text-sm text-xs uppercase text-nowrap">
             Learn Trading from Elite Mentors
           </p>
         </div>
-        <h1 className="md:text-8xl hero-title-line text-5xl md:text-start text-center  text-white font-bold">
-          <span className="text-nowrap">Learn Freely</span> <br />
-          <span className="text-nowrap">Lead Fully</span>
+        <h1 className="md:text-8xl overflow-hidden  hero-title-line text-5xl md:text-start text-center  text-white font-bold">
+          {splitText("Learn Freely")} <br />
+          {splitText("Lead Fully")}
         </h1>
-        <p className="text-white/90 hero-desc md:text-base text-sm md:text-start text-center">
-          Join a global community of traders learning directly from
-          professionals. No fluff, no shortcuts just real world financial
-          education that works.
+        <p className="text-white/90 overflow-hidden hero-desc md:text-base text-sm md:text-start text-center">
+          {splitWords("Join a global community of traders learning directly from professionals. No fluff, no shortcuts just real world financial education that works.")}
         </p>
         <Button
           size={"lg"}
-          className="md:text-[.8rem] font-bold group rounded-2xl"
+          className="md:text-[.8rem] hero-button font-bold group rounded-2xl"
         >
           Invest Your Self{" "}
           <FaArrowRight className="group-hover:translate-x-1 duration-900" />
