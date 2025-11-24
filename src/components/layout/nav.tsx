@@ -111,6 +111,7 @@ const Nav = () => {
         <div className="md:flex hidden items-center ml-8 gap-4">
           {navButtons.map((button) => (
             <Button
+            onClick={() => window.open(button.href, "_blank")}
               variant="outline"
               className={button.className + "  ease-in duration-200"}
             >
@@ -119,10 +120,10 @@ const Nav = () => {
           ))}
         </div>
         <div className="flex items-center gap-2">
-          <div className="py-1 px-2 rounded-sm cursor-pointer text-xs font-semibold md:hidden flex items-center justify-center bg-white text-black">
+          <div onClick={() => window.open(navButtons[0].href, "_blank")} className="py-1 px-2 rounded-sm cursor-pointer text-xs font-semibold md:hidden flex items-center justify-center bg-white text-black">
             <p>shop now</p>
           </div>
-          <div className="py-1 px-2 rounded-sm cursor-pointer text-xs font-semibold md:hidden flex items-center justify-center bg-white text-black">
+          <div onClick={() => window.open(navButtons[1].href, "_blank")} className="py-1 px-2 rounded-sm cursor-pointer text-xs font-semibold md:hidden flex items-center justify-center bg-white text-black">
             <p>book classes</p>
           </div>
         </div>
@@ -151,7 +152,7 @@ const Nav = () => {
         </div>
       </div>
       <div
-        onClick={() => window.open(`tel:${phoneNumber}`, "_blank")}
+        onClick={() => window.open(`tel:${phoneNumber.replace("+", "")}`, "_blank")}
         className=" px-3 group cursor-pointer h-full   md:flex hidden items-center justify-center gap-4"
       >
         <div className="p-4 rounded-full relative bg-white/10 group-hover:bg-primary ease-in duration-200 flex items-center justify-center">
