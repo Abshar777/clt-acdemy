@@ -1,4 +1,5 @@
 "use client";
+import { AboutVideo } from "@/components/global/heroVideo";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
@@ -57,9 +58,9 @@ const About = () => {
           </p>
         </div>
         <Button
-        onClick={() => {
-          window.location.href = "/courses";
-        }}
+          onClick={() => {
+            window.location.href = "/courses";
+          }}
           size={"lg"}
           className="md:text-[.8rem] mt-2 font-bold group rounded-2xl"
         >
@@ -67,15 +68,16 @@ const About = () => {
           <FaArrowRight className="group-hover:translate-x-1 duration-900" />
         </Button>
       </div>
-      <div className="relative md:block hidden  col-span-1 w-full h-full ">
-        <div className="h-full  fit-image shadow-2xs  w-full rounded-lg ">
-          <Image
+      <div className="relative bg-black md:block hidden overflow-hidden rounded-lg max-h-[70vh] col-span-1 w-full h-full ">
+        <div className="h-full    fit-image shadow-2xs overflow-hidden   w-full rounded-lg ">
+          {/* <Image
             src={"/about.png"}
             alt="goals"
             width={100}
             height={100}
             className="object-cover rounded-lg w-full h-full"
-          />
+          /> */}
+          <AboutVideo />
         </div>
       </div>
     </div>

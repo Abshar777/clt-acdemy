@@ -20,9 +20,10 @@ import t14 from "@/../public/t14.png";
 import t15 from "@/../public/t15.png";
 import t16 from "@/../public/t16.png";
 import t17 from "@/../public/t17.png";
-import t18 from "@/../public/t18.png";
+import t18 from "@/../public/t18.jpeg";
 import t19 from "@/../public/t19.png";
-import t20 from "@/../public/t20.png";
+import t20 from "@/../public/t20.jpeg";
+import t20_1 from "@/../public/t20-1.jpeg";
 import t21 from "@/../public/t21.png";
 import t22 from "@/../public/t22.png";
 import t23 from "@/../public/t23.png";
@@ -30,6 +31,10 @@ import t24 from "@/../public/t24.png";
 import t25 from "@/../public/t25.png";
 import t26 from "@/../public/t26.png";
 import t27 from "@/../public/t27.png";
+import t29 from "@/../public/t29.jpeg";
+import t30 from "@/../public/t30.jpeg";
+import t31 from "@/../public/t31.jpeg";
+import t32 from "@/../public/t32.jpeg";
 
 const TeamListing = () => {
 //   Muhammed Musthafa
@@ -42,6 +47,111 @@ const TeamListing = () => {
 // Trading Mentor
   const teamData = [
     {
+      id: 30,
+      name: "Nandana Jayakrishnan",
+      type: "Technical",
+      role: "HR Executive",
+      bio: "HR Executive",
+      imageUrl: t31,
+    },
+    {
+      id: 22,
+      name: "Fathimath Thanseera",
+      type: "Technical",
+      role: "HR Manager",
+      bio: "HR Manager",
+      imageUrl: t22,
+    },
+    {
+      id: 23,
+      name: "Mohamadaffan Memon",
+      type: "Technical",
+      role: "PR& Communication Executive",
+      bio: "PR& Communication Executive",
+      imageUrl: t23,
+    },
+    {
+      id: 24,
+      name: "Della Mariyam",
+      type: "Technical",
+      role: "Customer Relationship Manager",
+      bio: "Customer Relationship Manager",
+      imageUrl: t24,
+    },
+    {
+      id: 25,
+      name: "Falja Nizar",
+      type: "Technical",
+      role: "Head Of Customer Service",
+      bio: "Head Of Customer Service",
+      imageUrl: t25,
+    },
+    {
+      id: 26,
+      name: "Nubin Nuhais",
+      type: "Technical",
+      role: "Information Technology Head",
+      bio: "Information Technology Head",
+      imageUrl: t26,
+    },
+    {
+      id: 18,
+      name: "Edwin ",
+      type: "Mentors",
+      role: "Senior mentor",
+      bio: "Senior mentor",
+      imageUrl: t18,
+    },
+   
+    {
+      id: 20,
+      name: "Rafat ",
+      type: "Mentors",
+      role: "Trading mentor",
+      bio: "Trading mentor",
+      imageUrl: t20,
+    },
+    {
+      id: 28,
+      name: "Nihal ",
+      type: "Mentors",
+      role: "Trading mentor",
+      bio: "Trading mentor",
+      imageUrl: t20_1,
+    },
+    {
+      id: 19,
+      name: "Sriram",
+      type: "Mentors",
+      role: "Trading mentor",
+      bio: "Trading mentor",
+      imageUrl: t19,
+    },
+    {
+      id: 32,
+      name: "Ansa Abdul Offur",
+      type: "Technical",
+      role: "Head of Marketing",
+      bio: "Head of Marketing",
+      imageUrl: t32,
+    },
+    {
+      id: 29,
+      name: "Ifa Fathima",
+      type: "Technical",
+      role: "Data Engineer ",
+      bio: "Data Engineer",
+      imageUrl: t29,
+    },
+    {
+      id: 30,
+      name: "Fathimath Thanseera",
+      type: "Technical",
+      role: "HR Manager ",
+      bio: "HR Manager",
+      imageUrl: t30,
+    },
+    {
       id: 1,
       name: "Fasir Khalid",
       type: "Advisors",
@@ -49,6 +159,7 @@ const TeamListing = () => {
       bio: "Head of Academics",
       imageUrl: t1,
     },
+
     {
       id: 2,
       name: "Mohammed Sanjeed",
@@ -154,19 +265,11 @@ const TeamListing = () => {
       imageUrl: t14,
     },
     {
-      id: 15,
-      name: "Dennies",
-      type: "Advisors",
-      role: "Academic Counsellor",
-      bio: "Academic Counsellor",
-      imageUrl: t15,
-    },
-    {
       id: 16,
       name: "Kadeejath",
       type: "Advisors",
-      role: "Academic Counsellor",
-      bio: "Academic Counsellor",
+      role: "Department of Customer Service",
+      bio: "Department of Customer Service",
       imageUrl: t16,
     },
     {
@@ -177,86 +280,9 @@ const TeamListing = () => {
       bio: "Academic Counsellor",
       imageUrl: t17,
     },
-    {
-      id: 18,
-      name: "Muhammed Musthafa",
-      type: "Mentors",
-      role: "Trading Mentor",
-      bio: "Trading Mentor",
-      imageUrl: t18,
-    },
-    {
-      id: 19,
-      name: "Sirjaf Siddik",
-      type: "Mentors",
-      role: "Trading Mentor",
-      bio: "Trading Mentor",
-      imageUrl: t19,
-    },
-    {
-      id: 20,
-      name: "Amal krishna",
-      type: "Mentors",
-      role: "Trading Mentor",
-      bio: "Trading Mentor",
-      imageUrl: t20,
-    },
-    {
-      id: 21,
-      name: "Nandana Jayakrishnan",
-      type: "Technical",
-      role: "HR Executive",
-      bio: "HR Executive",
-      imageUrl: t21,
-    },
-    {
-      id: 22,
-      name: "Fathimath Thanseera",
-      type: "Technical",
-      role: "HR Manager",
-      bio: "HR Manager",
-      imageUrl: t22,
-    },
-    {
-      id: 23,
-      name: "Mohamadaffan Memon",
-      type: "Technical",
-      role: "PR& Communication Executive",
-      bio: "PR& Communication Executive",
-      imageUrl: t23,
-    },
-    {
-      id: 24,
-      name: "Della Mariyam",
-      type: "Technical",
-      role: "Department of Customer Service",
-      bio: "Department of Customer Service",
-      imageUrl: t24,
-    },
-    {
-      id: 25,
-      name: "Falja Nizar",
-      type: "Technical",
-      role: "Head Of Customer Service",
-      bio: "Head Of Customer Service",
-      imageUrl: t25,
-    },
-    {
-      id: 26,
-      name: "Nubin Nuhais",
-      type: "Technical",
-      role: "Information Technology Head",
-      bio: "Information Technology Head",
-      imageUrl: t26,
-    },
-    {
-      id: 27,
-      name: "Quratul Ain",
-      type: "Technical",
-      role: "Department of Customer Service",
-      bio: "Department of Customer Service",
-      imageUrl: t27,
-    },
+    
+   
+
 
 //     Nandana Jayakrishnan
 // HR Executive
@@ -279,7 +305,7 @@ const TeamListing = () => {
 // Quratul Ain
 // Department of Customer Service
   ];
-  const tabs = ["All", "Advisors", "Mentors", "Technical"];
+  const tabs = ["All","Mentors","Technical", "Advisors",];
   const [currentTab, setCurrentTab] = useState("All");
   return (
     <div className="w-screen px-1 md:px-10 md:py-10 py-4 flex flex-col gap-4 ">

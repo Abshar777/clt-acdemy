@@ -66,10 +66,13 @@ const AnimatedCounter = ({ value }: { value: number }) => {
   // Use a spring for smooth, organic movement
   // mass/stiffness/damping control the "physics"
   const springValue = useSpring(motionValue, {
-    mass: 0.8,
-    stiffness: 75,
-    damping: 15,
+    mass: 1,
+    stiffness: 22, // controls speed → lower = slower
+    damping: 18,   // smooth finish
   });
+  
+  
+  
 
   // Transform the raw number into a formatted string (e.g., 10,000)
   const displayValue = useTransform(springValue, (current) =>
