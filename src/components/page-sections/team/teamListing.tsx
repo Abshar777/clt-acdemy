@@ -34,7 +34,7 @@ import t27 from "@/../public/t27.png";
 import t29 from "@/../public/t29.jpeg";
 import t30 from "@/../public/t30.jpeg";
 import t31 from "@/../public/t31.jpeg";
-import tc1 from "@/../public/t-c1.jpeg";
+import tc1 from "@/../public/t-c1.png";
 import tc2 from "@/../public/t-c2.jpeg";
 import t32 from "@/../public/t32.jpeg";
 
@@ -108,8 +108,8 @@ const TeamListing = () => {
       id: 26,
       name: "Nubin Nuhais",
       type: "Technical",
-      role: "Information Technology Head",
-      bio: "Information Technology Head",
+      role: " Head Of Information Technology",
+      bio: " Head Of Information Technology",
       imageUrl: t26,
     },
     {
