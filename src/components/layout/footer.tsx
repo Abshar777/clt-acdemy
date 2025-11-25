@@ -95,15 +95,18 @@ const Footer = () => {
 
         {/* Gallery */}
         <div>
-          <h3 className="text-2xl font-semibold mb-3">Classes</h3>
+          <h3 className="text-2xl font-semibold mb-3">Terms and Conditions</h3>
           <div className="w-10 h-[3px] bg-red-500 mb-4"></div>
 
           <ul className="space-y-3 flex flex-col gap-2 text-gray-300">
-            <Link href="/" className="hover:text-white cursor-pointer">
-              Book Your Classes
+            <Link href="/disclaimer" className="hover:text-white cursor-pointer">
+              Disclaimer
             </Link>
-            <Link href="/" className="hover:text-white cursor-pointer">
-              Login
+            <Link href="/privacy-policy" className="hover:text-white cursor-pointer">
+              Privacy Policy
+            </Link>
+            <Link href="/termsandcondition" className="hover:text-white cursor-pointer">
+              Terms and Conditions
             </Link>
           </ul>
         </div>

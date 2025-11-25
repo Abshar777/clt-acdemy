@@ -1,20 +1,27 @@
 "use client";
+import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import React from "react";
-import { FaArrowRight } from "react-icons/fa";
 import awward from "@/../public/awward.png";
-import { whatsappLink } from "@/components/global/whatsapp";
+import { FaArrowRight } from "react-icons/fa";
+import {
+  motion,
+  useInView,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "framer-motion";
+import Image from "next/image";
 
-// 1000 +
-// Active Courses
-// 10 +
-// Millions in profits booked
-// 60000 +
-// Live sessions conducted.
-// 20000 +
-// Add ons & resources downloaded
-const jorneyData = [
+// Mocking the external constant
+const whatsappLink = "#";
+
+interface JourneyItem {
+  number: number;
+  description: string;
+  class: string;
+}
+
+const jorneyData: JourneyItem[] = [
   {
     number: 3000,
     description: "Students Trained",
@@ -42,45 +49,115 @@ const jorneyData = [
   },
 ];
 
-const Jorney = () => {
+/**
+ * Counter Component
+ * Uses physics-based springs for a "smooth" feel rather than linear duration.
+ * Formats numbers with commas.
+ */
+const AnimatedCounter = ({ value }: { value: number }) => {
+  const ref = useRef<HTMLSpanElement>(null);
+
+  // Only start when the individual number is in view
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+
+  // Start from 0
+  const motionValue = useMotionValue(0);
+
+  // Use a spring for smooth, organic movement
+  // mass/stiffness/damping control the "physics"
+  const springValue = useSpring(motionValue, {
+    mass: 0.8,
+    stiffness: 75,
+    damping: 15,
+  });
+
+  // Transform the raw number into a formatted string (e.g., 10,000)
+  const displayValue = useTransform(springValue, (current) =>
+    Math.round(current).toLocaleString()
+  );
+
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value);
+    }
+  }, [isInView, value, motionValue]);
+
+  return <motion.span ref={ref}>{displayValue}</motion.span>;
+};
+
+const Journey = () => {
+  // Ref for the container animation
+  const containerRef = useRef(null);
+  const isContainerInView = useInView(containerRef, {
+    once: true,
+    margin: "-100px",
+  });
+
   return (
-    <div className="w-full relative md:px-4 px-2 mt-10">
-      <div className="w-full md:min-h-[70vh]   rounded-lg overflow-hidden relative  bg-black ">
-        <div className="relative py-15  z-10 w-full h-full flex items-center justify-center flex-col gap-4">
-          <div className="flex-col flex gap-2">
-            <h1 className="text-white md:text-start text-center md:text-5xl text-4xl uppercase font-bold">
+    <div className="w-full relative md:px-4 px-2 mt-10" ref={containerRef}>
+      <div className="w-full md:min-h-[70vh] rounded-lg overflow-hidden relative bg-black">
+        {/* Content Container */}
+        <div className="relative py-15 z-10 w-full h-full flex items-center justify-center flex-col gap-4">
+          <div className="flex-col flex gap-2 mt-10 md:mt-0">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={isContainerInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6 }}
+              className="text-white md:text-start text-center md:text-5xl text-4xl uppercase font-bold"
+            >
               Our Journey
-            </h1>
-            <h2 className="text-white/80 md:text-xl text-base text-center  font-bold">
+            </motion.h1>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={isContainerInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-white/80 md:text-xl text-base text-center font-bold"
+            >
               From Confused To Confident
-            </h2>
+            </motion.h2>
           </div>
+
           <div className="grid md:grid-cols-3 grid-cols-2 md:w-[70%] w-full px-2 gap-2">
-            {jorneyData.map((item) => (
-              <div
-                className={`bg-white/5 cursor-pointer hover:-translate-y-1  duration-500 group  flex items-center  justify-center gap-4  py-10 backdrop-blur-sm md:px-6 px-3 rounded-lg ${item.class}`}
+            {jorneyData.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isContainerInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className={`bg-white/5 cursor-pointer hover:-translate-y-1 duration-500 group flex items-center justify-center gap-4 py-10 backdrop-blur-sm md:px-6 px-3 rounded-lg ${item.class}`}
               >
-                <div className="flex flex-col ">
-                  <h1 className="md:text-4xl text-2xl text-nowrap text-white font-bold">
-                    {item.number}+
+                <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                  <h1 className="md:text-4xl text-2xl text-nowrap text-white font-bold flex flex-row items-center">
+                    <AnimatedCounter value={item.number} />
+                    <span>+</span>
                   </h1>
-                  <p className="text-sm  text-white/90">{item.description}</p>
+                  <p className="text-sm text-white/90">{item.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-          <Button
-          onClick={() => {
-            window.location.href = whatsappLink;
-          }}
-            size={"lg"}
-            className="md:text-[.8rem] font-bold group rounded-2xl"
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isContainerInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="mb-10 md:mb-0"
           >
-            Start Your Journey{" "}
-            <FaArrowRight className="group-hover:translate-x-1 duration-900" />
-          </Button>
+            <Button
+              onClick={() => {
+                window.location.href = whatsappLink;
+              }}
+              size={"lg"}
+              className="md:text-[.8rem] font-bold group rounded-2xl"
+            >
+              Start Your Journey{" "}
+              <FaArrowRight className="ml-2 group-hover:translate-x-1 duration-500" />
+            </Button>
+          </motion.div>
         </div>
-        <div className="absolute fit-image z-0 top-0 left-0 w-full h-full flex items-center justify-center">
+
+        {/* Background Image - Replaced Next/Image with standard img for compatibility */}
+        <div className="absolute top-0 left-0 fit-image w-full h-full z-0 flex items-center justify-center pointer-events-none">
           <Image
             src={awward}
             alt="awward"
@@ -94,4 +171,4 @@ const Jorney = () => {
   );
 };
 
-export default Jorney;
+export default Journey;

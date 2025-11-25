@@ -153,7 +153,7 @@ const Nav = () => {
       </div>
       <div
         onClick={() => window.open(`tel:${phoneNumber.replace("+", "")}`, "_blank")}
-        className=" px-3 group cursor-pointer h-full   md:flex hidden items-center justify-center gap-4"
+        className=" px-3 group cursor-pointer h-full flex-1  md:flex hidden items-center justify-end gap-4"
       >
         <div className="p-4 rounded-full relative bg-white/10 group-hover:bg-primary ease-in duration-200 flex items-center justify-center">
           <FaPhoneAlt className="text-white text-2xl" />
