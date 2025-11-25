@@ -34,6 +34,8 @@ import t27 from "@/../public/t27.png";
 import t29 from "@/../public/t29.jpeg";
 import t30 from "@/../public/t30.jpeg";
 import t31 from "@/../public/t31.jpeg";
+import tc1 from "@/../public/t-c1.jpeg";
+import tc2 from "@/../public/t-c2.jpeg";
 import t32 from "@/../public/t32.jpeg";
 
 const TeamListing = () => {
@@ -46,6 +48,22 @@ const TeamListing = () => {
 // Amal krishna
 // Trading Mentor
   const teamData = [
+    {
+      id: 100,
+      name: "MOHAMMED AQIB LAPIA",
+      type: "Management",
+      role: "CEO",
+      bio: "CEO",
+      imageUrl: tc1,
+    },
+    {
+      id: 101,
+      name: "MOHAMMED FAIZEEN",
+      type: "Management",
+      role: "COO",
+      bio: "COO",
+      imageUrl: tc2,
+    },
     {
       id: 30,
       name: "Nandana Jayakrishnan",
@@ -305,7 +323,7 @@ const TeamListing = () => {
 // Quratul Ain
 // Department of Customer Service
   ];
-  const tabs = ["All","Mentors","Technical", "Advisors",];
+  const tabs = ["All","Management","Mentors","Technical", "Advisors",];
   const [currentTab, setCurrentTab] = useState("All");
   return (
     <div className="w-screen px-1 md:px-10 md:py-10 py-4 flex flex-col gap-4 ">
