@@ -37,6 +37,12 @@ import t31 from "@/../public/t31.jpeg";
 import tc1 from "@/../public/t-c1.png";
 import tc2 from "@/../public/t-c2.jpeg";
 import t32 from "@/../public/t32.jpeg";
+import t33 from "@/../public/t33.jpeg";
+import t34 from "@/../public/t34.jpeg";
+import t35 from "@/../public/t35.jpeg";
+import t36 from "@/../public/t36.jpeg";
+import t37 from "@/../public/t37.jpeg";
+import t38 from "@/../public/t38.jpeg";
 
 const TeamListing = () => {
   const teamData = [
@@ -290,6 +296,56 @@ const TeamListing = () => {
       bio: "Academic Counsellor",
       imageUrl: t17,
     },
+    {
+      id: 33,
+      name: "VIVEK P",
+      type: "Technical",
+      role: "Social Media Coordinator",
+      bio: "Social Media Coordinator",
+      imageUrl: t33,
+    },
+    {
+      id: 34,
+      name: "Mrudhul K",
+      type: "Technical",
+      role: "Graphic Designer",
+      bio: "Graphic Designer",
+      imageUrl: t34,
+    },
+    {
+      id: 35,
+      name: "Vaishnav C",
+      type: "Technical",
+      role: "Content Writer",
+      bio: "Content Writer",
+      imageUrl: t35,
+    },
+    {
+      id: 36,
+      name: "Muhammed Rashid",
+      type: "Technical",
+      role: "Video editor",
+      bio: "Video editor",
+      imageUrl: t36,
+    },
+    {
+      id: 37,
+      name: "sayyid mursal",
+      type: "Technical",
+      role: "videographer",
+      bio: "videographer",
+      imageUrl: t37,
+    },
+    {
+      id: 38,
+      name: "Ardra B",
+      type: "Technical",
+      role: "Content writer",
+      bio: "Content writer",
+      imageUrl: t37,
+    },
+
+    
     
    
 
