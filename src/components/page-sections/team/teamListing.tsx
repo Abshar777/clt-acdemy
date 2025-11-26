@@ -342,7 +342,7 @@ const TeamListing = () => {
       type: "Technical",
       role: "Content writer",
       bio: "Content writer",
-      imageUrl: t37,
+      imageUrl: t38,
     },
 
     
