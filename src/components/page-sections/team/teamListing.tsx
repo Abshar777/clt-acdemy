@@ -168,14 +168,7 @@ const TeamListing = () => {
       bio: "Data Engineer",
       imageUrl: t29,
     },
-    {
-      id: 30,
-      name: "Fathimath Thanseera",
-      type: "Technical",
-      role: "HR Manager ",
-      bio: "HR Manager",
-      imageUrl: t30,
-    },
+   
     {
       id: 1,
       name: "Fasir Khalid",
