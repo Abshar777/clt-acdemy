@@ -182,14 +182,7 @@ const TeamListing = () => {
       bio: " Head Of Information Technology",
       imageUrl: t26,
     },
-    {
-      id: 39,
-      name: "Muhammed Abshar",
-      type: "Oprations",
-      role: "Web Developer",
-      bio: "Web Developer",
-      imageUrl: t39,
-    },
+   
    
    
     {

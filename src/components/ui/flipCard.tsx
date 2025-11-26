@@ -24,11 +24,11 @@ export default function FlipCard({
     >
       <div
         // inner wrapper: preserve-3d and transition the rotation on hover
-        className={`relative w-full h-full  bg-primarytransition-transform duration-700 group`}
+        className={`relative w-full h-full  transition-transform duration-700 group`}
       >
         {/* Use a nested wrapper that actually performs the rotation on hover */}
         <div
-          className={`w-full h-full bg-primary cursor-pointer rounded-lg shadow-lg [transform-style:preserve-3d] transition-transform duration-700 group-hover:[transform:rotateY(180deg)]`}
+          className={`w-full h-full bg-primary cursor-pointer rounded-lg shadow-lg [transform-style:preserve-3d] transition-transform duration-700 group-hover:[transform:rotateX(180deg)]`}
         >
           {/* Front face */}
           <div
@@ -45,7 +45,7 @@ export default function FlipCard({
             className={`absolute inset-0 rounded-lg p-4 flex flex-col items-start justify-center bg-primary`}
             // rotate the back face so it shows after the wrapper rotates
             style={{
-              transform: "rotateY(180deg)",
+              transform: "rotateX(180deg)",
               backfaceVisibility: "hidden",
             }}
           >
