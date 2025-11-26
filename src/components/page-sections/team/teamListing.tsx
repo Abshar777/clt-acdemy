@@ -39,14 +39,6 @@ import tc2 from "@/../public/t-c2.jpeg";
 import t32 from "@/../public/t32.jpeg";
 
 const TeamListing = () => {
-//   Muhammed Musthafa
-// Trading Mentor
-
-// Sirjaf Siddik
-// Trading Mentor
-
-// Amal krishna
-// Trading Mentor
   const teamData = [
     {
       id: 100,
@@ -78,7 +70,7 @@ const TeamListing = () => {
       type: "Technical",
       role: "HR Manager",
       bio: "HR Manager",
-      imageUrl: t22,
+      imageUrl: t30,
     },
     {
       id: 23,
