@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Our Courses - CLT Academy",
+  title: "Terms and Conditions - CLT Academy",
   description: "CLT Academy is a platform for learning trading and investing.",
   keywords:[
     "CLT Academy",
