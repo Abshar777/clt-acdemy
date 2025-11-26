@@ -43,6 +43,7 @@ import t35 from "@/../public/t35.jpeg";
 import t36 from "@/../public/t36.jpeg";
 import t37 from "@/../public/t37.jpeg";
 import t38 from "@/../public/t38.jpeg";
+import t39 from "@/../public/t39.jpg";
 
 const TeamListing = () => {
   const teamData = [
@@ -109,6 +110,14 @@ const TeamListing = () => {
       role: " Head Of Information Technology",
       bio: " Head Of Information Technology",
       imageUrl: t26,
+    },
+    {
+      id: 39,
+      name: "Muhammed Abshar",
+      type: "Technical",
+      role: "Web Developer",
+      bio: "Web Developer",
+      imageUrl: t39,
     },
     {
       id: 18,
