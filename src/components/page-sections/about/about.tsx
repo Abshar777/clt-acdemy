@@ -1,6 +1,7 @@
 "use client";
 import { AboutVideo } from "@/components/global/heroVideo";
 import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
 import React from "react";
 import { FaArrowRight, FaCheckCircle } from "react-icons/fa";

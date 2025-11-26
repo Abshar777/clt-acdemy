@@ -79,6 +79,7 @@ const TeamListing = () => {
       bio: "Head Of Customer Service",
       imageUrl: t25,
     },
+
     {
       id: 32,
       name: "Ansa Abdul Offur",
@@ -86,6 +87,22 @@ const TeamListing = () => {
       role: "Head of Marketing",
       bio: "Head of Marketing",
       imageUrl: t32,
+    },
+    {
+      id: 2,
+      name: "Mohammed Sanjeed",
+      type: "Advisors",
+      role: "Sales Team Leader",
+      bio: "Sales Team Leader",
+      imageUrl: t2,
+    },
+    {
+      id: 4,
+      name: "Ajmal Ummer",
+      type: "Advisors",
+      role: "Sales Team Leader",
+      bio: "Sales Team Leader",
+      imageUrl: t4,
     },
     {
       id: 22,
@@ -186,14 +203,7 @@ const TeamListing = () => {
    
     
 
-    {
-      id: 2,
-      name: "Mohammed Sanjeed",
-      type: "Advisors",
-      role: "Sales Team Leader",
-      bio: "Sales Team Leader",
-      imageUrl: t2,
-    },
+   
     {
       id: 3,
       name: "Rashida Pudhuveettil",
@@ -202,14 +212,7 @@ const TeamListing = () => {
       bio: "Business Development Manager",
       imageUrl: t3,
     },
-    {
-      id: 4,
-      name: "Ajmal Ummer",
-      type: "Advisors",
-      role: "Sales Team Leader",
-      bio: "Sales Team Leader",
-      imageUrl: t4,
-    },
+    
     {
       id: 5,
       name: "Farsana Sirajudheen",

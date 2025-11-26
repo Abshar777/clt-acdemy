@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import ceoImage from "@/../public/ceo.png";
+import tc1 from "@/../public/t-c1.png";
 export function CEOMessage() {
   return (
     <div className="w-full px-5 ">
@@ -49,7 +49,7 @@ export function CEOMessage() {
             </div>
             </div>
             <Image
-              src={ceoImage}
+              src={tc1}
               placeholder="blur"
               width={500}
               height={500}
