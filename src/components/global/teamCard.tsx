@@ -34,7 +34,7 @@ export default function TeamCard({ member }: { member: TeamMember }) {
       whileHover="hover"
       animate="idle"
       variants={cardVariants as any}
-      className="w-full max-w-sm"
+      className={`w-full max-w-sm ${member.role === "Management" ? "col-span-2" : ""}`}
     >
      <div className="bg-red-900 md:h-[25rem] h-[15rem] flex items-end justify-center rounded-2xl relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full">

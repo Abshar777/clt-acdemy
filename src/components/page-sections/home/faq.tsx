@@ -83,7 +83,7 @@ export default function Faq() {
           </div>
 
           {/* RIGHT SIDE ACCORDION */}
-          <div className="bg-primary rounded-2xl p-8 wow fadeInUp">
+          <div className=" rounded-2xl p-8 wow fadeInUp">
             <Accordion
               type="single"
               collapsible
@@ -97,13 +97,13 @@ export default function Faq() {
                 <AccordionItem
                   key={index}
                   value={item.q}
-                  className="border-b border-white/20 md:py-4 py-2 wow fadeInUp"
+                  className="border-b border-black/20 md:py-4 py-2 wow fadeInUp"
                   data-wow-delay={item.delay}
                 >
-                  <AccordionTrigger className="md:text-lg text-md font-semibold text-white ">
+                  <AccordionTrigger className="md:text-lg text-md font-semibold text-black ">
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/90 font-semibold ">
+                  <AccordionContent className="text-black/90 font-semibold ">
                     {item.a}
                   </AccordionContent>
                 </AccordionItem>

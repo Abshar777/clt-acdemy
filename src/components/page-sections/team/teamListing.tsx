@@ -28,7 +28,7 @@ import t21 from "@/../public/t21.png";
 import t22 from "@/../public/t22.png";
 import t23 from "@/../public/t23.png";
 import t24 from "@/../public/t24.png";
-import t25 from "@/../public/t25.png";
+import t25 from "@/../public/t25.jpeg";
 import t26 from "@/../public/t26.png";
 import t27 from "@/../public/t27.png";
 import t29 from "@/../public/t29.jpeg";
@@ -64,21 +64,48 @@ const TeamListing = () => {
       imageUrl: tc2,
     },
     {
-      id: 30,
-      name: "Nandana Jayakrishnan",
-      type: "Technical",
-      role: "HR Executive",
-      bio: "HR Executive",
-      imageUrl: t31,
+      id: 1,
+      name: "Fasir Khalid",
+      type: "Advisors",
+      role: "Head of Academics",
+      bio: "Head of Academics",
+      imageUrl: t1,
+    },
+    {
+      id: 25,
+      name: "Falja Nizar",
+      type: "Customer Service",
+      role: "Head Of Customer Service",
+      bio: "Head Of Customer Service",
+      imageUrl: t25,
+    },
+    {
+      id: 32,
+      name: "Ansa Abdul Offur",
+      type: "Oprations",
+      role: "Head of Marketing",
+      bio: "Head of Marketing",
+      imageUrl: t32,
     },
     {
       id: 22,
       name: "Fathimath Thanseera",
-      type: "Technical",
+      type: "Oprations",
       role: "HR Manager",
       bio: "HR Manager",
       imageUrl: t30,
     },
+   
+    {
+      id: 30,
+      name: "Nandana Jayakrishnan",
+      type: "Oprations",
+      role: "HR Executive",
+      bio: "HR Executive",
+      imageUrl: t31,
+    },
+    
+  
     {
       id: 18,
       name: "Edwin ",
@@ -115,31 +142,25 @@ const TeamListing = () => {
     {
       id: 23,
       name: "Mohamadaffan Memon",
-      type: "Technical",
+      type: "Oprations",
       role: "PR& Communication Executive",
       bio: "PR& Communication Executive",
       imageUrl: t23,
     },
+   
     {
       id: 24,
       name: "Della Mariyam",
-      type: "Technical",
+      type: "Customer Service",
       role: "Customer Relationship Manager",
       bio: "Customer Relationship Manager",
       imageUrl: t24,
     },
-    {
-      id: 25,
-      name: "Falja Nizar",
-      type: "Technical",
-      role: "Head Of Customer Service",
-      bio: "Head Of Customer Service",
-      imageUrl: t25,
-    },
+  
     {
       id: 26,
       name: "Nubin Nuhais",
-      type: "Technical",
+      type: "Oprations",
       role: " Head Of Information Technology",
       bio: " Head Of Information Technology",
       imageUrl: t26,
@@ -147,37 +168,23 @@ const TeamListing = () => {
     {
       id: 39,
       name: "Muhammed Abshar",
-      type: "Technical",
+      type: "Oprations",
       role: "Web Developer",
       bio: "Web Developer",
       imageUrl: t39,
     },
    
-    {
-      id: 32,
-      name: "Ansa Abdul Offur",
-      type: "Technical",
-      role: "Head of Marketing",
-      bio: "Head of Marketing",
-      imageUrl: t32,
-    },
+   
     {
       id: 29,
       name: "Ifa Fathima",
-      type: "Technical",
+      type: "Oprations",
       role: "Data Engineer ",
       bio: "Data Engineer",
       imageUrl: t29,
     },
    
-    {
-      id: 1,
-      name: "Fasir Khalid",
-      type: "Advisors",
-      role: "Head of Academics",
-      bio: "Head of Academics",
-      imageUrl: t1,
-    },
+    
 
     {
       id: 2,
@@ -262,7 +269,7 @@ const TeamListing = () => {
     {
       id: 12,
       name: "Karthika",
-      type: "Advisors",
+      type: "Customer Service",
       role: "Academic Counsellor",
       bio: "Academic Counsellor",
       imageUrl: t12,
@@ -286,7 +293,7 @@ const TeamListing = () => {
     {
       id: 16,
       name: "Kadeejath",
-      type: "Advisors",
+      type: "Customer Service",
       role: "Department of Customer Service",
       bio: "Department of Customer Service",
       imageUrl: t16,
@@ -302,7 +309,7 @@ const TeamListing = () => {
     {
       id: 33,
       name: "VIVEK P",
-      type: "Technical",
+      type: "Oprations",
       role: "Social Media Coordinator",
       bio: "Social Media Coordinator",
       imageUrl: t33,
@@ -310,7 +317,7 @@ const TeamListing = () => {
     {
       id: 34,
       name: "Mrudhul K",
-      type: "Technical",
+      type: "Oprations",
       role: "Graphic Designer",
       bio: "Graphic Designer",
       imageUrl: t34,
@@ -318,7 +325,7 @@ const TeamListing = () => {
     {
       id: 35,
       name: "Vaishnav C",
-      type: "Technical",
+      type: "Oprations",
       role: "Content Writer",
       bio: "Content Writer",
       imageUrl: t35,
@@ -326,7 +333,7 @@ const TeamListing = () => {
     {
       id: 36,
       name: "Muhammed Rashid",
-      type: "Technical",
+      type: "Oprations",
       role: "Video editor",
       bio: "Video editor",
       imageUrl: t36,
@@ -334,7 +341,7 @@ const TeamListing = () => {
     {
       id: 37,
       name: "sayyid mursal",
-      type: "Technical",
+      type: "Oprations",
       role: "videographer",
       bio: "videographer",
       imageUrl: t37,
@@ -342,7 +349,7 @@ const TeamListing = () => {
     {
       id: 38,
       name: "Ardra B",
-      type: "Technical",
+      type: "Oprations",
       role: "Content writer",
       bio: "Content writer",
       imageUrl: t38,
@@ -374,7 +381,7 @@ const TeamListing = () => {
 // Quratul Ain
 // Department of Customer Service
   ];
-  const tabs = ["All","Management","Mentors","Technical", "Advisors",];
+  const tabs = ["All","Management","Mentors","Customer Service", "Advisors","Oprations",];
   const [currentTab, setCurrentTab] = useState("All");
   return (
     <div className="w-screen px-1 md:px-10 md:py-10 py-4 flex flex-col gap-4 ">
