@@ -48,22 +48,6 @@ import t39 from "@/../public/t39.jpg";
 const TeamListing = () => {
   const teamData = [
     {
-      id: 100,
-      name: "MOHAMMED AQIB LAPIA",
-      type: "Management",
-      role: "CEO",
-      bio: "CEO",
-      imageUrl: tc1,
-    },
-    {
-      id: 101,
-      name: "MOHAMMED FAIZEEN",
-      type: "Management",
-      role: "COO",
-      bio: "COO",
-      imageUrl: tc2,
-    },
-    {
       id: 1,
       name: "Fasir Khalid",
       type: "Advisors",
@@ -84,8 +68,8 @@ const TeamListing = () => {
       id: 32,
       name: "Ansa Abdul Offur",
       type: "Operations",
-      role: "Head of Marketing",
-      bio: "Head of Marketing",
+      role: "Marketing Manager",
+      bio: "Marketing Manager",
       imageUrl: t32,
     },
     {
@@ -112,7 +96,7 @@ const TeamListing = () => {
       bio: "HR Manager",
       imageUrl: t30,
     },
-   
+
     {
       id: 30,
       name: "Nandana Jayakrishnan",
@@ -121,8 +105,7 @@ const TeamListing = () => {
       bio: "HR Executive",
       imageUrl: t31,
     },
-    
-  
+
     {
       id: 18,
       name: "Edwin ",
@@ -131,7 +114,7 @@ const TeamListing = () => {
       bio: "Senior mentor",
       imageUrl: t18,
     },
-   
+
     {
       id: 20,
       name: "Rafat ",
@@ -164,7 +147,7 @@ const TeamListing = () => {
       bio: "PR& Communication Executive",
       imageUrl: t23,
     },
-   
+
     {
       id: 24,
       name: "Della Mariyam",
@@ -173,7 +156,7 @@ const TeamListing = () => {
       bio: "Customer Relationship Manager",
       imageUrl: t24,
     },
-  
+
     {
       id: 26,
       name: "Nubin Nuhais",
@@ -182,9 +165,7 @@ const TeamListing = () => {
       bio: " Head Of Information Technology",
       imageUrl: t26,
     },
-   
-   
-   
+
     {
       id: 29,
       name: "Ifa Fathima",
@@ -193,10 +174,7 @@ const TeamListing = () => {
       bio: "Data Engineer",
       imageUrl: t29,
     },
-   
-    
 
-   
     {
       id: 3,
       name: "Rashida Pudhuveettil",
@@ -205,7 +183,7 @@ const TeamListing = () => {
       bio: "Business Development Manager",
       imageUrl: t3,
     },
-    
+
     {
       id: 5,
       name: "Farsana Sirajudheen",
@@ -252,7 +230,7 @@ const TeamListing = () => {
       type: "Advisors",
       role: "Academic Counsellor",
       bio: "Academic Counsellor",
-          imageUrl: t10,
+      imageUrl: t10,
     },
     {
       id: 11,
@@ -351,33 +329,53 @@ const TeamListing = () => {
       imageUrl: t38,
     },
 
-    
-    
-   
+    //     Nandana Jayakrishnan
+    // HR Executive
 
+    // Fathimath Thanseera
+    // HR Manager
 
-//     Nandana Jayakrishnan
-// HR Executive
+    // Mohamadaffan Memon
+    // PR& Communication Executive
 
-// Fathimath Thanseera
-// HR Manager
+    // Della Mariyam
+    // Department of Customer Service
 
-// Mohamadaffan Memon
-// PR& Communication Executive
+    // Falja Nizar
+    // Head Of Customer Service
 
-// Della Mariyam
-// Department of Customer Service
+    // Nubin Nuhais
+    // Information Technology Head
 
-// Falja Nizar
-// Head Of Customer Service
-
-// Nubin Nuhais
-// Information Technology Head
-
-// Quratul Ain
-// Department of Customer Service
+    // Quratul Ain
+    // Department of Customer Service
   ];
-  const tabs = ["All","Management","Mentors","Customer Service", "Advisors","Operations",];
+  const mansgementData = [
+    {
+      id: 100,
+      name: "MOHAMMED AQIB LAPIA",
+      type: "Management",
+      role: "Chief Exicutive Officer",
+      bio: "Chief Exicutive Officer",
+      imageUrl: tc1,
+    },
+    {
+      id: 101,
+      name: "MOHAMMED FAIZEEN",
+      type: "Management",
+      role: "Chief Operating Officer",
+      bio: "Chief Operating Officer",
+      imageUrl: tc2,
+    },
+  ];
+  const tabs = [
+    "All",
+    "Management",
+    "Mentors",
+    "Customer Service",
+    "Advisors",
+    "Operations",
+  ];
   const [currentTab, setCurrentTab] = useState("All");
   return (
     <div className="w-screen px-1 md:px-10 md:py-10 py-4 flex flex-col gap-4 ">
@@ -413,13 +411,21 @@ const TeamListing = () => {
           </Tabs>
         </div>
       </div>
-      <div className="grid mb-10 justify-center justify-self-center items-center w-full grid-cols-2 md:px-2 px-1 md:grid-cols-3 lg:grid-cols-4 md:gap-4 gap-2">
-        {teamData
+      <div className="grid mb-10 justify-center justify-self-center items-center w-full grid-cols-2 md:px-2 px-1 md:grid-cols-2 lg:grid-cols-4 md:gap-4 gap-2">
+        {[...mansgementData,...teamData ]
           .filter((team) =>
             currentTab === "All" ? true : team.type === currentTab
           )
           .map((team, index) => (
-            <TeamCard key={index} member={team} />
+            <>
+              {team.type == "Management" ? (
+                <div className={`lg:col-span-2 flex items-center ${index % 2 == 0 ? "justify-end" : "justify-start"} col-span-1`}>
+                  <TeamCard key={index} member={team} />
+                </div>
+              ) : (
+                <TeamCard key={index} member={team} />
+              )}
+            </>
           ))}
       </div>
     </div>
