@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaChalkboardTeacher, FaChartPie, FaWhatsapp } from "react-icons/fa";
 import { FaMoneyBillTransfer, FaSackDollar } from "react-icons/fa6";
@@ -7,31 +8,37 @@ import { RiStockFill } from "react-icons/ri";
 const addons = [
   {
     title: "Digital Trading Journal",
+    link:"/services/0",
     desc: "Track what works. Our Digital Trading Journal gives data-driven clarity to improve every trading decision.",
     icon: <FaChartPie className="size-20  text-primary" />
   },
   {
     title: "The Profit Block eBook",
+    link:"/services/4",
     desc: "Trading is psychological. The Profit Block reveals common mindset mistakes and how to overcome them effectively.",
     icon: <FaSackDollar className="size-20  text-primary" />
   },
   {
     title: "Discord Trade Channel",
+    link:"/services/1",
     desc: "CLT’s Discord gives trade calls with clear logic, risk, entry, exit, and real-time learning support.",
     icon: <IoLogoDiscord className="size-20  text-primary" />
   },
   {     
     title: "WhatsApp Community",
+    link:"/services/5",
     desc: "Get instant feedback, motivation, and support from mentors in the CLT WhatsApp group—anytime, anywhere.",
     icon: <FaWhatsapp className="size-20  text-primary" />
   },
   {
     title: "CLT Precision Indicator",
+    link:"/services/2",
     desc: "Cut through market noise. The CLT Precision Indicator reveals liquidity zones, imbalances, and institutional moves clearly.",
     icon: <RiStockFill className="size-20  text-primary" />
   },
   {
     title: "Lifetime Mentorship",
+    link:"/services/3",
     desc: "Short courses fade. Our lifetime mentorship gives ongoing calls, reviews, strategies, and full access—forever.",
     icon: <FaChalkboardTeacher className="size-20  text-primary" />
   },
@@ -92,7 +99,8 @@ export default function TraderStackSection() {
         {/* Cards Section */}
         <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
           {addons.map((item, index) => (
-            <div
+            <Link
+              href={item.link}
               key={index}
               className="bg-white backdrop-blur-md rounded-2xl p-10 text-center shadow-xl "
             >
@@ -107,7 +115,7 @@ export default function TraderStackSection() {
               <p className="text-black/70 leading-relaxed text-sm">
                 {item.desc}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

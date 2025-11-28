@@ -52,9 +52,17 @@ const TeamListing = () => {
       id: 1,
       name: "Fasir Khalid",
       type: "Advisors",
-      role: "Head of Academics",
-      bio: "Head of Academics",
+      role: "Director of Sales Performance",
+      bio: "Director of Sales Performance",
       imageUrl: t1,
+    },
+    {
+      id: 22,
+      name: "Fathimath Thanseera",
+      type: "Operations",
+      role: "HR Manager",
+      bio: "HR Manager",
+      imageUrl: t30,
     },
     {
       id: 25,
@@ -65,14 +73,7 @@ const TeamListing = () => {
       imageUrl: t25,
     },
 
-    {
-      id: 32,
-      name: "Ansa Abdul Offur",
-      type: "Operations",
-      role: "Marketing Manager",
-      bio: "Marketing Manager",
-      imageUrl: t32,
-    },
+   
     {
       id: 2,
       name: "Mohammed Sanjeed",
@@ -89,23 +90,9 @@ const TeamListing = () => {
       bio: "Sales Team Leader",
       imageUrl: t4,
     },
-    {
-      id: 22,
-      name: "Fathimath Thanseera",
-      type: "Operations",
-      role: "HR Manager",
-      bio: "HR Manager",
-      imageUrl: t30,
-    },
+    
 
-    {
-      id: 30,
-      name: "Nandana Jayakrishnan",
-      type: "Operations",
-      role: "HR Executive",
-      bio: "HR Executive",
-      imageUrl: t31,
-    },
+   
 
     {
       id: 18,
@@ -147,6 +134,22 @@ const TeamListing = () => {
       role: "Trading mentor",
       bio: "Trading mentor",
       imageUrl: t19,
+    },
+    {
+      id: 30,
+      name: "Nandana Jayakrishnan",
+      type: "Operations",
+      role: "HR Executive",
+      bio: "HR Executive",
+      imageUrl: t31,
+    },
+    {
+      id: 32,
+      name: "Ansa Abdul Offur",
+      type: "Operations",
+      role: "Assistant Manager in Marketing",
+      bio: "Assistant Manager in Marketing",
+      imageUrl: t32,
     },
 
     {
@@ -365,8 +368,8 @@ const TeamListing = () => {
       id: 100,
       name: "MOHAMMED AQIB LAPIA",
       type: "Management",
-      role: "Chief Exicutive Officer",
-      bio: "Chief Exicutive Officer",
+      role: "Chief Executive Officer",
+      bio: "Chief Executive Officer",
       imageUrl: tc1,
     },
     {

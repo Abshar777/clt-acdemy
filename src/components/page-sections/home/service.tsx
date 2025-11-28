@@ -31,6 +31,7 @@ const Service = () => {
       desc: "Master the art of chart reading and real-time analysis.",
       bgImage: "/s4.png",
     },
+    
   ];
 
   return (
