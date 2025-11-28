@@ -151,7 +151,38 @@ const TeamListing = () => {
       bio: "Assistant Manager in Marketing",
       imageUrl: t32,
     },
-
+    {
+      id: 6,
+      name: "Alwin Bose",
+      type: "Advisors",
+      role: "Assistant Team Leader",
+      bio: "Assistant Team Leader",
+      imageUrl: t6,
+    },
+    {
+      id: 7,
+      name: "Kiran",
+      type: "Advisors",
+      role: "Assistant Team Leader",
+      bio: "Assistant Team Leader",
+      imageUrl: t7,
+    },
+    {
+      id: 13,
+      name: "Aleesha",
+      type: "Advisors",
+      role: "Assistant Team Leader",
+      bio: "Assistant Team Leader",
+      imageUrl: t13,
+    },
+    {
+      id: 14,
+      name: "Bindhyasree",
+      type: "Advisors",
+      role: "Assistant Team Leader",
+      bio: "Assistant Team Leader",
+      imageUrl: t14,
+    },
     {
       id: 23,
       name: "Mohamadaffan Memon",
@@ -174,8 +205,8 @@ const TeamListing = () => {
       id: 26,
       name: "Nubin Nuhais",
       type: "Operations",
-      role: " Head Of Information Technology",
-      bio: " Head Of Information Technology",
+      role: "Assistant IT Manager",
+      bio: "Assistant IT Manager",
       imageUrl: t26,
     },
 
@@ -205,22 +236,7 @@ const TeamListing = () => {
       bio: "Business Development Manager",
       imageUrl: t5,
     },
-    {
-      id: 6,
-      name: "Alwin Bose",
-      type: "Advisors",
-      role: "Academic Counsellor",
-      bio: "Academic Counsellor",
-      imageUrl: t6,
-    },
-    {
-      id: 7,
-      name: "Kiran",
-      type: "Advisors",
-      role: "Academic Counsellor",
-      bio: "Academic Counsellor",
-      imageUrl: t7,
-    },
+   
     {
       id: 8,
       name: "Neha",
@@ -261,22 +277,7 @@ const TeamListing = () => {
       bio: "Department of Customer Service",
       imageUrl: t12,
     },
-    {
-      id: 13,
-      name: "Aleesha",
-      type: "Advisors",
-      role: "Academic Counsellor",
-      bio: "Academic Counsellor",
-      imageUrl: t13,
-    },
-    {
-      id: 14,
-      name: "Bindhyasree",
-      type: "Advisors",
-      role: "Academic Counsellor",
-      bio: "Academic Counsellor",
-      imageUrl: t14,
-    },
+    
     {
       id: 16,
       name: "Kadeejath",
