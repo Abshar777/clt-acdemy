@@ -72,7 +72,14 @@ const TeamListing = () => {
       bio: "Head Of Customer Service",
       imageUrl: t25,
     },
-
+    {
+      id: 18,
+      name: "Edwin ",
+      type: "Mentors",
+      role: "Master Of Academics",
+      bio: "Master Of Academics",
+      imageUrl: t18,
+    },
    
     {
       id: 2,
@@ -94,14 +101,7 @@ const TeamListing = () => {
 
    
 
-    {
-      id: 18,
-      name: "Edwin ",
-      type: "Mentors",
-      role: "Master Of Academics",
-      bio: "Master Of Academics",
-      imageUrl: t18,
-    },
+
     {
       id: 40,
       name: "Aswin",

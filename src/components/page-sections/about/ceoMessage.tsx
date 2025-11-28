@@ -44,8 +44,8 @@ export function CEOMessage() {
           <div className="flex relative fit-image justify-center w-full h-full">
             <div className="absolute  w-[96%] flex items-center justify-center bottom-2 left-2 px-1">
             <div className="bg-white/5 backdrop-blur-3xl  w-full flex flex-col ] py-4 mb-2 px-4 rounded-2xl">
-              <h3 className="md:text-xl text-sm font-bold text-white">CEO</h3>
-              <p className="md:text-sm text-xs text-white/60">CLT Academy</p>
+              <h3 className="md:text-xl text-sm font-bold text-white">MOHAMMED AQIB LAPIA</h3>
+              <p className="md:text-sm text-xs text-white/60">CEO</p>
             </div>
             </div>
             <Image
