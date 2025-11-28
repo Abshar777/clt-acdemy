@@ -20,8 +20,8 @@ export default function OurTeam() {
       id: 18,
       name: "Edwin ",
       type: "Mentors",
-      role: "Senior mentor",
-      bio: "Senior mentor",
+      role: "Master Of Academics",
+      bio: "Master Of Academics",
       imageUrl: t18,
     },
     {
