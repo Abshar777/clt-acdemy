@@ -13,6 +13,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useUIStore } from "@/store/uiStore";
 import { whatsappLink } from "@/components/global/whatsapp";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const heroCta = [
   {
@@ -39,6 +40,31 @@ const heroCta = [
 ];
 
 const HeroVideo = dynamic(() => import("@/components/global/heroVideo"), {
+  ssr: false,
+  loading: () => (
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100%",
+      }}
+    >
+      <Image
+        style={{
+          // position:"relative",
+          objectFit: "cover",
+          width: "100%",
+          height: "100%",
+        }}
+        fill
+        src={poster}
+        alt="Logo"
+      />
+    </div>
+  ),
+});
+
+const HeroVideoMobile = dynamic(() => import("@/components/global/heroVideo").then((mod) => mod.HeroVideoMobile), {
   ssr: false,
   loading: () => (
     <div
@@ -136,7 +162,7 @@ const Hero = () => {
       ""
     );
   }, [isLoading]);
-
+  const isMobile = useIsMobile();
   return (
     <div
       ref={containerRef}
@@ -200,9 +226,14 @@ const Hero = () => {
               <h3 className="md:text-md text-xs uppercase">
                 CLARITY STARTS HERE
               </h3>
-              <h1 onClick={() => {
-                window.location.href = `tel:${phoneNumber.replace("+", "").replace(" ", "")}`;
-              }} className="md:text-2xl cursor-pointer text-xl text-nowrap font-bold">
+              <h1
+                onClick={() => {
+                  window.location.href = `tel:${phoneNumber
+                    .replace("+", "")
+                    .replace(" ", "")}`;
+                }}
+                className="md:text-2xl cursor-pointer text-xl text-nowrap font-bold"
+              >
                 {phoneNumber}
               </h1>
             </div>
@@ -212,7 +243,7 @@ const Hero = () => {
       </div>
 
       <div className="absolute z-0 top-0 left-0 w-full h-full bg-black">
-        <HeroVideo />
+        {isMobile ? <HeroVideoMobile /> : <HeroVideo />}
       </div>
     </div>
   );

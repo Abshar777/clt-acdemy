@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Outfit, Poppins } from "next/font/google";
 import "./globals.css";
 import IndexLayout from "@/components/layout";
+import { keywords } from "@/const/meta";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,49 +28,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "CLT Academy",
   description: "CLT Academy is a platform for learning trading and investing.",
-  keywords:[
-    "CLT Academy",
-    "Best Trading Academy in UAE",
-    "Best Trading Academy in Dubai",
-    "Best Online Trading Academy",
-    "Best Online Trading Course",
-    "Best Online Trading Course in UAE",
-    "Best Online Trading Course in Dubai",
-    "Best Online Trading Course in Sharjah",
-    "Best Online Trading Course in Abu Dhabi",
-    "Best Online Trading Course in Ajman",
-    "Best Online Trading Course in Ras Al Khaimah",
-    "Best Online Trading Course in Fujairah",
-    "Best Forex Trading Academy",
-    "Best Forex Trading Course",
-    "Best Forex Trading Course in UAE",
-    "Best Forex Trading Course in Dubai",
-    "Best Forex Trading Course in Sharjah",
-    "Best Forex Trading Course in Abu Dhabi",
-    "Best Forex Trading Course in Ajman",
-    "Best Forex Trading Course in Ras Al Khaimah",
-    "Best Forex Trading Course in Fujairah",
-    "clt trading academy",
-    "clt trading course",
-    "clt trading course in uae",
-    "clt trading course in dubai",
-    "clt trading course in sharjah",
-    "clt trading course in abu dhabi",
-    "clt trading course in ajman",
-    "clt trading course in ras al khaimah",
-    "clt trading course in fujairah",
-    "clt forex trading academy",
-    "CLT-ACADEMY",
-    "CLT-TRADING-ACADEMY",
-    "CLT-TRADING-COURSE",
-    "CLT-TRADING-COURSE-IN-UAE",
-    "CLT-TRADING-COURSE-IN-DUBAI",
-    "CLT-TRADING-COURSE-IN-SHARJAH",
-    "CLT-TRADING-COURSE-IN-ABU-DHABI",
-    "CLT-TRADING-COURSE-IN-AJMAN",
-    "CLT-TRADING-COURSE-IN-RAS-AL-KHAIMAH",
-    "CLT-TRADING-COURSE-IN-FUJAIRAH",
-  ],
+  keywords:keywords,
   openGraph: {
     images: [
       {

@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Gallery = () => {
@@ -15,6 +17,7 @@ const Gallery = () => {
         "☆ See Your Growth: Monitor progress and evolve as a trader",
       ],
       image: "/l1.png",
+      link: "/services/0",
     },
     {
       title: "Discord Trading Channel",
@@ -27,6 +30,7 @@ const Gallery = () => {
         "☆ Confident Execution: Trade with a clear mind",
       ],
       image: "/l2.png",
+      link: "/services/1",
     },
     {
       title: "CLT Precision Indicator",
@@ -39,6 +43,7 @@ const Gallery = () => {
         "☆ Trade Smarter: Use real data, not guesswork",
       ],
       image: "/l3.png",
+      link: "/services/2",
     },
     {
       title: "Life Time Mentorship",
@@ -51,14 +56,17 @@ const Gallery = () => {
         "☆ All-In Access: Tools, updates, and community for life",
       ],
       image: "/l4.png",
+      link: "/services/3",
     },
   ];
+
   return (
     <div className="w-screen md:block hidden px-3 py-10">
       {" "}
       <div className=" rounded-lg overflow-hidden flex h-screen  items-center justify-center ">
         {data.map((item, index) => (
-          <div
+          <Link
+            href={item.link}
             key={index}
             className="bg-black flex items-center justify-center relative group hover:w-[200%] transition-all duration-200 cursor-pointer w-full h-full"
           >
@@ -81,7 +89,7 @@ const Gallery = () => {
                 </p>
               ))}
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

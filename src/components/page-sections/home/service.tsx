@@ -34,12 +34,12 @@ const Service = () => {
   ];
 
   return (
-    <div className="w-screen flex justify-center md:px-20 md:py-25 py-10 min-h-screen">
+    <div className="w-screen flex justify-center md:px-20  md:py-25 py-10  ]">
       <div className="w-[90%] ">
         <div className="w-full flex items-center justify-center"></div>
 
         <div className="grid mt-3 justify-center items-center md:grid-cols-2 grid-cols-1 gap-6">
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col items-center justify-center gap-2">
             <div className="px-5 rounded-full mb-2 border border-primary text-primary font-semibold w-fit text-center py-2">
               <p className="md:text-sm text-xs uppercase text-nowrap">
                 CLT ACADEMY SERVICES

@@ -124,7 +124,9 @@ export default function Faq() {
               pros.
             </p>
           </div>
-          <div className="flex relative md:px-10 px-2 pt-4 z-10 mb-6 items-center gap-5">
+          <div onClick={() => {
+            window.open(`https://wa.me/${phoneNumber}?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20this.%20Could%20you%20please%20provide%20details?`, "_blank");
+          }} className="flex relative md:px-10 cursor-pointer px-2 pt-4 z-10 mb-6 items-center gap-5">
             <FaPhoneAlt className="text-white md:flex hidden  md:text-4xl text-xl" />
             <div className="flex text-white flex-col gap-1">
               <h3 className="md:text-md text-xs uppercase">

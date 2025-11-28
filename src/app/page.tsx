@@ -8,6 +8,7 @@ import Cta from "@/components/page-sections/home/cta";
 import Gallery from "@/components/page-sections/home/gallery";
 import Faq from "@/components/page-sections/home/faq";
 import Testimonials from "@/components/page-sections/home/testimonials";
+import OurTeam from "@/components/page-sections/home/mentors";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Jorney />
       <Service />
       <Proccess />
+      <OurTeam />
       <Cta />
       <Gallery />
       <Faq />

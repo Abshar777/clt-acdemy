@@ -64,12 +64,12 @@ export default function CourseFaq({
                 <AccordionItem
                   key={index}
                   value={item.question}
-                  className="border-b bg-primary px-2 rounded-xl border-white/20 md:py-4 py-2 wow fadeInUp"
+                  className="border-b  px-2 rounded-xl border-black/20 md:py-4 py-2 wow fadeInUp"
                 >
-                  <AccordionTrigger className="md:text-lg text-md font-semibold text-white ">
+                  <AccordionTrigger className="md:text-lg text-md font-semibold text-black ">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/90 border-t pt-3 border-white/20 font-semibold px-1">
+                  <AccordionContent className="text-black/90 pt-3 border-black/20 font-semibold px-1">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>
