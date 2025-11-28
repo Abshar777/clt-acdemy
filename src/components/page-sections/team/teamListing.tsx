@@ -44,6 +44,7 @@ import t36 from "@/../public/t36.jpeg";
 import t37 from "@/../public/t37.jpeg";
 import t38 from "@/../public/t38.jpeg";
 import t39 from "@/../public/t39.jpg";
+import t40 from "@/../public/t40.jpeg";
 
 const TeamListing = () => {
   const teamData = [
@@ -114,6 +115,14 @@ const TeamListing = () => {
       bio: "Senior mentor",
       imageUrl: t18,
     },
+    {
+      id: 40,
+      name: "Aswin",
+      type: "Mentors",
+      role: "Senior mentor",
+      bio: "Senior mentor",
+      imageUrl: t40,
+    },
 
     {
       id: 20,
@@ -139,6 +148,7 @@ const TeamListing = () => {
       bio: "Trading mentor",
       imageUrl: t19,
     },
+
     {
       id: 23,
       name: "Mohamadaffan Memon",
