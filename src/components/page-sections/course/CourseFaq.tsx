@@ -45,7 +45,7 @@ export default function CourseFaq({
             </p>
 
             <a
-              href="https://wa.me/+971507528009?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20this.%20Could%20you%20please%20provide%20details?"
+              href={`https://wa.me/${phoneNumber}?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20this.%20Could%20you%20please%20provide%20details?`}
               className="inline-block bg-primary text-white px-6 py-3 rounded-lg font-medium shadow wow fadeInUp"
               data-wow-delay="0.4s"
             >
