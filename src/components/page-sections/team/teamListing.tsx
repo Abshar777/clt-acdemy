@@ -205,8 +205,8 @@ const TeamListing = () => {
       id: 26,
       name: "Nubin Nuhais",
       type: "Operations",
-      role: "Assistant IT Manager",
-      bio: "Assistant IT Manager",
+      role: "System Engineer",
+      bio: "System Engineer",
       imageUrl: t26,
     },
 
