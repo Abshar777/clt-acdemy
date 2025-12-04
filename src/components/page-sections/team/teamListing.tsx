@@ -29,7 +29,7 @@ import t22 from "@/../public/t22.png";
 import t23 from "@/../public/t23.png";
 import t24 from "@/../public/t24.png";
 import t25 from "@/../public/t25.jpeg";
-import t26 from "@/../public/t26.png";
+import t26 from "@/../public/t26.jpeg";
 import t27 from "@/../public/t27.png";
 import t29 from "@/../public/t29.jpeg";
 import t30 from "@/../public/t30.jpeg";
