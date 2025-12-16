@@ -72,6 +72,18 @@ const Footer = () => {
               >
                 Contact Us
               </Link>
+              <Link
+                href={`whatsapp://send?phone=${phoneNumber}&text=Hello, I have a question about the courses.`}
+                className="hover:text-white cursor-pointer"
+              >
+                Gallery
+              </Link>
+              <Link
+                href={`whatsapp://send?phone=${phoneNumber}&text=Hello, I have a question about the courses.`}
+                className="hover:text-white cursor-pointer"
+              >
+                Blogs
+              </Link>
             </ul>
           </div>
 
