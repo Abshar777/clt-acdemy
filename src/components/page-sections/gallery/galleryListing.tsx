@@ -3,52 +3,53 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import DSC04938 from "@/../public/gallery/DSC04938.jpg";
-import DSC05215 from "@/../public/gallery/DSC05215.jpg";
-import DSC05234 from "@/../public/gallery/DSC05234.jpg";
-import DSC05244 from "@/../public/gallery/DSC05244.jpg";
-import DSC05298 from "@/../public/gallery/DSC05298.jpg";
-import DSC05394 from "@/../public/gallery/DSC05394.jpg";
-import DSC05396 from "@/../public/gallery/DSC05396.jpg";
-import DSC05416 from "@/../public/gallery/DSC05416.jpg";
-import DSC05476 from "@/../public/gallery/DSC05476.jpg";
-import DSC05499 from "@/../public/gallery/DSC05499.jpg";
-import DSC05502 from "@/../public/gallery/DSC05502.jpg";
-import DSC05506 from "@/../public/gallery/DSC05506.jpg";
-import DSC05510 from "@/../public/gallery/DSC05510.jpg";
-import DSC05510_1 from "@/../public/gallery/DSC05510 (1).jpg";
-import DSC05520 from "@/../public/gallery/DSC05520.jpg";
-import DSC05532 from "@/../public/gallery/DSC05532.jpg";
-import DSC05543 from "@/../public/gallery/DSC05543.jpg";
-import DSC05585 from "@/../public/gallery/DSC05585.jpg";
-import DSC05802 from "@/../public/gallery/DSC05802.jpg";
-import DSC05900 from "@/../public/gallery/DSC05900.jpg";
-import DSC06214 from "@/../public/gallery/DSC06214.jpg";
-import DSC06300 from "@/../public/gallery/DSC06300.jpg";
+import img1 from "@/../public/gallery/img1.jpg";
+import img2 from "@/../public/gallery/img2.jpg";
+import img3 from "@/../public/gallery/img3.jpg";
+import img4 from "@/../public/gallery/img4.jpg";
+import img5 from "@/../public/gallery/img5.jpg";
+import img6 from "@/../public/gallery/img6.jpg";
+import img7 from "@/../public/gallery/img7.jpg";
+import img8 from "@/../public/gallery/img8.jpg";
+import img9 from "@/../public/gallery/img9.jpg";
+import img10 from "@/../public/gallery/img10.jpg";
+import img11 from "@/../public/gallery/img11.jpg";
+import img12 from "@/../public/gallery/img12.jpg";
+import img13 from "@/../public/gallery/img13.jpg";
+import img14 from "@/../public/gallery/img14.jpg";
+import img15 from "@/../public/gallery/img15.jpg";
+import img16 from "@/../public/gallery/img16.jpg";
+import img17 from "@/../public/gallery/img17.jpg";
+import img18 from "@/../public/gallery/img18.jpg";
+import img19 from "@/../public/gallery/img19.jpg";
+import img20 from "@/../public/gallery/img20.jpg";
+import img21 from "@/../public/gallery/img21.jpg";
+import img22 from "@/../public/gallery/img22.jpg";
+
 
 const images = [
-  { src: DSC04938, alt: "", height: 400 },
-  { src: DSC05215, alt: "", height: 500 },
-  { src: DSC05234, alt: "", height: 350 },
-  { src: DSC05244, alt: "", height: 450 },
-  { src: DSC05298, alt: "", height: 380 },
-  { src: DSC05394, alt: "", height: 420 },
-  { src: DSC05396, alt: "", height: 480 },
-  { src: DSC05510, alt: "", height: 360 },
-  { src: DSC05416, alt: "", height: 440 },
-  { src: DSC05476, alt: "", height: 440 },
-  { src: DSC05499, alt: "", height: 440 },
-  { src: DSC05502, alt: "", height: 440 },
-  { src: DSC05506, alt: "", height: 440 },
-  { src: DSC05510_1, alt: "", height: 440 },
-  { src: DSC05520, alt: "", height: 440 },
-  { src: DSC05532, alt: "", height: 440 },
-  { src: DSC05543, alt: "", height: 440 },
-  { src: DSC05585, alt: "", height: 440 },
-  { src: DSC05802, alt: "", height: 440 },
-  { src: DSC05900, alt: "", height: 440 },
-  { src: DSC06214, alt: "", height: 440 },
-  { src: DSC06300, alt: "", height: 440 },
+  { src: img1, alt: "", height: 400 },
+  { src: img2, alt: "", height: 500 },
+  { src: img3, alt: "", height: 350 },
+  { src: img4, alt: "", height: 450 },
+  { src: img5, alt: "", height: 380 },
+  { src: img6, alt: "", height: 420 },
+  { src: img7, alt: "", height: 480 },
+  { src: img8, alt: "", height: 360 },
+  { src: img9, alt: "", height: 440 },
+  { src: img10, alt: "", height: 440 },
+  { src: img11, alt: "", height: 440 },
+  { src: img12, alt: "", height: 440 },
+  { src: img13, alt: "", height: 440 },
+  { src: img14, alt: "", height: 440 },
+  { src: img15, alt: "", height: 440 },
+  { src: img16, alt: "", height: 440 },
+  { src: img17, alt: "", height: 440 },
+  { src: img18, alt: "", height: 440 },
+  { src: img19, alt: "", height: 440 },
+  { src: img20, alt: "", height: 440 },
+  { src: img21, alt: "", height: 440 },
+  { src: img22, alt: "", height: 440 },
 ];
 
 export function Gallery() {
