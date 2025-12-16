@@ -8,30 +8,6 @@ const postListItems = [
   "Driving measurable impact through rigorous research methods, strategic collaboration, and continuous scienti.",
 ];
 
-// const tags = ["Explore", "Consult", "Quote"];
-
-// const socialLinks = [
-//   {
-//     icon: "fa-brands fa-linkedin",
-//     href: "https://www.linkedin.com/company/delta-international-academy/mycompany/?viewAsMember=true",
-//   },
-//   {
-//     icon: "fa-brands fa-facebook-f",
-//     href: "https://www.facebook.com/profile.php?id=100084051907653",
-//   },
-//   {
-//     icon: "fa-brands fa-instagram",
-//     href: "https://instagram.com/delta_international_institute?igshid=YmMyMTA2M2Y=",
-//   },
-//   {
-//     icon: "fa-brands fa-twitter",
-//     href: "https://twitter.com/deltainternati3",
-//   },
-//   {
-//     icon: "fa-brands fa-youtube",
-//     href: "https://www.youtube.com/channel/UCrxRRxzEy84uX-MZqxFSy2g",
-//   },
-// ];
 
 const TermsAndCondition: React.FC = () => {
   return (
@@ -53,7 +29,7 @@ const TermsAndCondition: React.FC = () => {
                 </h2>
 
                 <p className="wow fadeInUp" data-wow-delay="1s">
-                  Welcome to DELTA INTERNATIONAL privacy notice.
+                  Welcome to clt academy privacy notice.
                 </p>
                 <div className="text-black" style={{paddingLeft: "20px"}}>
                   <ul style={{listStyleType: "decimal"}} className="number-index-list">
@@ -65,12 +41,12 @@ const TermsAndCondition: React.FC = () => {
                         with Rule of the Information Technology 2017, which
                         requires the publication of rules and regulations,
                         privacy policy and terms of service for access or usage
-                        of the website which is deltainstitutions.com
+                        of the website which is clt-academy.com
                       </p>
                     </li>
                     <li>
                       <p>
-                        The terms “We/Us/Our” shall refer to Delta International
+                        The terms “We/Us/Our” shall refer to clt academy
                         Management Development Training, “You/Your” shall refer
                         to the users and any other persons accessing or seeking
                         to use the Platform.
@@ -83,8 +59,8 @@ const TermsAndCondition: React.FC = () => {
                           <li>
                             <p>
                               To become a member, you must be at least 17 years
-                              old and should be invited by a member of Delta
-                              International after the complete payment of fee.
+                              old and should be invited by a member of CLT Academy
+                              after the complete payment of fee.
                             </p>
                           </li>
                           <li>
@@ -136,7 +112,7 @@ const TermsAndCondition: React.FC = () => {
                           <li>
                             <p>
                               Being a part of any community or same niche
-                              business – immediate termination of membership
+                              business - immediate termination of membership
                               will be done
                             </p>
                           </li>

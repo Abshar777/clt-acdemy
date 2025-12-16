@@ -3,46 +3,55 @@ import CourseCard from "@/components/global/corseCard";
 import TeamCard from "@/components/global/teamCard";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React, { useState } from "react";
-import t1 from "@/../public/t1.png";
-import t2 from "@/../public/t2.png";
-import t3 from "@/../public/t3.png";
-import t4 from "@/../public/t4.png";
-import t5 from "@/../public/t5.png";
-import t6 from "@/../public/t6.png";
-import t7 from "@/../public/t7.png";
-import t8 from "@/../public/t8.png";
-import t9 from "@/../public/t9.png";
-import t10 from "@/../public/t10.png";
+import t1 from "@/../public/team/t1.png";
+import t2 from "@/../public/team/t2.png";
+import t4 from "@/../public/team/t4.png";
+import t5 from "@/../public/team/t5.png";
+import t6 from "@/../public/team/t6.png";
+import t7 from "@/../public/team/t7.png";
+import t8 from "@/../public/team/t8.png";
+import t10 from "@/../public/team/t10.png";
 import t11 from "@/../public/t11.png";
-import t12 from "@/../public/t12.png";
-import t13 from "@/../public/t13.png";
-import t14 from "@/../public/t14.png";
+import t12 from "@/../public/team/t12.png";
+import t13 from "@/../public/team/t13.png";
+import t14 from "@/../public/team/t14.png";
+import t17 from "@/../public/team/t17.png";
+import t18 from "@/../public/team/t18.png";
+import t20 from "@/../public/team/t20.png";
+import t20_1 from "@/../public/team/t20-1.png";
+import t23 from "@/../public/team/t23.png";
+import t25 from "@/../public/team/t25.png";
+import t26 from "@/../public/team/t26.png";
+import t29 from "@/../public/team/t29.jpg";
+import t30 from "@/../public/team/t30.png";
+import t31 from "@/../public/team/t31.webp";
+import t32 from "@/../public/team/t32.png";
+import t33 from "@/../public/team/t33.png";
+import t34 from "@/../public/team/t34.png";
+import t35 from "@/../public/team/t35.png";
+import t36 from "@/../public/team/t36.png";
+import t37 from "@/../public/team/t37.png";
+import t38 from "@/../public/team/t38.png";
+
+import tc1 from "@/../public/team/tc1.png";
+import tc2 from "@/../public/team/tc2.jpg";
+
+import t3 from "@/../public/t3.png";
+
+import t9 from "@/../public/t9.png";
+
 import t15 from "@/../public/t15.png";
 import t16 from "@/../public/t16.png";
-import t17 from "@/../public/t17.png";
-import t18 from "@/../public/t18.jpeg";
+
 import t19 from "@/../public/t19.png";
-import t20 from "@/../public/t20.jpeg";
-import t20_1 from "@/../public/t20-1.jpeg";
+
 import t21 from "@/../public/t21.png";
 import t22 from "@/../public/t22.png";
-import t23 from "@/../public/t23.png";
+
 import t24 from "@/../public/t24.png";
-import t25 from "@/../public/t25.jpeg";
-import t26 from "@/../public/t26.jpeg";
+
 import t27 from "@/../public/t27.png";
-import t29 from "@/../public/t29.jpeg";
-import t30 from "@/../public/t30.jpeg";
-import t31 from "@/../public/t31.jpeg";
-import tc1 from "@/../public/t-c1.png";
-import tc2 from "@/../public/t-c2.jpeg";
-import t32 from "@/../public/t32.jpeg";
-import t33 from "@/../public/t33.jpeg";
-import t34 from "@/../public/t34.jpeg";
-import t35 from "@/../public/t35.jpeg";
-import t36 from "@/../public/t36.jpeg";
-import t37 from "@/../public/t37.jpeg";
-import t38 from "@/../public/t38.jpeg";
+
 import t39 from "@/../public/t39.jpg";
 import t40 from "@/../public/t40.jpeg";
 
@@ -80,7 +89,7 @@ const TeamListing = () => {
       bio: "Master Of Academics",
       imageUrl: t18,
     },
-   
+
     {
       id: 2,
       name: "Mohammed Sanjeed",
@@ -97,10 +106,6 @@ const TeamListing = () => {
       bio: "Sales Team Leader",
       imageUrl: t4,
     },
-    
-
-   
-
 
     {
       id: 40,
@@ -236,7 +241,7 @@ const TeamListing = () => {
       bio: "Business Development Manager",
       imageUrl: t5,
     },
-   
+
     {
       id: 8,
       name: "Neha",
@@ -277,7 +282,7 @@ const TeamListing = () => {
       bio: "Department of Customer Service",
       imageUrl: t12,
     },
-    
+
     {
       id: 16,
       name: "Kadeejath",
@@ -342,27 +347,6 @@ const TeamListing = () => {
       bio: "Content writer",
       imageUrl: t38,
     },
-
-    //     Nandana Jayakrishnan
-    // HR Executive
-
-    // Fathimath Thanseera
-    // HR Manager
-
-    // Mohamadaffan Memon
-    // PR& Communication Executive
-
-    // Della Mariyam
-    // Department of Customer Service
-
-    // Falja Nizar
-    // Head Of Customer Service
-
-    // Nubin Nuhais
-    // Information Technology Head
-
-    // Quratul Ain
-    // Department of Customer Service
   ];
   const mansgementData = [
     {
@@ -426,14 +410,18 @@ const TeamListing = () => {
         </div>
       </div>
       <div className="grid mb-10 justify-center justify-self-center items-center w-full grid-cols-2 md:px-2 px-1 md:grid-cols-2 lg:grid-cols-4 md:gap-4 gap-2">
-        {[...mansgementData,...teamData ]
+        {[...mansgementData, ...teamData]
           .filter((team) =>
             currentTab === "All" ? true : team.type === currentTab
           )
           .map((team, index) => (
             <>
               {team.type == "Management" ? (
-                <div className={`lg:col-span-2 flex items-center ${index % 2 == 0 ? "justify-end" : "justify-start"} col-span-1`}>
+                <div
+                  className={`lg:col-span-2 flex items-center ${
+                    index % 2 == 0 ? "justify-end" : "justify-start"
+                  } col-span-1`}
+                >
                   <TeamCard key={index} member={team} />
                 </div>
               ) : (

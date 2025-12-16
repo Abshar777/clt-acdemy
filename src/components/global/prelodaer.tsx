@@ -27,7 +27,6 @@ const Loader: React.FC<AnimationProps> = ({ onComplete }) => {
         },
       });
 
-      // 1. Initial Setup
       gsap.set(".char", { y: 100, opacity: 0 });
       gsap.set(".candle", { scaleY: 0, transformOrigin: "bottom" });
       gsap.set(".grid-line", { scaleX: 0, transformOrigin: "left" });
@@ -37,7 +36,6 @@ const Loader: React.FC<AnimationProps> = ({ onComplete }) => {
         strokeDashoffset: 1000,
       });
 
-      // 2. Grid lines expansion (Simulate chart opening)
       tl.to(".grid-line", {
         scaleX: 1,
         duration: 1,
@@ -45,7 +43,6 @@ const Loader: React.FC<AnimationProps> = ({ onComplete }) => {
         ease: "expo.inOut",
       });
 
-      // 3. Candles popping up (Simulate market activity)
       tl.to(
         ".candle",
         {
@@ -60,7 +57,6 @@ const Loader: React.FC<AnimationProps> = ({ onComplete }) => {
         "-=0.5"
       );
 
-      // 4. Line chart drawing rapidly through the candles
       tl.to(
         ".main-path",
         {
@@ -71,7 +67,6 @@ const Loader: React.FC<AnimationProps> = ({ onComplete }) => {
         "-=1"
       );
 
-      // 5. Flash effect when line hits the end
       tl.to(".flash-overlay", {
         opacity: 0.4,
         duration: 0.1,
@@ -79,8 +74,6 @@ const Loader: React.FC<AnimationProps> = ({ onComplete }) => {
         repeat: 1,
       });
 
-      // 6. Text Reveal "CLT ACADEMY"
-      // We animate the container of candles out slightly to focus on text
       tl.to(
         candleContainerRef.current,
         {
@@ -116,7 +109,6 @@ const Loader: React.FC<AnimationProps> = ({ onComplete }) => {
         "-=0.4"
       );
 
-      // 7. Final Transition Out - Curtain effect
       tl.to(containerRef.current, {
         yPercent: -100,
         duration: 1.2,
@@ -128,10 +120,9 @@ const Loader: React.FC<AnimationProps> = ({ onComplete }) => {
     return () => ctx.revert();
   }, [onComplete]);
 
-  // Generate some dummy candle data
   const candles = Array.from({ length: 15 }).map((_, i) => {
-    const isGreen = i % 3 !== 0; // Bias towards green for "growth"
-    const height = Math.random() * 60 + 20; // 20% to 80% height
+    const isGreen = i % 3 !== 0;
+    const height = Math.random() * 60 + 20;
     return { isGreen, height };
   });
 
@@ -147,13 +138,21 @@ const Loader: React.FC<AnimationProps> = ({ onComplete }) => {
       className="fixed inset-0 z-[99] flex items-center justify-center bg-primary overflow-hidden"
     >
       {/* Background Grid */}
-      <div className={`absolute inset-0 flex flex-col justify-between p-10 ${show ? "opacity-20" : "opacity-0"} pointer-events-none`}>
+      <div
+        className={`absolute inset-0 flex flex-col justify-between p-10 ${
+          show ? "opacity-20" : "opacity-0"
+        } pointer-events-none`}
+      >
         {[...Array(6)].map((_, i) => (
           <div key={i} className="grid-line w-full h-[1px] bg-white/70" />
         ))}
       </div>
 
-      <div className={`relative w-full md:max-w-4xl max-w-2xl h-96 flex items-center justify-center ${show ? "opacity-100" : "opacity-0"}`}>
+      <div
+        className={`relative w-full md:max-w-4xl max-w-2xl h-96 flex items-center justify-center ${
+          show ? "opacity-100" : "opacity-0"
+        }`}
+      >
         {/* Chart Visualization Container */}
         <div
           ref={candleContainerRef}
@@ -181,7 +180,6 @@ const Loader: React.FC<AnimationProps> = ({ onComplete }) => {
               className="main-path stroke-white/40"
               d="M 40 300 C 100 280, 150 320, 200 250 S 300 100, 400 180 S 550 250, 600 150 S 750 200, 850 50"
               fill="none"
-              
               strokeWidth="4"
               strokeLinecap="round"
             />
