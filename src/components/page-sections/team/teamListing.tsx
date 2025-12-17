@@ -21,7 +21,7 @@ import t20 from "@/../public/team/t20.png";
 import t20_1 from "@/../public/team/t20-1.png";
 import t23 from "@/../public/team/t23.png";
 import t25 from "@/../public/team/t25.png";
-import t26 from "@/../public/team/t26.png";
+import t26 from "@/../public/team/t26.jpeg";
 import t29 from "@/../public/team/t29.jpg";
 import t30 from "@/../public/team/t30.png";
 import t31 from "@/../public/team/t31.webp";
@@ -35,6 +35,10 @@ import t38 from "@/../public/team/t38.png";
 import t40 from "@/../public/team/t40.jpeg";
 import tc1 from "@/../public/team/tc1.png";
 import tc2 from "@/../public/team/tc2.jpg";
+import t41 from "@/../public/team/t41.jpeg";
+import t42 from "@/../public/team/t42.jpeg";
+import t43 from "@/../public/team/t43.jpeg";
+import t44 from "@/../public/team/t44.jpeg";
 
 import t3 from "@/../public/team/t3.png";
 
@@ -282,15 +286,40 @@ const TeamListing = () => {
       bio: "Department of Customer Service",
       imageUrl: t12,
     },
-
     {
-      id: 16,
-      name: "Kadeejath",
+      id: 41,
+      name: "Fathima Shireen",
       type: "Customer Service",
       role: "Department of Customer Service",
       bio: "Department of Customer Service",
-      imageUrl: t16,
+      imageUrl: t41,
     },
+    {
+      id: 42,
+      name: "Nasida",
+      type: "Customer Service",
+      role: "Department of Customer Service",
+      bio: "Department of Customer Service",
+      imageUrl: t42,
+    },
+    {
+      id: 43,
+      name: "Rashidha Swalih",
+      type: "Customer Service",
+      role: "Department of Customer Service",
+      bio: "Department of Customer Service",
+      imageUrl: t43,
+    },
+    {
+      id: 44,
+      name: "Aswini",
+      type: "Customer Service",
+      role: "Department of Customer Service",
+      bio: "Department of Customer Service",
+      imageUrl: t44,
+    },
+
+  
     {
       id: 17,
       name: "Muneera",

@@ -78,10 +78,7 @@ const Footer = () => {
               >
                 Gallery
               </Link>
-              <Link
-                href={`/blogs`}
-                className="hover:text-white cursor-pointer"
-              >
+              <Link href={`/blogs`} className="hover:text-white cursor-pointer">
                 Blogs
               </Link>
             </ul>
@@ -95,8 +92,8 @@ const Footer = () => {
             <div className="space-y-4 text-gray-300">
               <p className="flex items-start gap-3">
                 <IoLocationSharp className="text-xl mt-1" />
-                Hyatt Regency Dubai, Al khaleej street, Deira, Dubai — Office
-                #239
+                Al Quiyadha Al Shaibani Building M09 Near Mamzar Center Hor al
+                anz East
               </p>
               <p className="flex items-center gap-3">
                 <FiPhoneCall className="text-xl" /> +971 557454523
