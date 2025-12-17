@@ -40,6 +40,12 @@ import t42 from "@/../public/team/t42.jpeg";
 import t43 from "@/../public/team/t43.jpeg";
 import t44 from "@/../public/team/t44.jpeg";
 
+// import t18 f
+// import t19 f
+// import t20 f
+// import t20_1
+// import t40
+
 import t3 from "@/../public/team/t3.png";
 
 import t9 from "@/../public/team/t9.jpeg";

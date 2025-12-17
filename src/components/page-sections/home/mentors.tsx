@@ -7,12 +7,12 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 
-import t18 from "@/../public/t18.jpeg";
-import t19 from "@/../public/t19.png";
-import t20 from "@/../public/t20.jpeg";
-import t20_1 from "@/../public/t20-1.jpeg";
+import t18 from "@/../public/team/t18.png";
+import t19 from "@/../public/team/t19.png";
+import t20 from "@/../public/team/t20.png";
+import t20_1 from "@/../public/team/t20-1.png";
 
-import t40 from "@/../public/t40.jpeg";
+import t40 from "@/../public/team/t40.jpeg";
 
 export default function OurTeam() {
   const teamMembers = [
