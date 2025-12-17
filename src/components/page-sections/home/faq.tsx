@@ -11,7 +11,6 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { phoneNumber } from "@/const/data";
 
 export default function Faq() {
-  
   const faqItems = [
     {
       q: "Why should I choose CLT Academy over other trading institutions?",
@@ -57,7 +56,6 @@ export default function Faq() {
         <div className="grid grid-cols-1 relative lg:grid-cols-2 gap-10">
           {/* LEFT SIDE */}
           <div className="top-12 space-y-5">
-
             <div className="px-5 mb-4 rounded-full w-fit font-semibold border border-primary text-primary text-center py-2">
               <p className="md:text-sm text-xs uppercase text-nowrap">
                 Our FAQs
@@ -78,12 +76,12 @@ export default function Faq() {
               className="inline-block bg-primary text-white px-6 md:text-lg py-3 rounded-lg font-medium shadow wow fadeInUp"
               data-wow-delay="0.4s"
             >
-             Enroll Now
+              Enroll Now
             </a>
           </div>
 
           {/* RIGHT SIDE ACCORDION */}
-          <div className=" rounded-2xl p-8 wow fadeInUp">
+          <div className="bg-primary rounded-2xl p-8 wow fadeInUp">
             <Accordion
               type="single"
               collapsible
@@ -97,13 +95,13 @@ export default function Faq() {
                 <AccordionItem
                   key={index}
                   value={item.q}
-                  className="border-b border-black/20 md:py-4 py-2 wow fadeInUp"
+                  className="border-b border-white/20 md:py-4 py-2 wow fadeInUp"
                   data-wow-delay={item.delay}
                 >
-                  <AccordionTrigger className="md:text-lg text-md font-semibold text-black ">
+                  <AccordionTrigger className="md:text-lg text-md font-semibold text-white ">
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-black/90 font-semibold ">
+                  <AccordionContent className="text-white/90 font-semibold ">
                     {item.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -116,16 +114,22 @@ export default function Faq() {
         <div className="relative shadow-2xl shadow-black/40  md:w-[86%] w-full z-10  bg-white overflow-hidden rounded-lg px-5 md:flex-row flex-col flex justify-between">
           <div className="flex-1 md:py-10 py-5 relative z-10 flex-col flex md:px-5 px-2 gap-2  justify-center ">
             <h1 className="text-2xl text-black/90 font-bold capitalize ">
-            Need Expert Trading Guidance?
+              Need Expert Trading Guidance?
             </h1>
             <p className="text-sm text-black/90 ">
-            Our advisors are here to help you plan, grow, and win —
-            whether you're just starting or scaling up.
+              Our advisors are here to help you plan, grow, and win — whether
+              you're just starting or scaling up.
             </p>
           </div>
-          <div onClick={() => {
-            window.open(`https://wa.me/${phoneNumber}?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20this.%20Could%20you%20please%20provide%20details?`, "_blank");
-          }} className="flex relative md:px-10 cursor-pointer px-2 pt-4 z-10 mb-6 items-center gap-5">
+          <div
+            onClick={() => {
+              window.open(
+                `https://wa.me/${phoneNumber}?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20this.%20Could%20you%20please%20provide%20details?`,
+                "_blank"
+              );
+            }}
+            className="flex relative md:px-10 cursor-pointer px-2 pt-4 z-10 mb-6 items-center gap-5"
+          >
             <FaPhoneAlt className="text-white md:flex hidden  md:text-4xl text-xl" />
             <div className="flex text-white flex-col gap-1">
               <h3 className="md:text-md text-xs uppercase">

@@ -70,8 +70,8 @@ const TeamListing = () => {
       id: 1,
       name: "Fasir Khalid",
       type: "Advisors",
-      role: "Director of Sales Performance",
-      bio: "Director of Sales Performance",
+      role: "Head of Sales Performance",
+      bio: "Head of Sales Performance",
       imageUrl: t1,
     },
     {
