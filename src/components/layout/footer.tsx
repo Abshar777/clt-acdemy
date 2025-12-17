@@ -67,19 +67,19 @@ const Footer = () => {
                 Our Team
               </Link>
               <Link
-                href={`whatsapp://send?phone=${phoneNumber}&text=Hello, I have a question about the courses.`}
+                href={`/contact`}
                 className="hover:text-white cursor-pointer"
               >
                 Contact Us
               </Link>
               <Link
-                href={`whatsapp://send?phone=${phoneNumber}&text=Hello, I have a question about the courses.`}
+                href={`/gallery`}
                 className="hover:text-white cursor-pointer"
               >
                 Gallery
               </Link>
               <Link
-                href={`whatsapp://send?phone=${phoneNumber}&text=Hello, I have a question about the courses.`}
+                href={`/blogs`}
                 className="hover:text-white cursor-pointer"
               >
                 Blogs

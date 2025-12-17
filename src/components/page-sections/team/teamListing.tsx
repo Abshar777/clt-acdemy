@@ -11,7 +11,7 @@ import t6 from "@/../public/team/t6.png";
 import t7 from "@/../public/team/t7.png";
 import t8 from "@/../public/team/t8.png";
 import t10 from "@/../public/team/t10.png";
-import t11 from "@/../public/t11.png";
+import t11 from "@/../public/team/t11.png";
 import t12 from "@/../public/team/t12.png";
 import t13 from "@/../public/team/t13.png";
 import t14 from "@/../public/team/t14.png";
@@ -32,28 +32,28 @@ import t35 from "@/../public/team/t35.png";
 import t36 from "@/../public/team/t36.png";
 import t37 from "@/../public/team/t37.png";
 import t38 from "@/../public/team/t38.png";
-
+import t40 from "@/../public/team/t40.jpeg";
 import tc1 from "@/../public/team/tc1.png";
 import tc2 from "@/../public/team/tc2.jpg";
 
-import t3 from "@/../public/t3.png";
+import t3 from "@/../public/team/t3.png";
 
-import t9 from "@/../public/t9.png";
+import t9 from "@/../public/team/t9.jpeg";
 
 import t15 from "@/../public/t15.png";
-import t16 from "@/../public/t16.png";
+import t16 from "@/../public/team/t16.png";
 
-import t19 from "@/../public/t19.png";
+import t19 from "@/../public/team/t19.png";
 
 import t21 from "@/../public/t21.png";
 import t22 from "@/../public/t22.png";
 
-import t24 from "@/../public/t24.png";
+import t24 from "@/../public/team/t24.jpeg";
 
 import t27 from "@/../public/t27.png";
 
 import t39 from "@/../public/t39.jpg";
-import t40 from "@/../public/t40.jpeg";
+
 
 const TeamListing = () => {
   const teamData = [
@@ -109,7 +109,7 @@ const TeamListing = () => {
 
     {
       id: 40,
-      name: "Aswin",
+      name: "Ashwin",
       type: "Mentors",
       role: "Senior mentor",
       bio: "Senior mentor",
