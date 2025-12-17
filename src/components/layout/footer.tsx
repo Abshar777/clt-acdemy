@@ -85,15 +85,15 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="w-full ">
             <h3 className="text-2xl font-semibold mb-3">Contact</h3>
             <div className="w-10 h-[3px] bg-red-500 mb-4"></div>
 
             <div className="space-y-4 text-gray-300">
               <p className="flex items-start gap-3">
-                <IoLocationSharp className="text-xl mt-1" />
+                <IoLocationSharp className="text-xl w-full mt-1" />
                 Al Quiyadha Al Shaibani Building M09 Near Mamzar Center Hor al
-                anz East
+                anz East,Deira - Dubai - United Arab Emirates
               </p>
               <p className="flex items-center gap-3">
                 <FiPhoneCall className="text-xl" /> +971 557454523

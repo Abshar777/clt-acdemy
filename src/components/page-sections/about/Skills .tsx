@@ -23,7 +23,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 w-full gap-4">
+        {/* <div className="grid grid-cols-2 w-full gap-4">
           <div className="flex flex-col mt-4 items-center justify-center w-full  gap-2">
             <div className="flex items-center justify-between gap-2">
               <h1 className="text-black/60 md:text-start text-center md:text-base text-sm font-semibold">
@@ -42,7 +42,7 @@ const Skills = () => {
             </div>
             <Progress value={90} color="primary" className="w-full" />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

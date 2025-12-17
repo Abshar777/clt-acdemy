@@ -116,12 +116,11 @@ export default function Faq() {
         <div className="relative shadow-2xl shadow-black/40  md:w-[86%] w-full z-10  bg-white overflow-hidden rounded-lg px-5 md:flex-row flex-col flex justify-between">
           <div className="flex-1 md:py-10 py-5 relative z-10 flex-col flex md:px-5 px-2 gap-2  justify-center ">
             <h1 className="text-2xl text-black/90 font-bold capitalize ">
-              Losing Trades or Missing Confidence?
+            Need Expert Trading Guidance?
             </h1>
             <p className="text-sm text-black/90 ">
-              Whether you're stuck in a loop or scaling up, <br />
-              CLT gives you the tools, systems and mentorship to trade like the
-              pros.
+            Our advisors are here to help you plan, grow, and win —
+            whether you're just starting or scaling up.
             </p>
           </div>
           <div onClick={() => {

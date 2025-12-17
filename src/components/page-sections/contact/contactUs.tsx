@@ -16,7 +16,7 @@ const contactInfo = [
     type: "Address",
     icon: <FaMapMarkerAlt className="w-6 h-6 text-white" />,
     content:
-      "Hyatt Regency Dubai - Office #239 Al Khaleej St - Hor Al Anz East - Deira - Dubai - United Arab Emirates",
+      "Al Quiyadha Al Shaibani Building M09 Near Mamzar Center Hor al anz East, Deira - Dubai - United Arab Emirates",
   },
 ];
 

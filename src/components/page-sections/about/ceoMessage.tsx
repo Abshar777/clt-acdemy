@@ -27,7 +27,7 @@ export function CEOMessage() {
                 chasing hype.
               </p>
               <p className="md:text-lg text-md text-center md:text-start text-white/80 leading-relaxed">
-                nstead, we teach the ‘why’ behind the markets — the logic,
+                Instead, we teach the ‘why’ behind the markets — the logic,
                 structure, and discipline that drive professional decisions. Our
                 education is not abstract; it’s institutional-grade training
                 designed to empower traders to think, act, and grow like
