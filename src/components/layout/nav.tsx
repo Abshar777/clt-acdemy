@@ -45,6 +45,46 @@ const navItems = [
     href: "/addons",
   },
 ];
+const mobileNavItems = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "About CLT",
+    href: "/about",
+  },
+  {
+    name: "Our Courses",
+    href: "/courses",
+  },
+  {
+    name: "Our team",
+    href: "/team",
+  },
+  {
+    name: "Contact Us",
+    // hidden: true,
+    href: `/contact`,
+  },
+  {
+    name: "Add Ons",
+    // hidden: true,
+    href: "/addons",
+  },
+  {
+    name:"Gallery",
+    href: "/gallery",
+  },
+  {
+    name:"Blogs",
+    href: "/blogs",
+  },
+  {
+    name:"Login",
+    href: "/login",
+  }
+];
 
 const navButtons = [
   {
@@ -141,7 +181,7 @@ const Nav = () => {
                 </div>
               </SheetHeader>
               <div className="flex px-4 flex-col gap-4">
-                {navItems.map((item) => (
+                {mobileNavItems.map((item) => (
                   <Link href={item.href} key={item.name}>
                     <p className="text-white py-3 border-b border-white/20 broder-dashed  ">{item.name}</p>
                   </Link>

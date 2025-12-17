@@ -58,7 +58,6 @@ import t27 from "@/../public/t27.png";
 
 import t39 from "@/../public/t39.jpg";
 
-
 const TeamListing = () => {
   const teamData = [
     {
@@ -289,37 +288,36 @@ const TeamListing = () => {
     {
       id: 41,
       name: "Fathima Shireen",
-      type: "Customer Service",
-      role: "Department of Customer Service",
-      bio: "Department of Customer Service",
+      type: "Advisors",
+      role: "Academic Counsellor",
+      bio: "Academic Counsellor",
       imageUrl: t41,
     },
     {
       id: 42,
       name: "Nasida",
-      type: "Customer Service",
-      role: "Department of Customer Service",
-      bio: "Department of Customer Service",
+      type: "Advisors",
+      role: "Academic Counsellor",
+      bio: "Academic Counsellor",
       imageUrl: t42,
     },
     {
       id: 43,
       name: "Rashidha Swalih",
-      type: "Customer Service",
-      role: "Department of Customer Service",
-      bio: "Department of Customer Service",
+      type: "Advisors",
+      role: "Academic Counsellor",
+      bio: "Academic Counsellor",
       imageUrl: t43,
     },
     {
       id: 44,
       name: "Aswini",
-      type: "Customer Service",
-      role: "Department of Customer Service",
-      bio: "Department of Customer Service",
+      type: "Advisors",
+      role: "Academic Counsellor",
+      bio: "Academic Counsellor",
       imageUrl: t44,
     },
 
-  
     {
       id: 17,
       name: "Muneera",
@@ -424,7 +422,7 @@ const TeamListing = () => {
             learn trading and investing.
           </p>
           <Tabs value={currentTab} onValueChange={setCurrentTab}>
-            <TabsList>
+            <TabsList className="flex flex-wrap">
               {tabs.map((tab, index) => (
                 <TabsTrigger
                   key={index}
