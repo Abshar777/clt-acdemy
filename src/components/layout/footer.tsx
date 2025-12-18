@@ -91,9 +91,8 @@ const Footer = () => {
 
             <div className="space-y-4 text-gray-300">
               <p className="flex items-start gap-3">
-                <IoLocationSharp className="text-xl   mt-1" />
-                Al&nbsp;Quiyadha&nbsp;Al&nbsp;Shaibani&nbsp;Building&nbsp;M09 Near Mamzar Center Hor al
-                anz East,Deira - Dubai - United Arab Emirates
+                <IoLocationSharp className="text-xl text-nowrap   mt-1" />
+                Al Quiyadh Al Shaibani Building, M09 Hor Al Anz East Dubai, United Arab Emirates
               </p>
               <p className="flex items-center gap-3">
                 <FiPhoneCall className="text-xl" /> +971 557454523
