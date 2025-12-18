@@ -12,36 +12,48 @@ import { phoneNumber } from "@/const/data";
 
 export default function Faq() {
   const faqItems = [
-   
+    {
+      q: "Why should I choose CLT Academy over other trading institutions?",
+      a: "CLT offers real trading strategies, lifetime mentorship, and a results-driven approach used by professionals and institutions.",
+      delay: "",
+      show: true,
+      alwaysOpen: true,
+    },
     {
       q: "What documents are needed to join?",
       a: "No documents are required. Simply tap “Enroll Now” or WhatsApp us for instant enrollment.",
       delay: "0.2s",
-      show: true,
+      show: false,
+      alwaysOpen: false,
+
     },
     {
       q: "How do I upgrade or switch courses later?",
       a: "You can upgrade anytime. Your existing payment or course access will be adjusted accordingly.",
       delay: "0.4s",
       show: false,
+      alwaysOpen: false,
     },
     {
       q: "Can I make a career in trading through CLT’s programs?",
       a: "Absolutely. Many students have gone from beginners to consistent traders with CLT’s structured roadmap.",
       delay: "0.6s",
       show: false,
+      alwaysOpen: false,
     },
     {
       q: "What’s the fastest way to enroll and get started?",
       a: "Tap on “Enroll Now” or speak directly to our support on WhatsApp for instant onboarding and payment setup.",
       delay: "0.8s",
       show: false,
+      alwaysOpen: false,
     },
     {
       q: "How does CLT support students after course completion?",
       a: "We provide ongoing trade reviews, access to mentorship calls, community groups, and continuous strategy updates.",
       delay: "0.8s",
       show: false,
+      alwaysOpen: false,
     },
   ];
 
@@ -78,25 +90,25 @@ export default function Faq() {
           {/* RIGHT SIDE ACCORDION */}
           <div className="bg-primary rounded-2xl p-8 wow fadeInUp">
             <Accordion
-              type="single"
-              collapsible
+              type="multiple"
+              
               defaultValue={
-                faqItems.find((i) => i.show)
-                  ? faqItems.find((i) => i.show)!.q
-                  : undefined
+                faqItems.filter((i) => i.show).map((i) => i.q)
+                 
               }
             >
               {faqItems.map((item, index) => (
                 <AccordionItem
                   key={index}
+
                   value={item.q}
                   className="border-b border-white/20 md:py-4 py-2 wow fadeInUp"
                   data-wow-delay={item.delay}
                 >
-                  <AccordionTrigger className="md:text-lg text-md font-semibold text-white ">
+                  <AccordionTrigger  className="md:text-lg text-md font-semibold text-white ">
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/90 font-semibold ">
+                  <AccordionContent  data-state={item.alwaysOpen ? "open" : ""} className="text-white/90 font-semibold ">
                     {item.a}
                   </AccordionContent>
                 </AccordionItem>
