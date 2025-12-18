@@ -92,8 +92,8 @@ const Footer = () => {
             <div className="space-y-4 text-gray-300">
               <p className="flex items-start gap-3">
                 <IoLocationSharp className="text-xl text-nowrap   mt-1" />
-                CLT Academy – Head Office Al Qiyadah Al Shaibani Building, M09
-                Hor Al Anz East Dubai United Arab Emirates
+                CLT Academy – Head Office Al&nbsp;Qiyadah Al&nbsp;Shaibani Building, M09
+                Hor Al&nbsp;Anz East Dubai United Arab Emirates
               </p>
               <p className="flex items-center gap-3">
                 <FiPhoneCall className="text-xl" /> +971 557454523
