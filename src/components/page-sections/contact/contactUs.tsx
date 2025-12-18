@@ -16,7 +16,7 @@ const contactInfo = [
     type: "Address",
     icon: <FaMapMarkerAlt className="w-6 h-6 text-white" />,
     content:
-      "Al Quiyadh Al Shaibani Building, M09 Hor Al Anz East Dubai United Arab Emirates",
+      "CLT Academy – Head Office Al Qiyadah Al Shaibani Building, M09 Hor Al Anz East Dubai United Arab Emirates",
   },
 ];
 
