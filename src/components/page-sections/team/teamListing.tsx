@@ -34,7 +34,7 @@ import t37 from "@/../public/team/t37.png";
 import t38 from "@/../public/team/t38.png";
 import t40 from "@/../public/team/t40.jpeg";
 import tc1 from "@/../public/team/tc1.png";
-import tc2 from "@/../public/team/tc2.jpg";
+import tc2 from "@/../public/team/tc2.png";
 import t41 from "@/../public/team/t41.jpeg";
 import t42 from "@/../public/team/t42.jpeg";
 import t43 from "@/../public/team/t43.jpeg";
