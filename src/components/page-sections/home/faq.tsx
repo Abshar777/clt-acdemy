@@ -12,12 +12,7 @@ import { phoneNumber } from "@/const/data";
 
 export default function Faq() {
   const faqItems = [
-    {
-      q: "Why should I choose CLT Academy over other trading institutions?",
-      a: "CLT offers real trading strategies, lifetime mentorship, and a results-driven approach used by professionals and institutions.",
-      delay: "",
-      show: false,
-    },
+   
     {
       q: "What documents are needed to join?",
       a: "No documents are required. Simply tap “Enroll Now” or WhatsApp us for instant enrollment.",
