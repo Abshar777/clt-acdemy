@@ -1,6 +1,7 @@
 "use client";
 import CourseTitleCotainer from "@/components/global/courseTitleCotainer";
 import PageTitleContainer from "@/components/global/pageTitleContainer";
+import { whatsappLink } from "@/components/global/whatsapp";
 import About from "@/components/page-sections/about/about";
 import Qulites from "@/components/page-sections/about/qulites";
 import Skills from "@/components/page-sections/about/Skills ";
@@ -47,9 +48,11 @@ const page = () => {
           disabled={Number(id) === 1}
         >
           <FaArrowLeft />
-          { "Previous Course"}
+          {"Previous Course"}
         </Button>
-        <Button>Enroll Now</Button>
+        <Button onClick={() => window.open(whatsappLink, "_blank")}>
+          Enroll Now
+        </Button>
         <Button
           className="bg-gray-200 hover:text-white text-black"
           disabled={Number(id) === course?.tabs.length}
