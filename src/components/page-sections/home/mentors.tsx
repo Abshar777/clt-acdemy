@@ -7,7 +7,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 
-import t18 from "@/../public/team/t18.png";
+import t18 from "@/../public/team/t18.jpeg";
 import t19 from "@/../public/team/t19.png";
 import t20 from "@/../public/team/t20.png";
 import t20_1 from "@/../public/team/t20-1.png";
