@@ -115,6 +115,22 @@ const TeamListing = () => {
       bio: "Sales Team Leader",
       imageUrl: t4,
     },
+    {
+      id: 30,
+      name: "Nandana Jayakrishnan",
+      type: "Operations",
+      role: "HR Executive",
+      bio: "HR Executive",
+      imageUrl: t31,
+    },
+    {
+      id: 32,
+      name: "Ansa Abdul Offur",
+      type: "Operations",
+      role: "Assistant Manager in Marketing",
+      bio: "Assistant Manager in Marketing",
+      imageUrl: t32,
+    },
 
     {
       id: 40,
@@ -149,22 +165,7 @@ const TeamListing = () => {
       bio: "Trading mentor",
       imageUrl: t19,
     },
-    {
-      id: 30,
-      name: "Nandana Jayakrishnan",
-      type: "Operations",
-      role: "HR Executive",
-      bio: "HR Executive",
-      imageUrl: t31,
-    },
-    {
-      id: 32,
-      name: "Ansa Abdul Offur",
-      type: "Operations",
-      role: "Assistant Manager in Marketing",
-      bio: "Assistant Manager in Marketing",
-      imageUrl: t32,
-    },
+   
     {
       id: 6,
       name: "Alwin Bose",
