@@ -329,8 +329,8 @@ const TeamListing = () => {
       id: 17,
       name: "Muneera",
       type: "Advisors",
-      role: "Academic Counsellor",
-      bio: "Academic Counsellor",
+      role: "Sales Team Leader",
+      bio: "Sales Team Leader",
       imageUrl: t17,
     },
     {
