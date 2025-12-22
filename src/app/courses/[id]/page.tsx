@@ -30,12 +30,12 @@ const page = () => {
           "We offer a range of courses to help you learn trading and investing."
         }
       />
-      {/* <CourseFaq
+      <CourseFaq
         faqItems={course?.faq || []}
         subtitle={course?.detSubtitle || ""}
         title={course?.detTitle || ""}
         description={course?.detDesc || ""}
-      /> */}
+      />
       <TabListing
         duration={course?.duration || ""}
         title={course?.name || ""}
