@@ -25,11 +25,16 @@ import img19 from "@/../public/gallery/img19.jpg";
 import img20 from "@/../public/gallery/img20.jpg";
 import img21 from "@/../public/gallery/img21.jpg";
 import img22 from "@/../public/gallery/img22.jpg";
+import img23 from "@/../public/gallery/img23.jpeg";
+import img24 from "@/../public/gallery/img24.jpeg";
+import img25 from "@/../public/gallery/img25.jpeg";
+import img26 from "@/../public/gallery/img26.jpeg";
 
 
 const images = [
   { src: img1, alt: "", height: 400 },
   { src: img2, alt: "", height: 500 },
+  { src: img26, alt: "", height: 440 },
   { src: img3, alt: "", height: 350 },
   { src: img4, alt: "", height: 450 },
   { src: img5, alt: "", height: 380 },
@@ -37,9 +42,11 @@ const images = [
   { src: img7, alt: "", height: 480 },
   { src: img8, alt: "", height: 360 },
   { src: img9, alt: "", height: 440 },
+  { src: img25, alt: "", height: 440 },
   { src: img10, alt: "", height: 440 },
   { src: img11, alt: "", height: 440 },
   { src: img12, alt: "", height: 440 },
+  { src: img24, alt: "", height: 440 },
   { src: img13, alt: "", height: 440 },
   { src: img14, alt: "", height: 440 },
   { src: img15, alt: "", height: 440 },
@@ -50,6 +57,10 @@ const images = [
   { src: img20, alt: "", height: 440 },
   { src: img21, alt: "", height: 440 },
   { src: img22, alt: "", height: 440 },
+  { src: img23, alt: "", height: 440 },
+ 
+ 
+  
 ];
 
 export function Gallery() {

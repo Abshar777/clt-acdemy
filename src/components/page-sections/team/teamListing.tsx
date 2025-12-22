@@ -39,30 +39,20 @@ import t41 from "@/../public/team/t41.jpeg";
 import t42 from "@/../public/team/t42.jpeg";
 import t43 from "@/../public/team/t43.jpeg";
 import t44 from "@/../public/team/t44.jpeg";
+import t45 from "@/../public/team/t45.jpeg";
 
-// import t18 f
-// import t19 f
-// import t20 f
-// import t20_1
-// import t40
 
 import t3 from "@/../public/team/t3.png";
 
 import t9 from "@/../public/team/t9.jpeg";
 
-import t15 from "@/../public/t15.png";
-import t16 from "@/../public/team/t16.png";
-
 import t19 from "@/../public/team/t19.png";
 
-import t21 from "@/../public/t21.png";
-import t22 from "@/../public/t22.png";
+
 
 import t24 from "@/../public/team/t24.jpeg";
 
-import t27 from "@/../public/t27.png";
 
-import t39 from "@/../public/t39.jpg";
 
 const TeamListing = () => {
   const teamData = [
@@ -164,6 +154,15 @@ const TeamListing = () => {
       role: "Trading mentor",
       bio: "Trading mentor",
       imageUrl: t19,
+    },
+   
+    {
+      id: 45,
+      name: "Mathson Mathew ",
+      type: "Mentors",
+      role: "Junior Mentor",
+      bio: "Junior Mentor",
+      imageUrl: t45,
     },
    
     {

@@ -13,6 +13,7 @@ const page = () => {
     <>
       <PageTitleContainer
         title="About Us"
+        isVideo={true}
         description="We are a team of traders and investors who are dedicated to helping you learn trading and investing."
       />
       <About />

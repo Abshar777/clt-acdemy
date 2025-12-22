@@ -59,4 +59,24 @@ export const AboutVideo = () => {
   );
 };
 
+
+
+export const AboutHeroVideo = () => {
+  return (
+    <video
+      loop
+      muted
+      autoPlay
+      playsInline
+      poster="/poster.png"
+      preload="none"
+      controls={false}
+      id="about-video"
+      className="w-full  pointer-events-none rounded-lg  h-full object-cover opacity-40"
+    >
+      <source src={"/ab.mp4"} type="video/mp4" />
+    </video>
+  );
+};
+
 export default HeroVideo;

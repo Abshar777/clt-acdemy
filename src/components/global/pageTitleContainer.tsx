@@ -9,13 +9,16 @@ import { IoCalculator } from "react-icons/io5";
 
 import { LuNotebookPen } from "react-icons/lu";
 import { TbTargetArrow } from "react-icons/tb";
+import HeroVideo, { AboutHeroVideo } from "./heroVideo";
 
 const PageTitleContainer = ({
   title,
   description,
+  isVideo = false,
 }: {
   title: string;
   description: string;
+  isVideo?: boolean;
 }) => {
   return (
     <div className="w-screen relative bg-black flex  flex-col pb-18 justify-center  md:px-20 px-5 md:gap-14 gap-4  ">
@@ -29,14 +32,17 @@ const PageTitleContainer = ({
       </div>
 
       <div className="absolute z-0 top-0 left-0 fit-image w-full h-full bg-linear-to-r to-primary/30 from-black">
-        <Image
-          src={awward}
-          alt={title}
-          width={500}
-          placeholder="blur"
-          height={500}
-          className="object-cover w-full h-full opacity-10"
-        />
+        {!isVideo && (
+          <Image
+            src={awward}
+            alt={title}
+            width={500}
+            placeholder="blur"
+            height={500}
+            className="object-cover w-full h-full opacity-10"
+          />
+        )}
+        {isVideo && <AboutHeroVideo />}
       </div>
       <div className="absolute bottom-0 left-0 w-full h-10 bg-black">
         <iframe
