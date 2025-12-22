@@ -11,6 +11,7 @@ import t18 from "@/../public/team/t18.jpeg";
 import t19 from "@/../public/team/t19.png";
 import t20 from "@/../public/team/t20.png";
 import t20_1 from "@/../public/team/t20-1.png";
+import t45 from "@/../public/team/t45.jpeg";
 
 import t40 from "@/../public/team/t40.jpeg";
 
@@ -56,6 +57,14 @@ export default function OurTeam() {
       role: "Trading mentor",
       bio: "Trading mentor",
       imageUrl: t19,
+    },
+    {
+      id: 45,
+      name: "Mathson Mathew ",
+      type: "Mentors",
+      role: "Junior Mentor",
+      bio: "Junior Mentor",
+      imageUrl: t45,
     },
   ];
 
