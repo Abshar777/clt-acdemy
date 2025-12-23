@@ -29,14 +29,14 @@ export default function CourseFaq({
       <div className="w-full">
         <div className="grid grid-cols-1 relative lg:grid-cols-2 gap-10">
           {/* LEFT SIDE */}
-          <div className="top-12 space-y-5 lg:sticky lg:top-20 self-start">
+          <div className="top-12  space-y-5 lg:sticky lg:top-20 self-start">
             <div className="px-5 mb-4 rounded-full w-fit font-semibold border border-primary text-primary text-center py-2">
               <p className="md:text-sm text-xs uppercase text-nowrap">
                 {title}
               </p>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-black/90 capitalize wow fadeInUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-white/90 capitalize wow fadeInUp">
               {subtitle}
             </h2>
 
@@ -46,7 +46,7 @@ export default function CourseFaq({
 
             <a
               href={`https://wa.me/${phoneNumber}?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20this.%20Could%20you%20please%20provide%20details?`}
-              className="inline-block bg-primary text-white px-6 py-3 rounded-lg font-medium shadow wow fadeInUp"
+              className="inline-block bg-primary text-black px-6 py-3 rounded-lg font-medium shadow wow fadeInUp"
               data-wow-delay="0.4s"
             >
               Buy Now
@@ -54,7 +54,7 @@ export default function CourseFaq({
           </div>
 
           {/* RIGHT SIDE ACCORDION */}
-          <div className=" rounded-2xl md:p-8 wow fadeInUp">
+          <div className="bg-primary rounded-2xl md:p-8 wow fadeInUp">
             <Accordion
               type="single"
               className="flex flex-col gap-4"
@@ -64,12 +64,12 @@ export default function CourseFaq({
                 <AccordionItem
                   key={index}
                   value={item.question}
-                  className="border-b  px-2 rounded-xl border-black/20 md:py-4 py-2 wow fadeInUp"
+                  className="border-b  px-2 rounded-xl border-white/20 md:py-4 py-2 wow fadeInUp"
                 >
-                  <AccordionTrigger className="md:text-lg text-md font-semibold text-black ">
+                  <AccordionTrigger className="md:text-lg text-md font-semibold text-white ">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-black/90 pt-3 border-black/20 font-semibold px-1">
+                  <AccordionContent className="text-white/90 pt-3 border-white/20 font-semibold px-1">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>
