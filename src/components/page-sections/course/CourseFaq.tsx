@@ -36,7 +36,7 @@ export default function CourseFaq({
               </p>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-white/90 capitalize wow fadeInUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-black/90 capitalize wow fadeInUp">
               {subtitle}
             </h2>
 
