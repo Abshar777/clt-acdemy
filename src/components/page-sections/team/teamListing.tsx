@@ -218,14 +218,14 @@ const TeamListing = () => {
       imageUrl: t24,
     },
 
-    {
-      id: 26,
-      name: "Nubin Nuhais",
-      type: "Operations",
-      role: "System Engineer",
-      bio: "System Engineer",
-      imageUrl: t26,
-    },
+    // {
+    //   id: 26,
+    //   name: "Nubin Nuhais",
+    //   type: "Operations",
+    //   role: "System Engineer",
+    //   bio: "System Engineer",
+    //   imageUrl: t26,
+    // },
 
     {
       id: 29,

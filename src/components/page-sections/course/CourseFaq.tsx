@@ -61,7 +61,7 @@ export default function CourseFaq({
                   key={index}
                   className="border-b  px-2 rounded-xl border-black/20 md:py-4 py-2 wow fadeInUp"
                 >
-                  <h1 className="md:text-lg border-b-4 border-primary/80 w-fit text-md font-semibold text-black ">
+                  <h1 className="md:text-lg border-b border-black/90 border-dashed w-fit text-md font-semibold text-black ">
                     {item.question}
                   </h1>
                   <p className="text-black/90 pt-3 border-black/20 font-semibold px-1">
