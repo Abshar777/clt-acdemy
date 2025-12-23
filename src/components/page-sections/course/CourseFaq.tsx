@@ -55,24 +55,30 @@ export default function CourseFaq({
 
           {/* RIGHT SIDE ACCORDION */}
           <div className=" rounded-2xl md:p-8 wow fadeInUp">
-            <div className="flex flex-col gap-4">
+            <Accordion
+              type="single"
+              className="flex flex-col gap-4"
+              collapsible
+            >
               {faqItems.map((item, index) => (
-                <div
+                <AccordionItem
                   key={index}
+                  value={item.question}
                   className="border-b  px-2 rounded-xl border-black/20 md:py-4 py-2 wow fadeInUp"
                 >
-                  <h1 className="md:text-lg border-b border-black/90 border-dashed w-fit text-md font-semibold text-black ">
+                  <AccordionTrigger className="md:text-lg text-md font-semibold text-black ">
                     {item.question}
-                  </h1>
-                  <p className="text-black/90 pt-3 border-black/20 font-semibold px-1">
+                  </AccordionTrigger>
+                  <AccordionContent className="text-black/90 pt-3 border-black/20 font-semibold px-1">
                     {item.answer}
-                  </p>
-                </div>
+                  </AccordionContent>
+                </AccordionItem>
               ))}
-            </div>
+            </Accordion>
           </div>
         </div>
       </div>
+     
     </div>
   );
 }
