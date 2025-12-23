@@ -24,7 +24,7 @@ export default function OurTeam() {
   const teamMembers = [
     {
       id: 18,
-      name: "Edwin ",
+      name: "Edwin Joy",
       type: "Mentors",
       role: "Master Of Academics",
       bio: "Master Of Academics",
@@ -38,11 +38,13 @@ export default function OurTeam() {
     },
     {
       id: 40,
-      name: "Aswin",
+      name: "Ashwin",
       type: "Mentors",
       role: "Senior mentor",
       bio: "Senior mentor",
       imageUrl: t40,
+      qualifications: "Bachelor of commerce, Diploma in Hospitality Managment",
+      experience: "Former Bank employee at Co operative bank",
     },
 
     {
@@ -75,6 +77,9 @@ export default function OurTeam() {
       role: "Trading mentor",
       bio: "Trading mentor",
       imageUrl: t19,
+      qualifications: "B.E, MBA, Certified from NISM- PGCCM",
+      achievements: "Created 200+ educational YouTube videos on Forex & financial markets, Mentored 100+ traders across the GCC region",
+      experience: "6+ years GCC experience in financial markets, Former Deputy Manager – Kotak Securities Limited, 7+ years trading experience across Indian markets, Forex & Crypto, Core focus on Gold, Silver, GBPUSD, EURUSD & NASDAQ",
     },
     {
       id: 45,
@@ -83,10 +88,10 @@ export default function OurTeam() {
       role: "Junior Mentor",
       bio: "Junior Mentor",
       imageUrl: t45,
-      qualifications: "Btech (Mechanical)",
+      qualifications: "B Tech in Mechanical Engineering ",
       comfortableAreaInTrading: "Currency Pairs",
       experience:
-        "1 year of trading experience in both Indian Market, Forex market ",
+        "4+ years of market experience. 2 year experience as a Forex Mentor. Expertise in swing trading with proper risk management and psychology and also worked in trading sales field. ",
     },
   ];
 
