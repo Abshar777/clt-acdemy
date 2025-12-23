@@ -366,3 +366,226 @@ h1,h2,h3,h4,h5,h6{
   background-color: var(--bg-color-sup);
   border-radius: 20px;
 }
+
+
+
+.image-anime {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-anime:after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: 1;
+}
+
+.image-anime:hover:after {
+  height: 250%;
+  transition: all 600ms linear;
+  background-color: transparent;
+}
+
+
+
+.our-services {
+  padding: 100px 0;
+}
+
+.service-item {
+  position: relative;
+  background: var(--white-color);
+  border-radius: 20px;
+  aspect-ratio: 1 / 1.15;
+  height: calc(100% - 30px);
+  margin-bottom: 30px;
+  padding: 40px 35px;
+  overflow: hidden;
+}
+
+.service-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--white-color);
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.service-item.active::before,
+.service-item:hover::before {
+  transform: translate(100%, -100%);
+}
+
+.service-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* opacity: 0; */
+  transition: all 0.4s ease-in-out;
+}
+
+.service-item.active .service-image,
+.service-item:hover .service-image {
+  opacity: 1;
+}
+
+.service-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 44, 69, 0) 39.29%,
+    var(--primary-color) 100%
+  );
+  width: 100%;
+  height: 100%;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-body {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.service-body-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.service-body .icon-box {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--accent-color);
+  border-radius: 50%;
+}
+
+.service-body .icon-box img {
+  width: 100%;
+  max-width: 24px;
+}
+
+.service-readmore-btn {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  transform: translate(-100%, 100%) rotate(90deg);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+  z-index: 1;
+}
+
+.service-item.active .service-readmore-btn,
+.service-item:hover .service-readmore-btn {
+  transform: translate(0, 0) rotate(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.service-readmore-btn a {
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.service-readmore-btn a img {
+  max-width: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+.service-readmore-btn a:hover img {
+  transform: rotate(45deg);
+}
+
+.service-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+.service-content h3 a {
+  color: inherit;
+}
+
+.service-content p {
+  margin-bottom: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.service-item.active .service-content h3,
+.service-item:hover .service-content h3,
+.service-item.active .service-content p,
+.service-item:hover .service-content p {
+  color: var(--white-color);
+}
+
+.section-footer-text {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.section-footer-text p {
+  margin: 0;
+}
+
+.section-footer-text p span {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.1em;
+  color: var(--white-color);
+  background: var(--primary-color);
+  border-radius: 4px;
+  padding: 4px 12px;
+  margin-right: 10px;
+}
+
+.section-footer-text p a {
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+}
+
+.section-footer-text p a:hover {
+  color: var(--white-color);
+}

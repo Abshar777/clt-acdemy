@@ -124,7 +124,7 @@ export default function OurTeam() {
             <SwiperSlide key={index}>
               <Sheet>
                 <SheetTrigger>
-                  <div className="relative bg-transparent rounded-xl overflow-hidden group">
+                  <div className="relative image-anime bg-transparent rounded-xl overflow-hidden group">
                     {/* Image Wrapper */}
                     <div className="relative overflow-hidden rounded-2xl bg-[#DBE0E3]">
                       {/* Gradient Overlay */}
