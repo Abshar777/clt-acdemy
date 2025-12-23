@@ -8,11 +8,13 @@ import Faq from "@/components/page-sections/home/faq";
 import Testimonials from "@/components/page-sections/home/testimonials";
 import TeamListing from "@/components/page-sections/team/teamListing";
 import React from "react";
+import tTitle from "@/../public/title/5.jpeg"
 
 const page = () => {
   return (
     <>
       <PageTitleContainer
+        imgSrc={tTitle}
         title="Gallery"
         description="Gallery of our events and activities."
       />

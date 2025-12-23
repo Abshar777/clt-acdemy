@@ -52,7 +52,7 @@ export default function Faq() {
       q: "How does CLT support students after course completion?",
       a: "We provide ongoing trade reviews, access to mentorship calls, community groups, and continuous strategy updates.",
       delay: "0.8s",
-      show: false,
+      show: true,
       alwaysOpen: true,
     },
   ];

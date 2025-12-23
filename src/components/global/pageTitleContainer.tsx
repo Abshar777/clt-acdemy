@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { phoneNumber } from "@/const/data";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import awward from "@/../public/awward.png";
 import React from "react";
 import { FaArrowRight, FaPhoneAlt } from "react-icons/fa";
@@ -15,10 +15,12 @@ const PageTitleContainer = ({
   title,
   description,
   isVideo = false,
+  imgSrc = awward,
 }: {
   title: string;
   description: string;
   isVideo?: boolean;
+  imgSrc?: StaticImageData;
 }) => {
   return (
     <div className="w-screen relative bg-black flex  flex-col pb-18 justify-center  md:px-20 px-5 md:gap-14 gap-4  ">
@@ -34,7 +36,7 @@ const PageTitleContainer = ({
       <div className="absolute z-0 top-0 left-0 fit-image w-full h-full bg-linear-to-r to-primary/30 from-black">
         {!isVideo && (
           <Image
-            src={awward}
+            src={imgSrc}
             alt={title}
             width={500}
             placeholder="blur"

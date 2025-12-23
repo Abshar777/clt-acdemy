@@ -7,11 +7,13 @@ import Faq from "@/components/page-sections/home/faq";
 import Testimonials from "@/components/page-sections/home/testimonials";
 import TeamListing from "@/components/page-sections/team/teamListing";
 import React from "react";
+import tTitle from "@/../public/title/4.jpeg"
 
 const page = () => {
   return (
     <>
       <PageTitleContainer
+        imgSrc={tTitle}
         title="Our Team"
         description="Our team is a group of experts who are dedicated to helping you learn trading and investing."
       />

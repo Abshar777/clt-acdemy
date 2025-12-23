@@ -11,6 +11,7 @@ import ContactUs from "@/components/page-sections/contact/contactUs";
 import Faq from "@/components/page-sections/home/faq";
 import Testimonials from "@/components/page-sections/home/testimonials";
 import React from "react";
+import tTitle from "@/../public/title/3.jpeg"
 
 const page = () => {
   return (
@@ -18,6 +19,7 @@ const page = () => {
       <PageTitleContainer
         title="YOUR COMPETETIVE
 ADVANTAGE STARTS HERE"
+        imgSrc={tTitle}
         description="Everything beyond the classroom, build to give you the edge the market respects."
       />
       <AddOnsCardListing />
