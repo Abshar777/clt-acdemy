@@ -44,11 +44,6 @@ export default function OurTeam() {
       bio: "Senior mentor",
       imageUrl: t40,
     },
-    //     Name - Rafat Shaik
-    // Profession - Forex Trader & Mentor
-    // Qualification -  BBA, Masters in Project Management.
-    // Experience - 7+ years in Financial Markets, 4 Years in Forex Market.
-    // Focused on Gold and BTC
 
     {
       id: 20,
@@ -61,9 +56,6 @@ export default function OurTeam() {
       comfortableAreaInTrading: "Gold and BTC",
       experience: "7+ years in Financial Markets, 4 Years in Forex Market.",
     },
-    //     Nihal Azhikodan
-
-    // “6 years of trading experience | Expert in Nasdaq & S&P500 indices | Intraday trader & scalper | Specialized in price action & volume-based trading | Junior Mentor | BBA graduate”
     {
       id: 28,
       name: "Nihal ",
@@ -84,10 +76,6 @@ export default function OurTeam() {
       bio: "Trading mentor",
       imageUrl: t19,
     },
-    //     Name: Mathson Mathew
-    // Designation: Junior Mentor
-    // Qualification: Btech (Mechanical)
-    // Comfortable Area in Trading: Currency Pairs
     {
       id: 45,
       name: "Mathson Mathew ",
@@ -184,30 +172,44 @@ export default function OurTeam() {
                       </div>
                       <div className="flex flex-col gap-2">
                         <p className="text-black/90 font-semibold text-md">
-                          <span className="font-bold text-primary">Name:</span> {member.name}
+                          <span className="font-bold text-primary">Name:</span>{" "}
+                          {member.name}
                         </p>
                         <p className="text-black/90 font-semibold text-md">
-                          <span className="font-bold text-primary">Role:</span> {member.role}
+                          <span className="font-bold text-primary">Role:</span>{" "}
+                          {member.role}
                         </p>
                         {member.qualifications && (
                           <p className="text-black/90 font-semibold text-md">
-                            <span className="font-bold text-primary">Qualifications:</span> {member.qualifications}
+                            <span className="font-bold text-primary">
+                              Qualifications:
+                            </span>{" "}
+                            {member.qualifications}
                           </p>
                         )}
                         {member.comfortableAreaInTrading && (
                           <p className="text-black/90 font-semibold text-md">
-                            <span className="font-bold text-primary">Comfortable Area in Trading:</span> {member.comfortableAreaInTrading}
+                            <span className="font-bold text-primary">
+                              Comfortable Area in Trading:
+                            </span>{" "}
+                            {member.comfortableAreaInTrading}
                             {member.comfortableAreaInTrading}
                           </p>
                         )}
                         {member.experience && (
                           <p className="text-black/90 font-semibold text-md">
-                            <span className="font-bold text-primary">Experience:</span> {member.experience}
+                            <span className="font-bold text-primary">
+                              Experience:
+                            </span>{" "}
+                            {member.experience}
                           </p>
                         )}
                         {member.achievements && (
                           <p className="text-black/90 font-semibold text-md">
-                            <span className="font-bold text-primary">Achievements:</span> {member.achievements}
+                            <span className="font-bold text-primary">
+                              Achievements:
+                            </span>{" "}
+                            {member.achievements}
                           </p>
                         )}
                       </div>
