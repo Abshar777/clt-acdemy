@@ -70,7 +70,8 @@ export default function OurTeam() {
       id: 1,
       name: "Edwin Joy",
       type: "Mentors",
-      role: "Academic Head & Forex Analyst",
+      role: "Master Of Academics",
+
       bio: "A rare academic-trader blend, Edwin is the brain behind CLT’s academic curriculum. With deep research in trading instruments and a commitment to structured learning, his mentorship blends discipline and data.",
       background:
         "BTech, MTech, MBA, PGDIM, PGDHRM | Certified by NPTEL, IRADAI",
