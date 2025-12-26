@@ -7,6 +7,7 @@ import Faq from "@/components/page-sections/home/faq";
 import Testimonials from "@/components/page-sections/home/testimonials";
 import React from "react";
 import { CEOMessage } from "@/components/page-sections/about/ceoMessage";
+import AwardsSection from "@/components/page-sections/about/awwards";
 
 const page = () => {
   return (
@@ -17,6 +18,7 @@ const page = () => {
       />
       <About />
       <Qulites />
+      <AwardsSection />
       <VisionMissionSection />
       <CEOMessage />
       <div className="md:h-0 h-20"></div>
