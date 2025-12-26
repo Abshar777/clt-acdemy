@@ -10,6 +10,7 @@ import { IoCalculator } from "react-icons/io5";
 import { LuNotebookPen } from "react-icons/lu";
 import { TbTargetArrow } from "react-icons/tb";
 import HeroVideo, { AboutHeroVideo } from "./heroVideo";
+import { cn } from "@/lib/utils";
 
 const PageTitleContainer = ({
   title,
@@ -41,7 +42,9 @@ const PageTitleContainer = ({
             width={500}
             placeholder="blur"
             height={500}
-            className="object-cover w-full h-full opacity-10"
+            className={cn("object-cover w-full h-full ",
+              imgSrc === awward ? "opacity-10" : "opacity-20"
+            )}
           />
         )}
         {isVideo && <AboutHeroVideo />}
