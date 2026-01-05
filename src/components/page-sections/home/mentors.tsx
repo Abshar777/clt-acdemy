@@ -131,6 +131,51 @@ export default function OurTeam() {
       achievements:
         "Expert in volatile instruments, price psychology, and precise entry-exit strategies",
     },
+    {
+
+//       Name: Nihal
+
+// Role: Senior Mentor
+
+// Bio:
+// Nihal brings a practical, hands-on approach to trading education, focusing on real-market application and consistency. With a strong emphasis on discipline and risk control, he helps learners transition from theory to confident execution. His mentorship style centers on clarity, patience, and long-term skill building within CLT’s learning ecosystem.
+
+// Background:
+// Trader & Market Enthusiast | Bachelor’s Degree | Financial Markets Educator
+
+// Qualifications:
+// NISM Certified, Technical & Price Action Trading Certification, Risk & Capital Management Training
+
+// Experience:
+// 5+ years in trading and personalized mentoring
+
+// Achievements:
+// Practical market execution, beginner-to-intermediate trader development, disciplined trading habits, confidence building
+          id: 28,
+          name: "Nihal ",
+          type: "Mentors", 
+          role: "Trading mentor",
+          bio: "Nihal brings a practical, hands-on approach to trading education, focusing on real-market application and consistency. With a strong emphasis on discipline and risk control, he helps learners transition from theory to confident execution. His mentorship style centers on clarity, patience, and long-term skill building within CLT’s learning ecosystem.",
+          background: "Trader & Market Enthusiast | Bachelor’s Degree | Financial Markets Educator",
+          qualifications: "NISM Certified, Technical & Price Action Trading Certification, Risk & Capital Management Training",
+          experience: "5+ years in trading and personalized mentoring",
+          achievements: "Practical market execution, beginner-to-intermediate trader development, disciplined trading habits, confidence building",
+          imageUrl: t20_1, 
+        },
+        {
+
+
+          id: 19,
+          name: "Sriram",
+          type: "Mentors",
+          role: "Trading mentor",
+          bio: "Sriram combines deep market understanding with a calm, methodical mentoring approach. Known for his clarity and structured teaching style, he focuses on building strong trading mindsets while simplifying complex market dynamics. His commitment to disciplined learning makes him a key pillar in CLT’s mentoring framework.",
+          background: "Market Analyst | Bachelor of Commerce | Finance & Trading Educator",
+          qualifications: "NISM Certified, Equity & Derivatives Specialist, Technical Analysis Certified, Risk Management Certification",
+          experience: "6+ years in trading, market analysis, and student-focused mentoring",
+          achievements: "Concept clarity, strategy-based learning, mindset development, risk-focused trading discipline",
+          imageUrl: t19,
+        },
   ];
 
   return (

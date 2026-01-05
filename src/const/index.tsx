@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 
 
-
+import a0 from "@/../public/awwards/a0.jpg";
 import a1 from "@/../public/awwards/a1.jpeg";
 import a2 from "@/../public/awwards/a2.jpeg";
 import a3 from "@/../public/awwards/a3.jpeg";
@@ -169,6 +169,14 @@ export const PROFIT_RESULTS = [
 
 
 export const AWARDS = [
+  {
+    id:0,
+    title:"Forex Expo Award ",
+    year:"2025",
+    org:"Master of forex education",
+     icon: <Award className="w-8 h-8" />,
+    image:a0,
+  },
   {
     id: 1,
     title: "ProFx Awards",

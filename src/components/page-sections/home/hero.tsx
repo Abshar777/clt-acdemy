@@ -174,7 +174,7 @@ const Hero = () => {
             Learn Trading from Elite Mentors
           </p>
         </div>
-        <h1 className="md:text-8xl overflow-hidden  hero-title-line text-5xl md:text-start text-center  text-white font-bold">
+        <h1 className="md:text-8xl text-nowrap overflow-hidden  hero-title-line text-5xl md:text-start text-center  text-white font-bold">
           {splitText("Learn Freely")} <br />
           {splitText("Lead Fully")}
         </h1>
