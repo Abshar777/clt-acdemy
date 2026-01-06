@@ -339,9 +339,9 @@ const TeamListing = () => {
     {
       id: 42,
       name: "Nasida",
-      type: "Advisors",
-      role: "Academic Counsellor",
-      bio: "Academic Counsellor",
+      type: "Customer Service",
+      role: "Department of Customer Service",
+      bio: "Department of Customer Service",
       imageUrl: t42,
     },
     {
