@@ -59,13 +59,22 @@ import t24 from "@/../public/team/t24.jpeg";
 
 const TeamListing = () => {
   const teamData = [
-    {
-      id: 1,
-      name: "Fasir Khalid",
-      type: "Advisors",
-      role: "Director of Sales Performance",
-      bio: "Director of Sales Performance",
-      imageUrl: t1,
+    // {
+    //   id: 1,
+    //   name: "Fasir Khalid",
+    //   type: "Advisors",
+    //   role: "Director of Sales Performance",
+    //   bio: "Director of Sales Performance",
+    //   imageUrl: t1,
+    // },
+
+     {
+      id: 18,
+      name: "Edwin ",
+      type: "Mentors",
+      role: "Master Of Academics",
+      bio: "Master Of Academics",
+      imageUrl: t18,
     },
     {
       id: 22,
@@ -83,14 +92,7 @@ const TeamListing = () => {
       bio: "Head Of Customer Service",
       imageUrl: t25,
     },
-    {
-      id: 18,
-      name: "Edwin ",
-      type: "Mentors",
-      role: "Master Of Academics",
-      bio: "Master Of Academics",
-      imageUrl: t18,
-    },
+   
 
     {
       id: 2,
