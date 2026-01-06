@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { AWARDS } from "@/const";
 import Image from "next/image";
-import a0 from "@/../public/awwards/a0.jpg";
 
 const AwardsSection: React.FC = () => {
   return (
@@ -41,82 +40,86 @@ const AwardsSection: React.FC = () => {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-          <div className="w-full flex items-center justify-center rounded-2xl col-span-5 relative">
- <motion.div
-              key={AWARDS[0].id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.05 }}
-              whileHover={{ y: -5 }}
-              className="relative  min-w-[500px] group p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:border-red-600/30 hover:bg-white hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-300 text-center"
-            >
-              
-              <div className="w-20 h-30 bg-white rounded-2xl flex items-center justify-center overflow-hidden text-red-600 mx-auto mb-4 shadow-sm group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
+        <div className="grid md:-translate-x-10 md:grid-cols-2 min-h-[55vh] gap-0 md:gap-6">
+          <div className="w-full md:h-full h-[300px] rounded-2xl flex items-center md:justify-end justify-center">
+            <div className="w-3/5 h-full rounded-xl ">
+              <div
+                key={AWARDS[0].id}
+                className="w-full flex items-end justify-center relative h-full rounded-2xl overflow-hidden"
+              >
                 <Image
                   placeholder="blur"
-                  height={64}
+                  height={500}
                   src={AWARDS[0].image}
                   alt={AWARDS[0].title}
-                  width={64}
-                  className="object-cover w-full h-full"
+                  width={500}
+                  className="object-cover absolute inset-0 top-0 w-full h-full"
                 />
+                {/* <div className="w-[95%] mx-auto h-fit relative z-[1] p-2 bg-black/50 backdrop-blur-2xl rounded-2xl mb-2 flex items-center justify-center">
+                  <p className="text-white text-sm font-black">
+                    {AWARDS[0].title}
+                  </p>
+                </div> */}
               </div>
-
-              <div className="relative z-10">
-                <p className="text-red-600 font-black text-[12px] uppercase tracking-widest mb-1.5">
-                  Winner {AWARDS[0].year}
-                </p>
-                <h4 className="text-lg font-black text-slate-900 mb-1 group-hover:text-red-600 transition-colors line-clamp-2 min-h-[2.5rem] flex items-center justify-center">
-                  {AWARDS[0].title}
-                </h4>
-                <p className="text-slate-400 text-[10px] font-bold uppercase tracking-tight line-clamp-1">
-                  {AWARDS[0].org}
-                </p>
-              </div>
-
-              {/* Decorative Corner Glow */}
-              <div className="absolute top-4 right-4 w-1.5 h-1.5 bg-red-100 rounded-full group-hover:bg-red-600 transition-colors" />
-            </motion.div>
+            </div>
           </div>
-          {AWARDS.slice(1).map((award, i) => (
-            <motion.div
-              key={award.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              whileHover={{ y: -5 }}
-              className="relative group p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:border-red-600/30 hover:bg-white hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-300 text-center"
-            >
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center overflow-hidden text-red-600 mx-auto mb-4 shadow-sm group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-2 place-items-center min-h-[300px]">
+            {AWARDS.slice(1, 7).map((award) => (
+              <div
+                key={award.id}
+                className="w-full flex items-end justify-center relative h-[250px] rounded-2xl overflow-hidden"
+              >
                 <Image
                   placeholder="blur"
-                  height={64}
+                  height={500}
                   src={award.image}
                   alt={award.title}
-                  width={64}
-                  className="object-cover w-full h-full"
+                  width={500}
+                  className="object-cover absolute inset-0 w-full h-full"
                 />
+                <div className="w-[95%] mx-auto mb-2 p-2 bg-white/5 backdrop-blur-xl rounded-2xl relative z-[1] text-center">
+                  <p className="text-xs font-semibold text-primary">
+                    winner {award.year}
+                  </p>
+                  <p className="text-white text-xs font-semibold">
+                    {award.title}
+                  </p>
+                </div>
               </div>
+            ))}
+          </div>
 
-              <div className="relative z-10">
-                <p className="text-red-600 font-black text-[10px] uppercase tracking-widest mb-1.5">
-                  Winner {award.year}
-                </p>
-                <h4 className="text-sm font-black text-slate-900 mb-1 group-hover:text-red-600 transition-colors line-clamp-2 min-h-[2.5rem] flex items-center justify-center">
-                  {award.title}
-                </h4>
-                <p className="text-slate-400 text-[9px] font-bold uppercase tracking-tight line-clamp-1">
-                  {award.org}
-                </p>
-              </div>
-
-              {/* Decorative Corner Glow */}
-              <div className="absolute top-4 right-4 w-1.5 h-1.5 bg-red-100 rounded-full group-hover:bg-red-600 transition-colors" />
-            </motion.div>
-          ))}
+          {/* Mobile Infinite Marquee */}
+          <div className="md:hidden mt-6 overflow-hidden">
+            <div className="marquee gap-2">
+              {[...AWARDS.slice(1, 7), ...AWARDS.slice(1, 7)].map(
+                (award, index) => (
+                  <div
+                    key={`${award.id}-${index}`}
+                    className="w-[150px] flex-shrink-0 flex items-end justify-center relative h-[200px] rounded-2xl overflow-hidden"
+                  >
+                    <Image
+                      placeholder="blur"
+                      height={500}
+                      src={award.image}
+                      alt={award.title}
+                      width={500}
+                      className="object-cover absolute inset-0 w-full h-full"
+                    />
+                    <div className="w-[95%] mx-auto mb-2 p-2 bg-white/5 backdrop-blur-xl rounded-2xl relative z-[1] text-center">
+                      <p className="text-xs font-semibold text-primary">
+                        winner {award.year}
+                      </p>
+                      <p className="text-white text-xs font-semibold">
+                        {award.title}
+                      </p>
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
         </div>
         {/* <img src="" alt="" /> */}
       </div>

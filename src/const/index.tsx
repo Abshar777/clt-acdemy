@@ -169,6 +169,7 @@ export const PROFIT_RESULTS = [
 
 
 export const AWARDS = [
+  
   {
     id:0,
     title:"Forex Expo Award ",
@@ -176,38 +177,6 @@ export const AWARDS = [
     org:"Master of forex education",
      icon: <Award className="w-8 h-8" />,
     image:a0,
-  },
-  {
-    id: 1,
-    title: "ProFx Awards",
-    year: "2024",
-    org: "Best Forex Academy",
-    icon: <Award className="w-8 h-8" />,
-    image: a1,
-  },
-  {
-    id: 2,
-    title: "Global Islamic FinTech",
-    year: "2022",
-    org: "GIFA Market Leadership Award ",
-    icon: <Shield className="w-8 h-8" />,
-    image: a2,
-  },
-  {
-    id: 3,
-    title: "MEA Finance Annual Industry Awards",
-    year: "2024",
-    org: "Best Professional Trading Academy",
-    icon: <Trophy className="w-8 h-8" />,
-    image: a3,
-  },
-  {
-    id: 4,
-    title: "Gulf Finance Focus",
-    year: "2021",
-    org: "Customer service excellence award",
-    icon: <Medal className="w-8 h-8" />,
-    image: a4,
   },
   {
     id: 5,
@@ -218,12 +187,12 @@ export const AWARDS = [
     image: a5,
   },
   {
-    id: 6,
-    title: "iFX EXPO Dubai",
+    id: 1,
+    title: "ProFx Awards",
     year: "2024",
-    org: "Best Trading Curriculum Design",
-    icon: <Globe className="w-8 h-8" />,
-    image: a6,
+    org: "Best Forex Academy",
+    icon: <Award className="w-8 h-8" />,
+    image: a1,
   },
   {
     id: 7,
@@ -249,6 +218,8 @@ export const AWARDS = [
     icon: <Cpu className="w-8 h-8" />,
     image: a9,
   },
+  
+  
   {
     id: 10,
     title: "Finance Middle East",
