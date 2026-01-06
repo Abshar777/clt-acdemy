@@ -197,7 +197,7 @@ export const AWARDS = [
     id: 3,
     title: "MEA Finance Annual Industry Awards",
     year: "2024",
-    org: "Best Management Consultancy Firm",
+    org: "Best Professional Trading Academy",
     icon: <Trophy className="w-8 h-8" />,
     image: a3,
   },
@@ -205,7 +205,7 @@ export const AWARDS = [
     id: 4,
     title: "Gulf Finance Focus",
     year: "2021",
-    org: "Cusyomer service excellence award",
+    org: "Customer service excellence award",
     icon: <Medal className="w-8 h-8" />,
     image: a4,
   },
@@ -221,7 +221,7 @@ export const AWARDS = [
     id: 6,
     title: "iFX EXPO Dubai",
     year: "2024",
-    org: "Global B2B Exhibition",
+    org: "Best Trading Curriculum Design",
     icon: <Globe className="w-8 h-8" />,
     image: a6,
   },
@@ -245,7 +245,7 @@ export const AWARDS = [
     id: 9,
     title: "Banking Tech Summit",
     year: "2025",
-    org: "MEA Finance",
+    org: "Innovation in Trading Education Award",
     icon: <Cpu className="w-8 h-8" />,
     image: a9,
   },
@@ -259,5 +259,5 @@ export const AWARDS = [
   }
 ];
 
-
+  
 export const phoneNumber = "+971557454523";

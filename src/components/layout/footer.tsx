@@ -92,7 +92,7 @@ const Footer = () => {
             <div className="space-y-4 text-gray-300">
               <p className="flex items-start gap-3">
                 <IoLocationSharp className="text-xl text-nowrap   mt-1" />
-                CLT Academy Head Office <br />M09, Al&nbsp;Shaibani Building,
+                CLT Academy | Head Office <br />M09, Al&nbsp;Shaibani Building,
                 Hor&nbsp;Al&nbsp;Anz&nbsp;East, Dubai, United Arab Emirates.
               </p>
               <p className="flex items-center gap-3">

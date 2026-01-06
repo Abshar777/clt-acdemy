@@ -50,10 +50,10 @@ const AwardsSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.05 }}
               whileHover={{ y: -5 }}
-              className="relative group p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:border-red-600/30 hover:bg-white hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-300 text-center"
+              className="relative  min-w-[500px] group p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:border-red-600/30 hover:bg-white hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-300 text-center"
             >
               
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center overflow-hidden text-red-600 mx-auto mb-4 shadow-sm group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
+              <div className="w-20 h-30 bg-white rounded-2xl flex items-center justify-center overflow-hidden text-red-600 mx-auto mb-4 shadow-sm group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
                 <Image
                   placeholder="blur"
                   height={64}
@@ -65,13 +65,13 @@ const AwardsSection: React.FC = () => {
               </div>
 
               <div className="relative z-10">
-                <p className="text-red-600 font-black text-[10px] uppercase tracking-widest mb-1.5">
+                <p className="text-red-600 font-black text-[12px] uppercase tracking-widest mb-1.5">
                   Winner {AWARDS[0].year}
                 </p>
-                <h4 className="text-sm font-black text-slate-900 mb-1 group-hover:text-red-600 transition-colors line-clamp-2 min-h-[2.5rem] flex items-center justify-center">
+                <h4 className="text-lg font-black text-slate-900 mb-1 group-hover:text-red-600 transition-colors line-clamp-2 min-h-[2.5rem] flex items-center justify-center">
                   {AWARDS[0].title}
                 </h4>
-                <p className="text-slate-400 text-[9px] font-bold uppercase tracking-tight line-clamp-1">
+                <p className="text-slate-400 text-[10px] font-bold uppercase tracking-tight line-clamp-1">
                   {AWARDS[0].org}
                 </p>
               </div>
