@@ -29,7 +29,7 @@ import a4 from "@/../public/awwards/a4.jpeg";
 import a5 from "@/../public/awwards/a5.jpeg";
 import a6 from "@/../public/awwards/a6.jpeg";
 import a7 from "@/../public/awwards/a7.jpeg";
-import a8 from "@/../public/awwards/a8.webp";
+import a8 from "@/../public/awwards/a8.jpeg";
 import a9 from "@/../public/awwards/a9.jpeg";
 import a10 from "@/../public/awwards/a10.jpeg";
 
