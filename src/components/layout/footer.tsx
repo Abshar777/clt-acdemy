@@ -109,7 +109,7 @@ const Footer = () => {
       </div>
       <div className="w-full bg-black  ">
         <div className="max-w-7xl mx-auto flex items-center md:flex-row flex-col md:gap-0 gap-1 py-2 justify-between md:px-32 md:py-6 md:h-3">
-          <p className="text-xs">© 2025 CLT Academy. All rights reserved.</p>
+          <p className="text-xs">© 2026 CLT Academy. All rights reserved.</p>
           <p className="text-xs flex items-center gap-2">
             <Link
               href="/disclaimer"
