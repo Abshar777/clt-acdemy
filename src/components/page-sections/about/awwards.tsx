@@ -85,6 +85,7 @@ const AwardsSection: React.FC = () => {
                   <p className="text-white text-xs font-semibold">
                     {award.title}
                   </p>
+
                 </div>
               </div>
             ))}
@@ -113,6 +114,9 @@ const AwardsSection: React.FC = () => {
                       </p>
                       <p className="text-white text-xs font-semibold">
                         {award.title}
+                      </p>
+                      <p className="text-white/70 text-xs font-medium">
+                        {award.org}
                       </p>
                     </div>
                   </div>
