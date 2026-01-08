@@ -76,22 +76,15 @@ const TeamListing = () => {
       bio: "Master Of Academics",
       imageUrl: t18,
     },
-    {
-      id: 22,
-      name: "Fathimath Thanseera",
-      type: "Operations",
-      role: "HR Manager",
-      bio: "HR Manager",
-      imageUrl: t30,
-    },
-    {
-      id: 25,
-      name: "Falja Nizar",
-      type: "Customer Service",
-      role: "Head Of Customer Service",
-      bio: "Head Of Customer Service",
-      imageUrl: t25,
-    },
+    // {
+    //   id: 22,
+    //   name: "Fathimath Thanseera",
+    //   type: "Operations",
+    //   role: "HR Manager",
+    //   bio: "HR Manager",
+    //   imageUrl: t30,
+    // },
+   
    
 
     {
@@ -109,6 +102,14 @@ const TeamListing = () => {
       role: "Sales Team Leader",
       bio: "Sales Team Leader",
       imageUrl: t4,
+    },
+     {
+      id: 25,
+      name: "Falja Nizar",
+      type: "Customer Service",
+      role: "Head Of Customer Service",
+      bio: "Head Of Customer Service",
+      imageUrl: t25,
     },
     {
       id: 30,
