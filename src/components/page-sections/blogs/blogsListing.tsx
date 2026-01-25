@@ -22,7 +22,7 @@ const BlogsListing = () => {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blogs"`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blogs`,
       );
       if (response.ok) {
         const data = await response.json();
