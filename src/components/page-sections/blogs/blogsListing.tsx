@@ -1,26 +1,69 @@
 "use client";
 import { BLOG_POSTS } from "@/const/data";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BlogPostCard } from "./blogCard";
 import { BlogSidebar } from "./blogSidebar";
+import { Post, User } from "@/types";
+import PostModal from "./PostModal";
 
 const BlogsListing = () => {
-  return (
-    <section className="container mt-20 min-h-screen mx-auto px-4 max-w-7xl pb-20">
-      <div className="flex flex-col lg:flex-row gap-12 xl:gap-20">
-        <div className="lg:w-2/3">
-          {BLOG_POSTS.map((post) => (
-            <BlogPostCard key={post.id} post={post} />
-          ))}
-        </div>
+  const [posts, setPosts] = useState<Post[]>([]);
 
-        <div className="lg:w-1/3">
-          <div className="sticky top-28">
-            <BlogSidebar />
+  const [selectedPost, setSelectedPost] = useState<Post | null>(null);
+  const [editingPost, setEditingPost] = useState<Post | null>(null);
+  const [showAdminPanel, setShowAdminPanel] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [loginData, setLoginData] = useState({ username: "", password: "" });
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Sync with Backend
+  const fetchPosts = async () => {
+    setIsLoading(true);
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blogs"`,
+      );
+      if (response.ok) {
+        const data = await response.json();
+        setPosts(data);
+      } else {
+        setPosts(BLOG_POSTS);
+      }
+    } catch (error) {
+      console.error("Fetch Error:", error);
+      setPosts(BLOG_POSTS);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchPosts();
+  }, []);
+  return (
+    <>
+      <section className="container mt-20 min-h-screen mx-auto px-4 max-w-7xl pb-20">
+        <div className="flex flex-col lg:flex-row gap-12 xl:gap-20">
+          <div className="lg:w-2/3">
+            {posts.map((post) => (
+              <BlogPostCard
+                onClick={() => setSelectedPost(post)}
+                key={post._id}
+                post={post}
+              />
+            ))}
+          </div>
+
+          <div className="lg:w-1/3">
+            <div className="sticky top-28">
+              <BlogSidebar />
+            </div>
           </div>
         </div>
-      </div>
-    </section>      
+      </section>
+      <PostModal post={selectedPost} onClose={() => setSelectedPost(null)} />
+    </>
   );
 };
 

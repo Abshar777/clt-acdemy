@@ -28,7 +28,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "CLT Academy",
   description: "CLT Academy is a platform for learning trading and investing.",
-  keywords:keywords,
+  keywords: keywords,
   openGraph: {
     images: [
       {
@@ -38,7 +38,8 @@ export const metadata: Metadata = {
       },
     ],
     title: "CLT Academy",
-    description: "CLT Academy is a platform for learning trading and investing.",
+    description:
+      "CLT Academy is a platform for learning trading and investing.",
     url: "https://clt-academy.com",
     siteName: "CLT Academy",
     locale: "uae",
@@ -47,7 +48,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "CLT Academy",
-    description: "CLT Academy is a platform for learning trading and investing.",
+    description:
+      "CLT Academy is a platform for learning trading and investing.",
     images: ["/logo.png"],
   },
   icons: {
@@ -71,7 +73,6 @@ export const metadata: Metadata = {
   creator: "CLT Academy",
   publisher: "CLT Academy",
   category: "education",
- 
 };
 
 export default function RootLayout({
@@ -81,6 +82,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/react-quill-new@1.0.2/dist/quill.snow.css"
+        ></link>
+      </head>
       <body
         className={`${geistSans.variable} ${poppins.variable} ${outfit.variable} relative ${geistMono.variable} antialiased overflow-x-hidden w-screen `}
       >

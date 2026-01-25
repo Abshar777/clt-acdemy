@@ -1,27 +1,20 @@
 import React from "react";
 import { Calendar, User, Folder, Clock, ArrowRight } from "lucide-react";
+import { Post } from "@/types";
 
-interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  image: string;
-  date: string;
-  author: string;
-  category: string;
-  readTime: string;
-}
+
 interface BlogPostCardProps {
-  post: BlogPost;
+  post: Post;
+  onClick: () => void;
 }
 
-export const BlogPostCard: React.FC<BlogPostCardProps> = ({ post }) => {
+export const BlogPostCard: React.FC<BlogPostCardProps> = ({ post, onClick }) => {
   return (
-    <article className="bg-white mb-12 flex flex-col group">
+    <article onClick={onClick} className="bg-white mb-12 flex flex-col group">
       {/* Image Container */}
       <div className="relative overflow-hidden rounded-lg mb-6">
         <img
-          src={post.image}
+          src={post.photo}
           alt={post.title}
           className="w-full h-64 md:h-96 object-cover transform transition-transform duration-500 group-hover:scale-105"
         />
@@ -31,7 +24,7 @@ export const BlogPostCard: React.FC<BlogPostCardProps> = ({ post }) => {
       <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
         <div className="flex items-center gap-1.5 hover:text-red-600 transition-colors cursor-pointer">
           <Calendar size={16} className="text-red-500" />
-          <span>{post.date}</span>
+          <span>{new Date(post.createdAt).toLocaleDateString()}</span>
         </div>
         <div className="flex items-center gap-1.5 hover:text-red-600 transition-colors cursor-pointer">
           <User size={16} className="text-red-500" />
@@ -39,7 +32,7 @@ export const BlogPostCard: React.FC<BlogPostCardProps> = ({ post }) => {
         </div>
         <div className="flex items-center gap-1.5 hover:text-red-600 transition-colors cursor-pointer">
           <Folder size={16} className="text-red-500" />
-          <span>{post.category}</span>
+          <span>{post.tags[0]}</span>
         </div>
         <div className="flex items-center gap-1.5">
           <Clock size={16} className="text-red-500" />
@@ -53,7 +46,7 @@ export const BlogPostCard: React.FC<BlogPostCardProps> = ({ post }) => {
       </h2>
 
       {/* Excerpt */}
-      <p className="text-gray-600 leading-relaxed mb-6">{post.excerpt}</p>
+      <p className="text-gray-600 leading-relaxed mb-6">{post.description}</p>
 
       {/* Enroll Button */}
       <div>
