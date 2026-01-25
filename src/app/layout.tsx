@@ -3,6 +3,8 @@ import { Geist, Geist_Mono, Outfit, Poppins } from "next/font/google";
 import "./globals.css";
 import IndexLayout from "@/components/layout";
 import { keywords } from "@/const/meta";
+import "react-quill-new/dist/quill.snow.css";
+// import "font-awesome/css/font-awesome.min.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
