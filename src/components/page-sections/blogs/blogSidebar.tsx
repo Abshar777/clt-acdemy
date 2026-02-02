@@ -38,14 +38,19 @@ export const BlogSidebar: React.FC = () => {
     }
   };
   const fetchTags = async () => {
+    console.log("FETCH TAGS");
     setIsLoading(true);
     try {
-      const response = await fetch("http://localhost:3000/api/blogs/tags");
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blogs/tags`,
+      );
       if (response.ok) {
         const data = await response.json();
         setTags(data);
+        console.log("TAGS", data);
       } else {
         setTags(CATEGORIES);
+        console.log("TAGS from local", CATEGORIES);
       }
     } catch (error) {
       console.error("Fetch Error:", error);
