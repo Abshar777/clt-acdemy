@@ -18,6 +18,7 @@ export const BlogSidebar: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   // Sync with Backend
+
   const fetchPosts = async () => {
     setIsLoading(true);
     try {
@@ -38,7 +39,7 @@ export const BlogSidebar: React.FC = () => {
     }
   };
   const fetchTags = async () => {
-    console.log("FETCH TAGS");
+    console.log("FETCH TAGS ", process.env.NEXT_PUBLIC_BACKEND_URL);
     setIsLoading(true);
     try {
       const response = await fetch(
