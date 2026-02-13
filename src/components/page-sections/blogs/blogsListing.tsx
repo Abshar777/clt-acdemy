@@ -5,6 +5,8 @@ import { BlogPostCard } from "./blogCard";
 import { BlogSidebar } from "./blogSidebar";
 import { Post, User } from "@/types";
 import PostModal from "./PostModal";
+import { useRouter } from "next/navigation";
+import { useUIStore } from "@/store/uiStore";
 
 const BlogsListing = () => {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -16,7 +18,8 @@ const BlogsListing = () => {
   const [loginData, setLoginData] = useState({ username: "", password: "" });
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-
+  const router = useRouter();
+  const { setPost } = useUIStore();
   // Sync with Backend
   const fetchPosts = async () => {
     setIsLoading(true);
@@ -48,7 +51,10 @@ const BlogsListing = () => {
           <div className="lg:w-2/3">
             {posts.map((post) => (
               <BlogPostCard
-                onClick={() => setSelectedPost(post)}
+                onClick={() => {
+                  setPost(post);
+                  router.push(`/blogs/${post.title}`);
+                }}
                 key={post._id}
                 post={post}
               />

@@ -1,8 +1,10 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import { Post } from "@/types";
 import "react-quill-new/dist/quill.snow.css";
 import { IoClose } from "react-icons/io5";
 import { FaUserShield } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 interface PostModalProps {
   post: Post | null;
@@ -11,7 +13,73 @@ interface PostModalProps {
 
 const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
   if (!post) return null;
+  
+ useEffect(() => {
+    // Update document title
+    const originalTitle = document.title;
+    document.title = post.title;
+    // Update meta tags
+    const updateMetaTag = (name: string, content: string) => {
+      let element = document.querySelector(`meta[name="${name}"]`);
+      console.log(element);
+      if (!element) {
+        element = document.createElement('meta');
+        element.setAttribute('name', name);
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
 
+    const updatePropertyTag = (property: string, content: string) => {
+      let element = document.querySelector(`meta[property="${property}"]`);
+      if (!element) {
+        element = document.createElement('meta');
+        element.setAttribute('property', property);
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
+
+    // Update canonical link
+    const updateCanonical = (href: string) => {
+      let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+      if (!link) {
+        link = document.createElement('link');
+        link.setAttribute('rel', 'canonical');
+        document.head.appendChild(link);
+      }
+      link.href = href;
+    };
+
+    // Set all meta tags
+    updateMetaTag('description', post.description);
+    updateMetaTag('keywords', post.tags.join(", "));
+    
+    // Open Graph
+    updatePropertyTag('og:title', post.title);
+    updatePropertyTag('og:description', post.description);
+    updatePropertyTag('og:image', post.photo);
+    updatePropertyTag('og:type', 'article');
+    
+    // Twitter
+    updateMetaTag('twitter:card', 'summary_large_image');
+    updateMetaTag('twitter:title', post.title);
+    updateMetaTag('twitter:description', post.description);
+    updateMetaTag('twitter:image', post.photo);
+    
+    // Canonical URL
+    const canonicalUrl = post._id || `${window.location.origin}/blog/${post._id}`;
+    updateCanonical(canonicalUrl);
+
+    // Lock body scroll
+    // document.body.style.overflow = 'hidden';
+
+    // Cleanup function
+    return () => {
+      document.title = originalTitle;
+      // document.body.style.overflow = 'unset';
+    };
+  }, [post]);
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 sm:p-4 md:p-8 overflow-hidden">
       {/* Backdrop */}

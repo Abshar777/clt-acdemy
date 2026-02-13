@@ -94,7 +94,7 @@ export const BlogSidebar: React.FC = () => {
           {Object.keys(tags).map((cat, index) => (
             <li key={index} className="group">
               <a
-                href="#"
+                href={`?category=${cat}`}
                 className="flex items-center justify-between text-gray-600 group-hover:text-red-600 transition-colors"
               >
                 <span className="flex items-center gap-2">
