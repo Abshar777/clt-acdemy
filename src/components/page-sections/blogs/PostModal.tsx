@@ -13,7 +13,7 @@ interface PostModalProps {
 
 const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
   if (!post) return null;
-  
+  const router = useRouter();
  useEffect(() => {
     // Update document title
     const originalTitle = document.title;
@@ -85,7 +85,9 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/95 backdrop-blur-3xl animate-in fade-in duration-700"
-        onClick={onClose}
+        onClick={()=>{
+          router.back();
+        }}
       />
 
       {/* Modal */}
@@ -140,7 +142,7 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
           {/* Title & Tags */}
           <div className="absolute bottom-6 sm:bottom-12 left-4 sm:left-8 md:left-16 right-4 sm:right-16">
             <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
-              {post.tags.map((tag) => (
+              {post.tags.slice(0, 5).map((tag) => (
                 <span
                   key={tag}
                   className="px-3 py-1 sm:px-4 sm:py-1.5 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.3em] bg-primary/50 text-white rounded-xl shadow-[0_10px_20px_-5px_primary]"
@@ -148,6 +150,13 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
                   {tag}
                 </span>
               ))}
+              {
+                post.tags.length > 5 && (
+                  <span className="px-3 py-1 sm:px-4 sm:py-1.5 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.3em] bg-primary/50 text-white rounded-xl shadow-[0_10px_20px_-5px_primary]">
+                    +{post.tags.length - 5}
+                  </span>
+                )
+              }
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-7xl font-black text-white leading-[0.95] tracking-tighter">
@@ -175,10 +184,10 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
 
             <div>
               <p className="text-zinc-100 font-black text-lg sm:text-xl uppercase tracking-tighter">
-                {post.author}
+                CLT Academy
               </p>
               <p className="text-zinc-600 text-[10px] sm:text-xs font-black uppercase tracking-widest mt-1">
-                Node Synced:{" "}
+                Created On:{" "}
                 {new Date(post.createdAt).toLocaleDateString("en-US", {
                   month: "long",
                   day: "numeric",

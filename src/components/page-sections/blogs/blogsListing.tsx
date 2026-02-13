@@ -53,7 +53,7 @@ const BlogsListing = () => {
               <BlogPostCard
                 onClick={() => {
                   setPost(post);
-                  router.push(`/blogs/${post.title}`);
+                  router.push(`/blogs/${post.title}?id=${post._id}`);
                 }}
                 key={post._id}
                 post={post}
