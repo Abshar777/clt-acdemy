@@ -116,21 +116,21 @@ export default function OurTeam() {
         "Balanced risk management & psychology with mechanical precision",
     },
 
-    {
-      id: 4,
-      name: "Rafat",
-      type: "Mentors",
-      role: "Trading Mentor",
-      bio: "Rafat offers a deep-rooted understanding of the volatility and power of gold and crypto trading. His structured mentoring style and command of long-term charting give students a strong sense of direction.",
-      background: "BBA | Master’s in Project Management",
-      imageUrl: t20,
-      qualifications:
-        "NSE Certified, Forex Trading Masterclass, CISI Certified, AFCM Certified, CFA – Investments",
-      comfortableAreaInTrading: "Gold & Bitcoin",
-      experience: "7+ years into trading and personalized education",
-      achievements:
-        "Expert in volatile instruments, price psychology, and precise entry-exit strategies",
-    },
+    // {
+    //   id: 4,
+    //   name: "Rafat",
+    //   type: "Mentors",
+    //   role: "Trading Mentor",
+    //   bio: "Rafat offers a deep-rooted understanding of the volatility and power of gold and crypto trading. His structured mentoring style and command of long-term charting give students a strong sense of direction.",
+    //   background: "BBA | Master’s in Project Management",
+    //   imageUrl: t20,
+    //   qualifications:
+    //     "NSE Certified, Forex Trading Masterclass, CISI Certified, AFCM Certified, CFA – Investments",
+    //   comfortableAreaInTrading: "Gold & Bitcoin",
+    //   experience: "7+ years into trading and personalized education",
+    //   achievements:
+    //     "Expert in volatile instruments, price psychology, and precise entry-exit strategies",
+    // },
     {
 
 //       Name: Nihal

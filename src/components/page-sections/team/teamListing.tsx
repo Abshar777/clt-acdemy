@@ -137,14 +137,14 @@ const TeamListing = () => {
       imageUrl: t40,
     },
 
-    {
-      id: 20,
-      name: "Rafat ",
-      type: "Mentors",
-      role: "Trading mentor",
-      bio: "Trading mentor",
-      imageUrl: t20,
-    },
+    // {
+    //   id: 20,
+    //   name: "Rafat ",
+    //   type: "Mentors",
+    //   role: "Trading mentor",
+    //   bio: "Trading mentor",
+    //   imageUrl: t20,
+    // },
     {
       id: 28,
       name: "Nihal ",
