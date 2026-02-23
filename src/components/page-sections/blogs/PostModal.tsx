@@ -199,9 +199,9 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
 
           {/* Description */}
           <div className="mx-auto">
-            <div className="text-base sm:text-xl text-white/80 bg-primary/5 rounded-xl p-4 sm:p-6 font-light mb-12 sm:mb-16 border-l-4 border-primary/50 pl-6 sm:pl-10 italic">
+            {/* <div className="text-base sm:text-xl text-white/80 bg-primary/5 rounded-xl p-4 sm:p-6 font-light mb-12 sm:mb-16 border-l-4 border-primary/50 pl-6 sm:pl-10 italic">
               {post.description}
-            </div>
+            </div> */}
 
             {/* Rich Content */}
             <div
