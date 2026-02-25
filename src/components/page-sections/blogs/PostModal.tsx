@@ -81,13 +81,11 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
     };
   }, [post]);
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 sm:p-4 md:p-8 overflow-hidden">
+      <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 sm:p-4 md:p-8 overflow-hidden">
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/95 backdrop-blur-3xl animate-in fade-in duration-700"
-        onClick={()=>{
-          router.back();
-        }}
+        onClick={onClose}
       />
 
       {/* Modal */}
@@ -142,7 +140,7 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
           {/* Title & Tags */}
           <div className="absolute bottom-6 sm:bottom-12 left-4 sm:left-8 md:left-16 right-4 sm:right-16">
             <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
-              {post.tags.slice(0, 5).map((tag) => (
+              {post.tags.map((tag) => (
                 <span
                   key={tag}
                   className="px-3 py-1 sm:px-4 sm:py-1.5 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.3em] bg-primary/50 text-white rounded-xl shadow-[0_10px_20px_-5px_primary]"
@@ -150,13 +148,6 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
                   {tag}
                 </span>
               ))}
-              {
-                post.tags.length > 5 && (
-                  <span className="px-3 py-1 sm:px-4 sm:py-1.5 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.3em] bg-primary/50 text-white rounded-xl shadow-[0_10px_20px_-5px_primary]">
-                    +{post.tags.length - 5}
-                  </span>
-                )
-              }
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-7xl font-black text-white leading-[0.95] tracking-tighter">
@@ -184,24 +175,34 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
 
             <div>
               <p className="text-zinc-100 font-black text-lg sm:text-xl uppercase tracking-tighter">
-                CLT Academy
+                {post.authorDetails?.name || post.author}
               </p>
               <p className="text-zinc-600 text-[10px] sm:text-xs font-black uppercase tracking-widest mt-1">
-                Created On:{" "}
+                {post.authorDetails?.profession || "Admin"} • Node Synced:{" "}
                 {new Date(post.createdAt).toLocaleDateString("en-US", {
                   month: "long",
                   day: "numeric",
                   year: "numeric",
                 })}
               </p>
+              {post.authorDetails?.link && (
+                <a
+                  href={post.authorDetails.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 text-xs font-black uppercase tracking-widest text-primary hover:text-white transition-colors"
+                >
+                  Profile Link
+                </a>
+              )}
             </div>
           </div>
 
           {/* Description */}
           <div className="mx-auto">
-            {/* <div className="text-base sm:text-xl text-white/80 bg-primary/5 rounded-xl p-4 sm:p-6 font-light mb-12 sm:mb-16 border-l-4 border-primary/50 pl-6 sm:pl-10 italic">
+            <div className="text-base sm:text-xl text-white/80 bg-primary/5 rounded-xl p-4 sm:p-6 font-light mb-12 sm:mb-16 border-l-4 border-primary/50 pl-6 sm:pl-10 italic">
               {post.description}
-            </div> */}
+            </div>
 
             {/* Rich Content */}
             <div

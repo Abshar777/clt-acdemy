@@ -1,4 +1,3 @@
-
 export interface Post {
   _id: string;
   title: string;
@@ -11,12 +10,21 @@ export interface Post {
   author: string;
   __v?: number;
   readTime?: string;
+  authorDetails?: AuthorProfile | null;
 }
 
+export interface AuthorProfile {
+  _id: string;
+  name: string;
+  profession: string;
+  link: string;
+  createdAt?: string;
+  updatedAt?: string;
+}
 export interface User {
   id: string;
   username: string;
-  role: 'admin' | 'user';
+  role: "admin" | "user";
 }
 
 export type AppState = {
