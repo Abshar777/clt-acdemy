@@ -12,6 +12,7 @@ import t20 from "@/../public/team/t20.png";
 import t20_1 from "@/../public/team/t20-1.png";
 import t45 from "@/../public/team/t45.jpeg";
 import t40 from "@/../public/team/t40.jpeg";
+import t50 from "@/../public/team/t50.jpeg";
 import {
   Sheet,
   SheetContent,
@@ -116,41 +117,24 @@ export default function OurTeam() {
         "Balanced risk management & psychology with mechanical precision",
     },
 
-    // {
-    //   id: 4,
-    //   name: "Rafat",
-    //   type: "Mentors",
-    //   role: "Trading Mentor",
-    //   bio: "Rafat offers a deep-rooted understanding of the volatility and power of gold and crypto trading. His structured mentoring style and command of long-term charting give students a strong sense of direction.",
-    //   background: "BBA | Master’s in Project Management",
-    //   imageUrl: t20,
-    //   qualifications:
-    //     "NSE Certified, Forex Trading Masterclass, CISI Certified, AFCM Certified, CFA – Investments",
-    //   comfortableAreaInTrading: "Gold & Bitcoin",
-    //   experience: "7+ years into trading and personalized education",
-    //   achievements:
-    //     "Expert in volatile instruments, price psychology, and precise entry-exit strategies",
-    // },
+    {
+      id: 4,
+      name: "Rahim",
+      type: "Mentors",
+      role: "Trading Mentor",
+      bio: "Rahim offers a deep-rooted understanding of the volatility and power of gold and crypto trading. His structured mentoring style and command of long-term charting give students a strong sense of direction.",
+      background: "BBA | Master’s in Project Management",
+      imageUrl: t50,
+      qualifications:
+        "NSE Certified, Forex Trading Masterclass, CISI Certified, AFCM Certified, CFA – Investments",
+      comfortableAreaInTrading: "Gold & Bitcoin",
+      experience: "7+ years into trading and personalized education",
+      achievements:
+        "Expert in volatile instruments, price psychology, and precise entry-exit strategies",
+    },
     {
 
-//       Name: Nihal
 
-// Role: Senior Mentor
-
-// Bio:
-// Nihal brings a practical, hands-on approach to trading education, focusing on real-market application and consistency. With a strong emphasis on discipline and risk control, he helps learners transition from theory to confident execution. His mentorship style centers on clarity, patience, and long-term skill building within CLT’s learning ecosystem.
-
-// Background:
-// Trader & Market Enthusiast | Bachelor’s Degree | Financial Markets Educator
-
-// Qualifications:
-// NISM Certified, Technical & Price Action Trading Certification, Risk & Capital Management Training
-
-// Experience:
-// 5+ years in trading and personalized mentoring
-
-// Achievements:
-// Practical market execution, beginner-to-intermediate trader development, disciplined trading habits, confidence building
           id: 28,
           name: "Nihal ",
           type: "Mentors", 

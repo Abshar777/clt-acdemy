@@ -54,7 +54,7 @@ import t19 from "@/../public/team/t19.png";
 
 
 import t24 from "@/../public/team/t24.jpeg";
-
+import t50 from "@/../public/team/t50.jpeg";
 
 
 const TeamListing = () => {
@@ -137,14 +137,14 @@ const TeamListing = () => {
       imageUrl: t40,
     },
 
-    // {
-    //   id: 20,
-    //   name: "Rafat ",
-    //   type: "Mentors",
-    //   role: "Trading mentor",
-    //   bio: "Trading mentor",
-    //   imageUrl: t20,
-    // },
+    {
+      id: 20,
+      name: "Rahim ",
+      type: "Mentors",
+      role: "Trading mentor",
+      bio: "Trading mentor",
+      imageUrl: t50,
+    },
     {
       id: 28,
       name: "Nihal ",
