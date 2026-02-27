@@ -14,7 +14,7 @@ interface PostModalProps {
 const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
   if (!post) return null;
   const router = useRouter();
- useEffect(() => {
+  useEffect(() => {
     // Update document title
     const originalTitle = document.title;
     document.title = post.title;
@@ -54,19 +54,19 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
     // Set all meta tags
     updateMetaTag('description', post.description);
     updateMetaTag('keywords', post.tags.join(", "));
-    
+
     // Open Graph
     updatePropertyTag('og:title', post.title);
     updatePropertyTag('og:description', post.description);
     updatePropertyTag('og:image', post.photo);
     updatePropertyTag('og:type', 'article');
-    
+
     // Twitter
     updateMetaTag('twitter:card', 'summary_large_image');
     updateMetaTag('twitter:title', post.title);
     updateMetaTag('twitter:description', post.description);
     updateMetaTag('twitter:image', post.photo);
-    
+
     // Canonical URL
     const canonicalUrl = post._id || `${window.location.origin}/blog/${post._id}`;
     updateCanonical(canonicalUrl);
@@ -81,7 +81,7 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
     };
   }, [post]);
   return (
-      <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 sm:p-4 md:p-8 overflow-hidden">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 sm:p-4 md:p-8 overflow-hidden">
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/95 backdrop-blur-3xl animate-in fade-in duration-700"
@@ -200,9 +200,9 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
 
           {/* Description */}
           <div className="mx-auto">
-            <div className="text-base sm:text-xl text-white/80 bg-primary/5 rounded-xl p-4 sm:p-6 font-light mb-12 sm:mb-16 border-l-4 border-primary/50 pl-6 sm:pl-10 italic">
+            {/* <div className="text-base sm:text-xl text-white/80 bg-primary/5 rounded-xl p-4 sm:p-6 font-light mb-12 sm:mb-16 border-l-4 border-primary/50 pl-6 sm:pl-10 italic">
               {post.description}
-            </div>
+            </div> */}
 
             {/* Rich Content */}
             <div
@@ -211,7 +211,7 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
                 text-sm sm:text-base
                 text-zinc-300
                 leading-[1.7] sm:leading-[1.8]
-                space-y-6 sm:space-y-8
+                space-y-10 sm:space-y-8
                 font-serif
               "
             >
