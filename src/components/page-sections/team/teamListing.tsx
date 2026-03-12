@@ -395,14 +395,6 @@ const TeamListing = () => {
       imageUrl: t35,
     },
     {
-      id: 36,
-      name: "Muhammed Rashid",
-      type: "Operations",
-      role: "Video editor",
-      bio: "Video editor",
-      imageUrl: t36,
-    },
-    {
       id: 37,
       name: "sayyid mursal",
       type: "Operations",
