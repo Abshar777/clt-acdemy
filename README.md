@@ -1,36 +1,238 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+  # Next.js admin Application (v15.5.5)
 
-## Getting Started
+This repository contains a **Next.js v15.5.5** frontend application
+built with a modern, scalable architecture.\
+It integrates **NextAuth**, **React Query**, **React Hook Form**,
+**Zod**, **Zustand**, **Framer Motion**, **TanStack Table**, **ShadCN
+UI**, and **Tailwind CSS**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Tech Stack
+
+### **Framework & Core**
+
+- **Next.js 15.5.5**
+- **TypeScript**
+- **App Router** architecture
+
+### **Authentication**
+
+- **NextAuth.js**
+
+### **Data Fetching & State**
+
+- **React Query (@tanstack/react-query)**\
+- **Zustand** (for client‑side state management)
+
+### **Forms & Validation**
+
+- **React Hook Form**
+- **Zod** (schema validation)
+- Custom hooks:
+  - `useZodForm`
+  - `useZodFormV2`
+
+### **UI & Animations**
+
+- **ShadCN UI**\
+- **Tailwind CSS**
+- **Framer Motion**
+
+### **Tables**
+
+- **TanStack React Table (v8)**
+
+---
+
+# 📂 Project Architecture
+
+    src/
+     ├─ api/                     # API call functions (axios)
+     │   ├─ deposit.ts
+     │   ├─ withdraw.ts
+     │   └─ utils.ts
+     │
+     ├─ hooks/
+     │   ├─ useDeposit.ts       # Deposit logic (mutation + queries + validation)
+     │   ├─ useDepositeHistory.ts
+     │   ├─ useDeleteDeposit.ts
+     │   ├─ useMutation.ts       # React-query mutation wrapper
+     │   ├─ useQueryData.ts      # React-query fetch wrapper
+     │   └─ useZodForm.ts        # Zod + React Hook Form integration
+     │
+     ├─ components/
+     │   ├─ forms/
+     │   │     ├─ depositForm.tsx
+     │   │     └─ withdrawForm.tsx
+     │   │
+     │   ├─ tables/
+     │   │   ├─ deposit/
+     │   │   │    ├─ columns.ts
+     │   │   │    ├─ depositListing.tsx
+     │   │   │
+     │   │   └─ withdraw/
+     │   │        ├─ columns.ts
+     │   │        ├─ withdrawListing.tsx
+     │   │
+     │   └─ ui/ (shadcn components)
+     │
+     ├─ schema/
+     │   ├─ funds/
+     │   │    └─ deposit.schema.ts
+     │
+     └─ types/
+         └─ api.response.ts
+
+---
+
+# 🎯 How the Architecture Works
+
+### **API Functions**
+
+All backend API requests live in the **`/api`** folder.
+
+Example:
+
+```ts
+export const deposit = (payload, token) =>
+  axios.post("/deposit", payload, { headers: { Authorization: token } });
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### **Hooks Layer (Main Business Logic)**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Every feature has its own dedicated hook.\
+Example for deposit:
 
-## Learn More
+### ✔ `useDeposit()`
 
-To learn more about Next.js, take a look at the following resources:
+- Handles:
+  - deposit API mutations\
+  - Zod validation\
+  - react-hook-form form state\
+  - API-driven dropdown options\
+  - currency exchange rate logic\
+  - error handling\
+  - success toast\
+- Resets the form on success\
+- Fetches prices, payment methods, currencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ✔ `useDepositeHistory()`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Wraps a React-Query GET request\
+- Formats response for tables
 
-## Deploy on Vercel
+### ✔ `useDeleteDeposit()`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Deletes deposit entry\
+- Automatically refreshes React Query cache
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+# 📝 Custom Utility Hooks
+
+### 🔸 `useMutationData()`
+
+A wrapper over `useMutation()`: - Shows success/error toast\
+
+- Invalidates related queries\
+- Handles error normalization
+
+### 🔸 `useQueryData()`
+
+A wrapper over `useQuery()`: - Handles refetchInterval\
+
+- Returns `isPending`, `isFetching`, etc.
+
+### 🔸 `useZodForm()` / `useZodFormV2()`
+
+Handles: - Schema validation (Zod) - React Hook Form resolver -
+Submission error toasts
+
+---
+
+# 📄 Table Architecture
+
+All tables follow this pattern:
+
+    components/
+     └─ tables/
+         └─ deposit/
+              ├─ columns.ts           # table column definitions
+              └─ depositListing.tsx   # table UI + actions
+
+### Example column definition:
+
+```ts
+export const columns: ColumnDef<TDepositHistoryApiResponse>[] = [
+  {
+    accessorKey: "amount",
+    header: "Amount",
+  },
+  {
+    accessorKey: "status",
+    header: "Status",
+    cell: ({ row }) => <Badge>{row.original.status}</Badge>
+  }
+]
+```
+
+---
+
+# 📄 Form Architecture
+
+Forms follow the same pattern:
+
+    components/forms/
+     └─ depositForm.tsx
+     └─ withdrawForm.tsx
+
+Each form: - Uses **React Hook Form** - Uses **Zod schema validation** -
+Uses its corresponding hook (`useDeposit()`) - Supports file uploads,
+dropdowns, real‑time currency conversions
+
+---
+
+# 🛠 Development
+
+### Install dependencies
+
+```sh
+npm install
+```
+
+### Run dev server
+
+```sh
+npm run dev
+```
+
+### Build
+
+```sh
+npm run build
+```
+
+---
+
+# 🙌 Summary
+
+This repo uses a clean, scalable architecture that separates: - API
+logic\
+
+- Hooks (business logic)\
+- UI components\
+- Form and table system\
+- React Query data layer\
+- Validation via Zod
+
+It allows the project to stay **modular**, **testable**, and **easy to
+extend**.
+
+---
+
+# 📥 Download
+
+This README is now available as `README.md` in the files section below.
