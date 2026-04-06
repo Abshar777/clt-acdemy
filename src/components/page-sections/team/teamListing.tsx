@@ -402,14 +402,14 @@ const TeamListing = () => {
       bio: "videographer",
       imageUrl: t37,
     },
-    {
-      id: 38,
-      name: "Ardra B",
-      type: "Operations",
-      role: "Content writer",
-      bio: "Content writer",
-      imageUrl: t38,
-    },
+    // {
+    //   id: 38,
+    //   name: "Ardra B",
+    //   type: "Operations",
+    //   role: "Content writer",
+    //   bio: "Content writer",
+    //   imageUrl: t38,
+    // },
   ];
   const mansgementData = [
     {
