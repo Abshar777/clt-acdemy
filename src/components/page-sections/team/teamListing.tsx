@@ -44,7 +44,10 @@ import t46 from "@/../public/team/t46.jpeg";
 import t47 from "@/../public/team/t47.jpeg";
 import t48 from "@/../public/team/t48.jpeg";
 import t49 from "@/../public/team/t49.jpeg";
-
+import t54 from "@/../public/team/t54.jpeg";
+import t51 from "@/../public/team/t51.jpeg";
+import t52 from "@/../public/team/t52.jpeg";
+import t53 from "@/../public/team/t53.jpeg";
 import t3 from "@/../public/team/t3.png";
 
 import t9 from "@/../public/team/t9.jpeg";
@@ -361,7 +364,38 @@ const TeamListing = () => {
       bio: "Academic Counsellor",
       imageUrl: t44,
     },
-
+        {
+      id: 54,
+      name: "Sabsheera",
+      type: "Advisors",
+      role: "Academic Counsellor",
+      bio: "Academic Counsellor",
+      imageUrl: t54,
+    },
+    {
+      id: 51,
+      name: "Fathima Sana",
+      type: "Advisors",
+      role: "Academic Counsellor",
+      bio: "Academic Counsellor",
+      imageUrl: t51,
+    },
+    {
+      id: 52,
+      name: "Fathima V N",
+      type: "Advisors",
+      role: "Academic Counsellor",
+      bio: "Academic Counsellor",
+      imageUrl: t52,
+    },
+    {
+      id: 53,
+      name: "Shanif",
+      type: "Advisors",
+      role: "Academic Counsellor",
+      bio: "Academic Counsellor",
+      imageUrl: t53,
+    },
     {
       id: 17,
       name: "Muneera",
