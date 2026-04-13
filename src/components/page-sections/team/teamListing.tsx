@@ -410,7 +410,7 @@ const TeamListing = () => {
     //   bio: "Content writer",
     //   imageUrl: t38,
     // },
-  ];
+  ]; 
   const mansgementData = [
     {
       id: 100,
