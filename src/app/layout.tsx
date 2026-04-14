@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   title: "CLT Academy",
   description: "CLT Academy is a platform for learning trading and investing.",
   keywords: keywords,
+  verification: {
+    google: "DaVM4iUS9uUd1fAHt13kalio5mwEJB73Q4ZieWKJavQ",
+  },
   openGraph: {
     images: [
       {
