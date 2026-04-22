@@ -58,8 +58,9 @@ import t19 from "@/../public/team/t19.png";
 
 import t24 from "@/../public/team/t24.jpeg";
 import t50 from "@/../public/team/t50.jpeg";
-
-
+import t56 from "@/../public/team/t56.jpeg";
+import t57 from "@/../public/team/t57.jpeg";
+import t58 from "@/../public/team/t58.jpeg";
 const TeamListing = () => {
   const teamData = [
     // {
@@ -241,7 +242,30 @@ const TeamListing = () => {
       bio: "Data Engineer",
       imageUrl: t29,
     },
-
+    {
+      id: 37,
+      name: "Neha Fazal",
+      type: "Operations",
+      role: "Software Developer",
+      bio: "Software Developer",
+      imageUrl: t56,
+    },
+{
+      id: 37,
+      name: "Ashwin D A",
+      type: "Operations",
+      role: "Flutter Devoloper",
+      bio: "Flutter Devoloper",
+      imageUrl: t57,
+    },
+    {
+      id: 37,
+      name: "Shabas Ahmmed",
+      type: "Operations",
+      role: "Full stack devoloper",
+      bio: "Full stack devoloper",
+      imageUrl: t58,
+    },
     {
       id: 3,
       name: "Rashida Pudhuveettil",
