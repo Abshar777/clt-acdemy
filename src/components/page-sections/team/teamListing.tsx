@@ -58,8 +58,7 @@ import t19 from "@/../public/team/t19.png";
 
 import t24 from "@/../public/team/t24.jpeg";
 import t50 from "@/../public/team/t50.jpeg";
-import t56 from "@/../public/team/t56.jpeg";
-import t57 from "@/../public/team/t57.jpeg";
+import t57 from "@/../public/team/t57.png";
 import t58 from "@/../public/team/t58.jpeg";
 const TeamListing = () => {
   const teamData = [
@@ -237,31 +236,23 @@ const TeamListing = () => {
     {
       id: 29,
       name: "Ifa Fathima",
-      type: "Operations",
+      type: "Information Technology",
       role: "Data Engineer ",
       bio: "Data Engineer",
       imageUrl: t29,
     },
-    {
-      id: 37,
-      name: "Neha Fazal",
-      type: "Operations",
-      role: "Software Developer",
-      bio: "Software Developer",
-      imageUrl: t56,
-    },
 {
-      id: 37,
+      id: 30,
       name: "Ashwin D A",
-      type: "Operations",
+      type: "Information Technology",
       role: "Flutter Devoloper",
       bio: "Flutter Devoloper",
       imageUrl: t57,
     },
     {
-      id: 37,
+      id: 31,
       name: "Shabas Ahmmed",
-      type: "Operations",
+      type: "Information Technology",
       role: "Full stack devoloper",
       bio: "Full stack devoloper",
       imageUrl: t58,
@@ -485,8 +476,9 @@ const TeamListing = () => {
     "Mentors",
     "Customer Service",
     "Advisors",
-    "Operations",
-  ];
+     "Information Technology",
+    "Operations"
+    ];
   const [currentTab, setCurrentTab] = useState("All");
   return (
     <div className="w-screen px-1 md:px-10 md:py-10 py-4 flex flex-col gap-4 ">
