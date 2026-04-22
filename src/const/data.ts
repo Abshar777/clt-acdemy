@@ -1,6 +1,6 @@
 import { Post } from "@/types";
 
-export const phoneNumber = "+971557454523";
+export const phoneNumber = "+971557454939";
 
 export const courseData = [
   {

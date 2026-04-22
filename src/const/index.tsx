@@ -231,4 +231,4 @@ export const AWARDS = [
 ];
 
   
-export const phoneNumber = "+971557454523";
+export const phoneNumber = "+971557454939";
