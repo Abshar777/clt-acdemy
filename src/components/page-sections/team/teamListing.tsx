@@ -389,14 +389,6 @@ const TeamListing = () => {
       imageUrl: t52,
     },
     {
-      id: 53,
-      name: "Shanif",
-      type: "Advisors",
-      role: "Academic Counsellor",
-      bio: "Academic Counsellor",
-      imageUrl: t53,
-    },
-    {
       id: 17,
       name: "Muneera",
       type: "Advisors",
