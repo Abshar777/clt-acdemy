@@ -98,13 +98,13 @@ const TeamListing = () => {
       bio: "Sales Team Leader",
       imageUrl: t2,
     },
-    {
-      id: 4,
-      name: "Ajmal Ummer",
-      type: "Advisors",
-      role: "Sales Team Leader",
-      bio: "Sales Team Leader",
-      imageUrl: t4,
+      {
+      id: 26,
+      name: "Nubin Nuhais",
+      type: "Information Technology",
+      role: "Information Technology Manager",
+      bio: "Information Technology Manager",
+      imageUrl: t26,
     },
      {
       id: 25,
@@ -121,6 +121,14 @@ const TeamListing = () => {
       role: "HR Executive",
       bio: "HR Executive",
       imageUrl: t31,
+    },
+        {
+      id: 4,
+      name: "Ajmal Ummer",
+      type: "Advisors",
+      role: "Sales Team Leader",
+      bio: "Sales Team Leader",
+      imageUrl: t4,
     },
     {
       id: 32,
@@ -222,15 +230,6 @@ const TeamListing = () => {
       role: "Customer Relationship Manager",
       bio: "Customer Relationship Manager",
       imageUrl: t24,
-    },
-
-    {
-      id: 26,
-      name: "Nubin Nuhais",
-      type: "Information Technology",
-      role: "System Engineer",
-      bio: "System Engineer",
-      imageUrl: t26,
     },
 
     {
