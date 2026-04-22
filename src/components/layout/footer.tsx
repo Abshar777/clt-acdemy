@@ -96,7 +96,7 @@ const Footer = () => {
                 Hor&nbsp;Al&nbsp;Anz&nbsp;East, Dubai, United Arab Emirates.
               </p>
               <p className="flex items-center gap-3">
-                <FiPhoneCall className="text-xl" /> +971 557454523
+                <FiPhoneCall className="text-xl" /> +971 557454939
               </p>
               <p className="flex items-center gap-3">
                 <MdEmail className="text-xl" /> info@clt-academy.com
