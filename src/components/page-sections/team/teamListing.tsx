@@ -58,6 +58,7 @@ import t19 from "@/../public/team/t19.png";
 
 import t24 from "@/../public/team/t24.jpeg";
 import t50 from "@/../public/team/t50.jpeg";
+import t56 from "@/../public/team/t56.jpeg";
 import t57 from "@/../public/team/t57.png";
 import t58 from "@/../public/team/t58.jpeg";
 const TeamListing = () => {
@@ -239,6 +240,14 @@ const TeamListing = () => {
       role: "Data Engineer ",
       bio: "Data Engineer",
       imageUrl: t29,
+    },
+        {
+      id: 32,
+      name: "Neha Fazal",
+      type: "Information Technology",
+      role: "Software Devoloper", 
+      bio: "Software Devoloper",
+      imageUrl: t56,
     },
 {
       id: 30,
