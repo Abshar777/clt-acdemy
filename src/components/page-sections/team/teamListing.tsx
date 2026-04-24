@@ -58,7 +58,7 @@ import t19 from "@/../public/team/t19.png";
 
 import t24 from "@/../public/team/t24.jpeg";
 import t50 from "@/../public/team/t50.jpeg";
-import t56 from "@/../public/team/t56.jpeg";
+import t56 from "@/../public/team/t56.png";
 import t57 from "@/../public/team/t57.png";
 import t58 from "@/../public/team/t58.jpeg";
 const TeamListing = () => {
@@ -95,8 +95,8 @@ const TeamListing = () => {
       id: 2,
       name: "Mohammed Sanjeed",
       type: "Advisors",
-      role: "Sales Team Leader",
-      bio: "Sales Team Leader",
+      role: "Head of Sales",
+      bio: "Head of Sales",
       imageUrl: t2,
     },
       {
@@ -130,6 +130,22 @@ const TeamListing = () => {
       role: "Sales Team Leader",
       bio: "Sales Team Leader",
       imageUrl: t4,
+    },
+     {
+      id: 13,
+      name: "Aleesha",
+      type: "Advisors",
+      role: "Sales Team Leader",
+      bio: "Sales Team Leader",
+      imageUrl: t13,
+    },
+        {
+      id: 17,
+      name: "Muneera",
+      type: "Advisors",
+      role: "Sales Team Leader",
+      bio: "Sales Team Leader",
+      imageUrl: t17,
     },
     {
       id: 32,
@@ -198,14 +214,6 @@ const TeamListing = () => {
       role: "Assistant Team Leader",
       bio: "Assistant Team Leader",
       imageUrl: t7,
-    },
-    {
-      id: 13,
-      name: "Aleesha",
-      type: "Advisors",
-      role: "Assistant Team Leader",
-      bio: "Assistant Team Leader",
-      imageUrl: t13,
     },
     {
       id: 14,
@@ -410,14 +418,6 @@ const TeamListing = () => {
       role: "Academic Counsellor",
       bio: "Academic Counsellor",
       imageUrl: t52,
-    },
-    {
-      id: 17,
-      name: "Muneera",
-      type: "Advisors",
-      role: "Sales Team Leader",
-      bio: "Sales Team Leader",
-      imageUrl: t17,
     },
     {
       id: 33,
