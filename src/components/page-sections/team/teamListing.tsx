@@ -249,14 +249,6 @@ const TeamListing = () => {
       bio: "Data Engineer",
       imageUrl: t29,
     },
-        {
-      id: 32,
-      name: "Neha Fazal",
-      type: "Information Technology",
-      role: "Software Devoloper", 
-      bio: "Software Devoloper",
-      imageUrl: t56,
-    },
 {
       id: 30,
       name: "Ashwin D A",
