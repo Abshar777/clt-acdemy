@@ -146,20 +146,7 @@ export default function OurTeam() {
           achievements: "Practical market execution, beginner-to-intermediate trader development, disciplined trading habits, confidence building",
           imageUrl: t20_1, 
         },
-        {
-
-
-          id: 19,
-          name: "Sriram",
-          type: "Mentors",
-          role: "Trading mentor",
-          bio: "Sriram combines deep market understanding with a calm, methodical mentoring approach. Known for his clarity and structured teaching style, he focuses on building strong trading mindsets while simplifying complex market dynamics. His commitment to disciplined learning makes him a key pillar in CLT’s mentoring framework.",
-          background: "Market Analyst | Bachelor of Commerce | Finance & Trading Educator",
-          qualifications: "NISM Certified, Equity & Derivatives Specialist, Technical Analysis Certified, Risk Management Certification",
-          experience: "6+ years in trading, market analysis, and student-focused mentoring",
-          achievements: "Concept clarity, strategy-based learning, mindset development, risk-focused trading discipline",
-          imageUrl: t19,
-        },
+       
   ];
 
   return (
