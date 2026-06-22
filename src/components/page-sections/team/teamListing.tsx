@@ -182,15 +182,6 @@ const TeamListing = () => {
       imageUrl: t20_1,
     },
     {
-      id: 19,
-      name: "Sriram",
-      type: "Mentors",
-      role: "Trading mentor",
-      bio: "Trading mentor",
-      imageUrl: t19,
-    },
-   
-    {
       id: 45,
       name: "Mathson Mathew ",
       type: "Mentors",
