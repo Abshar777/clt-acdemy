@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Outfit, Poppins } from "next/font/google";
 import "./globals.css";
 import IndexLayout from "@/components/layout";
-import { keywords } from "@/const/meta";
+import { SITE } from "@/const/seo";
+import JsonLd from "@/components/seo/JsonLd";
 import Script from "next/script";
 
 import "react-quill-new/dist/quill.snow.css";
@@ -30,38 +31,41 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "CLT Academy",
-  description: "CLT Academy is a platform for learning trading and investing.",
-  keywords: keywords,
+  metadataBase: new URL(SITE.url),
+  title: {
+    default: SITE.defaultTitle,
+    template: SITE.titleTemplate,
+  },
+  description: SITE.description,
+  applicationName: SITE.name,
 
   openGraph: {
     images: [
       {
-        url: "/logo.png",
+        url: SITE.ogImage,
         width: 1200,
         height: 630,
+        alt: SITE.name,
       },
     ],
-    title: "CLT Academy",
-    description:
-      "CLT Academy is a platform for learning trading and investing.",
-    url: "https://clt-academy.com",
-    siteName: "CLT Academy",
-    locale: "uae",
+    title: SITE.defaultTitle,
+    description: SITE.description,
+    url: SITE.url,
+    siteName: SITE.name,
+    locale: SITE.locale,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "CLT Academy",
-    description:
-      "CLT Academy is a platform for learning trading and investing.",
-    images: ["/logo.png"],
+    title: SITE.defaultTitle,
+    description: SITE.description,
+    images: [SITE.ogImage],
   },
   icons: {
     icon: "/logo.png",
   },
   alternates: {
-    canonical: "https://clt-academy.com",
+    canonical: SITE.url,
   },
   robots: {
     index: true,
@@ -69,14 +73,18 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
+  // Real token from Google Search Console -> set GOOGLE_SITE_VERIFICATION in env.
   verification: {
-    google: "google-site-verification=1234567890",
+    google: process.env.GOOGLE_SITE_VERIFICATION,
   },
-  authors: [{ name: "CLT Academy", url: "https://clt-academy.com" }],
-  creator: "CLT Academy",
-  publisher: "CLT Academy",
+  authors: [{ name: SITE.name, url: SITE.url }],
+  creator: SITE.name,
+  publisher: SITE.name,
   category: "education",
 };
 
@@ -112,6 +120,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${poppins.variable} ${outfit.variable} relative ${geistMono.variable} antialiased overflow-x-hidden w-screen `}
       >
+        <JsonLd />
         <IndexLayout>{children}</IndexLayout>
       </body>
     </html>

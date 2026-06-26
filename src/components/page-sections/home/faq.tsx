@@ -57,8 +57,25 @@ export default function Faq() {
     },
   ];
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
   return (
     <div className="py-20 gridAnim relative md:px-20 px-5 w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="w-full">
         <div className="grid grid-cols-1 relative lg:grid-cols-2 gap-10">
           {/* LEFT SIDE */}
@@ -74,8 +91,8 @@ export default function Faq() {
             </h2>
 
             <p className="wow fadeInUp" data-wow-delay="0.2s">
-              We've compiled answers to the most common questions about our lab
-              services, research process, and capabilities.
+              We&apos;ve compiled answers to the most common questions about our
+              trading programs, mentorship and enrollment process.
             </p>
 
             <a
