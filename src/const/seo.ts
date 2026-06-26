@@ -12,7 +12,10 @@ export const SITE = {
   titleTemplate: "%s | CLT Academy",
   description:
     "CLT Academy is the leading trading academy in the UAE — expert-led forex, stock & crypto trading courses in Dubai with mentorship, live sessions and certification.",
-  ogImage: "/logo.png",
+  // Share-preview image: use the dark logo (white background) so it stays
+  // visible on light/dark chat backgrounds. The transparent white logo
+  // disappears on light backgrounds.
+  ogImage: "/logo-black.png",
   locale: "en_AE",
   phone: "+971557454939",
   email: "info@clt-academy.com",
