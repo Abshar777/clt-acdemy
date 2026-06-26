@@ -197,9 +197,9 @@ const Loader: React.FC<AnimationProps> = ({ onComplete }) => {
           ref={textRef}
           className="relative z-10 text-center mix-blend-screen"
         >
-          <h1 className="text-5xl md:text-9xl font-display font-bold tracking-tighter text-white overflow-hidden">
+          <div className="text-5xl md:text-9xl font-display font-bold tracking-tighter text-white overflow-hidden">
             {splitText}
-          </h1>
+          </div>
           <p className="subtitle opacity-0 translate-y-4 text-xl md:text-2xl text-trading-green font-light tracking-[0.5em] mt-4 uppercase">
             Master the Markets
           </p>
