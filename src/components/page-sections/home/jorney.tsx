@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import awward from "@/../public/awward.png";
 import { FaArrowRight } from "react-icons/fa";
@@ -79,13 +79,23 @@ const AnimatedCounter = ({ value }: { value: number }) => {
     Math.round(current).toLocaleString()
   );
 
+  // Once the counter has entered view we hand the text over to the animation.
+  // Before that (and crucially in the server-rendered HTML that Google reads,
+  // and for users with JS disabled) we render the REAL number — not "0".
+  const [animating, setAnimating] = useState(false);
+
   useEffect(() => {
     if (isInView) {
+      setAnimating(true);
       motionValue.set(value);
     }
   }, [isInView, value, motionValue]);
 
-  return <motion.span ref={ref}>{displayValue}</motion.span>;
+  return (
+    <motion.span ref={ref}>
+      {animating ? displayValue : value.toLocaleString()}
+    </motion.span>
+  );
 };
 
 const Journey = () => {
