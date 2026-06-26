@@ -123,8 +123,8 @@ const Testimonials = () => {
       </div>
       <div className="absolute z-0 top-0 left-0 w-full h-full flex items-center justify-center">
         <img
-          src="https://clt-academy.com/wp-content/uploads/2025/08/trading-academy.webp"
-          alt="awward"
+          src="/awward.png"
+          alt="CLT Academy background"
           className="w-full opacity-5 object-cover  h-full "
         />
       </div>

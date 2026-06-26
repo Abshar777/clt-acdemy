@@ -197,7 +197,7 @@ const Hero = () => {
       <div className="w-full relative z-10 py-2  flex flex-col items-center justify-between  gap-4">
         <div className="grid md:w-[80%] w-full  md:grid-cols-3 grid-cols-1 gap-4">
           {heroCta.map((item) => (
-            <div className="bg-white/5 cursor-pointer hover:-translate-y-1 hover:scale-105 duration-500 group  flex items-center  justify-center gap-4  py-10 backdrop-blur-sm md:px-6 px-3 rounded-lg">
+            <div key={item.title} className="bg-white/5 cursor-pointer hover:-translate-y-1 hover:scale-105 duration-500 group  flex items-center  justify-center gap-4  py-10 backdrop-blur-sm md:px-6 px-3 rounded-lg">
               {item.icon}
               <div className="flex flex-col ">
                 <h1 className="text-2xl text-nowrap text-white font-bold">

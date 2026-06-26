@@ -61,7 +61,7 @@ const Goals = () => {
         </div>
         <div className="flex mt-4 flex-col gap-2">
           {goals.map((goal) => (
-            <div className="flex items-center gap-2">
+            <div key={goal} className="flex items-center gap-2">
               <FaCheckCircle className="text-primary text-xl" />
               <p className="text-black/60 md:text-start text-center md:text-base text-sm font-semibold ">
                 {goal}

@@ -120,11 +120,17 @@ const Loader: React.FC<AnimationProps> = ({ onComplete }) => {
     return () => ctx.revert();
   }, [onComplete]);
 
-  const candles = Array.from({ length: 15 }).map((_, i) => {
-    const isGreen = i % 3 !== 0;
-    const height = Math.random() * 60 + 20;
-    return { isGreen, height };
-  });
+  // Deterministic heights (no Math.random at render) so the server-rendered
+  // HTML matches the client and React doesn't throw a hydration mismatch.
+  // GSAP animates the candle scaleY from 0 on mount, so these are just the
+  // stable starting heights.
+  const candleHeights = [
+    45, 68, 32, 55, 78, 40, 62, 35, 72, 48, 80, 28, 58, 38, 66,
+  ];
+  const candles = candleHeights.map((height, i) => ({
+    isGreen: i % 3 !== 0,
+    height,
+  }));
 
   const splitText = "CLT ACADEMY".split("").map((char, index) => (
     <span key={index} className="char inline-block whitespace-pre">

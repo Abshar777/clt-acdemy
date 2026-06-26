@@ -511,19 +511,19 @@ const TeamListing = () => {
             currentTab === "All" ? true : team.type === currentTab
           )
           .map((team, index) => (
-            <>
+            <React.Fragment key={index}>
               {team.type == "Management" ? (
                 <div
                   className={`lg:col-span-2 flex items-center ${
                     index % 2 == 0 ? "justify-end" : "justify-start"
                   } col-span-1`}
                 >
-                  <TeamCard key={index} member={team} />
+                  <TeamCard member={team} />
                 </div>
               ) : (
-                <TeamCard key={index} member={team} />
+                <TeamCard member={team} />
               )}
-            </>
+            </React.Fragment>
           ))}
       </div>
     </div>

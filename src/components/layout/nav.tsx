@@ -155,6 +155,7 @@ const Nav = () => {
         <div className="md:flex hidden items-center ml-8 gap-4">
           {navButtons.map((button) => (
             <Button
+              key={button.name}
               onClick={() => router.push(button.href)}
               variant="outline"
               className={button.className + "  ease-in duration-200"}
