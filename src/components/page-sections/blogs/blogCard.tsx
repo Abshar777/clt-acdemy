@@ -1,6 +1,7 @@
 import React from "react";
 import { Calendar, User, Folder, Clock, ArrowRight } from "lucide-react";
 import { Post } from "@/types";
+import { getReadTime } from "@/lib/readTime";
 
 
 interface BlogPostCardProps {
@@ -23,22 +24,24 @@ export const BlogPostCard: React.FC<BlogPostCardProps> = ({ post, onClick }) => 
       </div>
 
       {/* Meta Data */}
-      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
+      <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-gray-700 mb-4">
         <div className="flex items-center gap-1.5 hover:text-red-600 transition-colors cursor-pointer">
           <Calendar size={16} className="text-red-500" />
           <span>{new Date(post.createdAt).toLocaleDateString()}</span>
         </div>
         <div className="flex items-center gap-1.5 hover:text-red-600 transition-colors cursor-pointer">
           <User size={16} className="text-red-500" />
-          <span>by {post.author}</span>
+          <span>
+            by <span className="font-semibold text-gray-900">{post.author}</span>
+          </span>
         </div>
         <div className="flex items-center gap-1.5 hover:text-red-600 transition-colors cursor-pointer">
           <Folder size={16} className="text-red-500" />
-          <span>{post.tags[0]}</span>
+          <span className="font-semibold text-gray-900">{post.tags[0]}</span>
         </div>
         <div className="flex items-center gap-1.5">
           <Clock size={16} className="text-red-500" />
-          <span>{post.readTime}</span>
+          <span>{getReadTime(post.content, post.readTime)}</span>
         </div>
       </div>
 
