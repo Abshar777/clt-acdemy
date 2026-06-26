@@ -120,6 +120,8 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
           <img
             src={post.photo}
             alt={post.title}
+            width={1200}
+            height={630}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[10s] ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/40 to-transparent" />

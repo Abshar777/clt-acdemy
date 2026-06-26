@@ -16,6 +16,8 @@ export const BlogPostCard: React.FC<BlogPostCardProps> = ({ post, onClick }) => 
         <img
           src={post.photo}
           alt={post.title}
+          width={1200}
+          height={630}
           className="w-full h-64 md:h-96 object-cover transform transition-transform duration-500 group-hover:scale-105"
         />
       </div>

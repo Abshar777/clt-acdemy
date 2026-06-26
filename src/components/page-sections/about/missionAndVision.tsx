@@ -57,6 +57,8 @@ export function VisionMissionSection() {
               }}
                 src="/logo.png"
                 alt="logo"
+                width={470}
+                height={380}
                 className="w-20 h-20 object-contain"
               />
             </div>

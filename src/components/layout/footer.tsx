@@ -15,7 +15,7 @@ const Footer = () => {
         <div className=" max-w-7xl  mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 py-16 px-6 md:px-16">
           {/* Left Section */}
           <div>
-            <img src="/logo.png" alt="logo" className="w-20 mb-6" />
+            <img src="/logo.png" alt="logo" width={470} height={380} className="w-20 mb-6" />
 
             <p className="text-lg font-semibold mb-3">
               BUILT BY TRADERS. DRIVEN BY PURPOSE.

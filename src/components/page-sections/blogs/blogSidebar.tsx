@@ -125,6 +125,8 @@ export const BlogSidebar: React.FC = () => {
                 <img
                   src={news.photo}
                   alt={news.title}
+                  width={96}
+                  height={96}
                   className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
                 />
               </div>

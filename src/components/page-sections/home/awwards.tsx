@@ -98,6 +98,8 @@ const Awards = () => {
                       <img
                         src="/images/arrow-white.svg"
                         alt=""
+                        width={20}
+                        height={20}
                         className="w-5 transition-transform duration-300 hover:rotate-45"
                       />
                     </a>

@@ -125,6 +125,8 @@ const Testimonials = () => {
         <img
           src="/awward.png"
           alt="CLT Academy background"
+          width={1200}
+          height={800}
           className="w-full opacity-5 object-cover  h-full "
         />
       </div>
