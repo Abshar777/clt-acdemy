@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Disclaimer",
+  title: "Trading Risk Disclaimer & Disclosure",
   description:
     "CLT Academy disclaimer — trading involves risk. Read our risk disclosure regarding educational content and trading in the UAE.",
   path: "/disclaimer",
