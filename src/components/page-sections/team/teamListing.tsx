@@ -250,7 +250,7 @@ const TeamListing = () => {
     },
     {
       id: 31,
-      name: "Shabas Ahmmed",
+      name: "Shabas Rahman",
       type: "Information Technology",
       role: "Full stack devoloper",
       bio: "Full stack devoloper",
