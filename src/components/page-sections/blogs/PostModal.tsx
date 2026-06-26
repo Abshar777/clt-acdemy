@@ -40,17 +40,6 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
       element.setAttribute('content', content);
     };
 
-    // Update canonical link
-    const updateCanonical = (href: string) => {
-      let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-      if (!link) {
-        link = document.createElement('link');
-        link.setAttribute('rel', 'canonical');
-        document.head.appendChild(link);
-      }
-      link.href = href;
-    };
-
     // Set all meta tags
     updateMetaTag('description', post.description);
     updateMetaTag('keywords', post.tags.join(", "));
@@ -67,9 +56,7 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
     updateMetaTag('twitter:description', post.description);
     updateMetaTag('twitter:image', post.photo);
 
-    // Canonical URL
-    const canonicalUrl = post._id || `${window.location.origin}/blog/${post._id}`;
-    updateCanonical(canonicalUrl);
+    // Canonical is handled server-side by the route's layout metadata.
 
     // Lock body scroll
     // document.body.style.overflow = 'hidden';
