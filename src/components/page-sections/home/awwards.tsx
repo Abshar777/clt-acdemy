@@ -79,7 +79,7 @@ const Awards = () => {
               >
                 {/* Image */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-                  <Image src={award.img} alt="" fill className="object-cover" />
+                  <Image src={award.img} alt={award.title} fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[var(--primary-color)]" />
                 </div>
 

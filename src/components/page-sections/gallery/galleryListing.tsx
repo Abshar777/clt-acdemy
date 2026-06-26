@@ -89,7 +89,7 @@ export function Gallery() {
           >
             <Image
               src={image.src || "/placeholder.svg"}
-              alt={image.alt}
+              alt={image.alt || `CLT Academy event photo ${index + 1}`}
               className="w-full transition-all duration-300 object-cover"
               style={{ height: image.height }}
               placeholder="blur"
