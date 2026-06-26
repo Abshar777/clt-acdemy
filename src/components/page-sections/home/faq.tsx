@@ -137,9 +137,9 @@ export default function Faq() {
       <div className="w-full mt-5 flex items-center justify-center ">
         <div className="relative shadow-2xl shadow-black/40  md:w-[86%] w-full z-10  bg-white overflow-hidden rounded-lg px-5 md:flex-row flex-col flex justify-between">
           <div className="flex-1 md:py-10 py-5 relative z-10 flex-col flex md:px-5 px-2 gap-2  justify-center ">
-            <h1 className="text-2xl text-black/90 font-bold capitalize ">
+            <h2 className="text-2xl text-black/90 font-bold capitalize ">
               Need Expert Trading Guidance?
-            </h1>
+            </h2>
             <p className="text-sm text-black/90 ">
               Our advisors are here to help you plan, grow, and win — whether
               you're just starting or scaling up.
@@ -159,9 +159,9 @@ export default function Faq() {
               <h3 className="md:text-md text-xs uppercase">
                 CLARITY STARTS HERE
               </h3>
-              <h1 className="md:text-2xl text-xl text-nowrap font-bold">
+              <h2 className="md:text-2xl text-xl text-nowrap font-bold">
                 {phoneNumber}
-              </h1>
+              </h2>
             </div>
           </div>
           <div className="bg-primary z-0 w-[30rem] h-[20rem] absolute md:right-[-10%] right-[-5%] md:top-[-20%] top-[70%] rounded-full px-4 py-2"></div>

@@ -37,10 +37,10 @@ const Goals = () => {
             Our Company Goals
           </p>
         </div>
-        <h1 className="mb-2 md:text-5xl text-4xl md:text-start text-center  font-bold">
+        <h2 className="mb-2 md:text-5xl text-4xl md:text-start text-center  font-bold">
           {" "}
           CLT isn’t just an academy it’s the foundation of your trading legacy.
-        </h1>
+        </h2>
         <div className="flex flex-col gap-1">
           <p className="text-black/60 md:text-start text-center md:text-base text-sm font-semibold">
             Our Values Reflect the Mindset of Every Successful Trader We Aim to

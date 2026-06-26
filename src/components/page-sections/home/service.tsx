@@ -46,9 +46,9 @@ const Service = () => {
                 CLT ACADEMY SERVICES
               </p>
             </div>
-            <h1 className="md:text-5xl text-4xl text-center md:text-start text-black/90 font-bold">
+            <h2 className="md:text-5xl text-4xl text-center md:text-start text-black/90 font-bold">
               Our Signature Programs, Tailored for Every Trader’s Journey
-            </h1>
+            </h2>
           </div>
           <p className="text-black/60 md:mt-4 text-md">
             From complete beginners to seasoned traders, our training programs
@@ -83,9 +83,9 @@ const Service = () => {
             {cards.map((card, index) => (
               <SwiperSlide className="rounded-2xl overflow-hidden" key={index}>
                 <div className=" flex flex-col justify-center items-center rounded-2xl min-h-[20rem] border bg-primary relative overflow-hidden hover:scale-[1.03] duration-200 cursor-pointer">
-                  <h1 className="text-white text-3xl text-center font-bold">
+                  <h2 className="text-white text-3xl text-center font-bold">
                     {card.title}
-                  </h1>
+                  </h2>
                   <p className="text-white w-[80%] text-md text-center">
                     {card.desc}
                   </p>

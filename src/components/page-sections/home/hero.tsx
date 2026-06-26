@@ -200,9 +200,9 @@ const Hero = () => {
             <div key={item.title} className="bg-white/5 cursor-pointer hover:-translate-y-1 hover:scale-105 duration-500 group  flex items-center  justify-center gap-4  py-10 backdrop-blur-sm md:px-6 px-3 rounded-lg">
               {item.icon}
               <div className="flex flex-col ">
-                <h1 className="text-2xl text-nowrap text-white font-bold">
+                <h2 className="text-2xl text-nowrap text-white font-bold">
                   {item.title}
-                </h1>
+                </h2>
                 <p className="text-sm  text-white/90">{item.description}</p>
               </div>
             </div>
@@ -211,9 +211,9 @@ const Hero = () => {
         <div className=""></div>
         <div className="absolute md:bottom-[-80%] bottom-[-60%] shadow-2xl shadow-black/40  md:w-[86%] w-full  bg-white overflow-hidden rounded-lg px-5 md:flex-row flex-col flex justify-between">
           <div className="flex-1 md:py-10 py-5 relative z-10 flex-col flex md:px-5 px-2 gap-2  justify-center ">
-            <h1 className="text-2xl text-black/90 font-bold capitalize ">
+            <h2 className="text-2xl text-black/90 font-bold capitalize ">
               Losing Trades or Missing Confidence?
-            </h1>
+            </h2>
             <p className="text-sm text-black/90 ">
               Whether you're stuck in a loop or scaling up, <br />
               CLT gives you the tools, systems and mentorship to trade like the
@@ -226,7 +226,7 @@ const Hero = () => {
               <h3 className="md:text-md text-xs uppercase">
                 CLARITY STARTS HERE
               </h3>
-              <h1
+              <h2
                 onClick={() => {
                   window.location.href = `tel:${phoneNumber
                     .replace("+", "")
@@ -235,7 +235,7 @@ const Hero = () => {
                 className="md:text-2xl cursor-pointer text-xl text-nowrap font-bold"
               >
                 {phoneNumber}
-              </h1>
+              </h2>
             </div>
           </div>
           <div className="bg-primary z-0 w-[30rem] h-[20rem] absolute md:right-[-10%] right-[-5%] md:top-[-20%] top-[70%] rounded-full px-4 py-2"></div>

@@ -153,9 +153,9 @@ const TradingRoadmap: React.FC = () => {
       </div>
 
       {/* Title */}
-      <h1 className="text-4xl bg-white md:mt-0 mt-3   md:text-5xl font-bold text-black/90 text-center leading-tight">
+      <h2 className="text-4xl bg-white md:mt-0 mt-3   md:text-5xl font-bold text-black/90 text-center leading-tight">
         We follow these steps to <br /> improve your trading
-      </h1>
+      </h2>
       </div>
 
       <div className="relative w-full max-w-7xl mx-auto px-4 lg:px-8">

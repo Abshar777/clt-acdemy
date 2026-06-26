@@ -55,9 +55,9 @@ const Testimonials = () => {
               Our Testimonials
             </p>
           </div>
-          <h1 className="text-white text-4xl font-bold">
+          <h2 className="text-white text-4xl font-bold">
             We’re Happy to get Our Happy Customer Feedback
-          </h1>
+          </h2>
           <p className="text-white text-lg font-semibold capitalize">from google reviews</p>
           <div className="mt-10">
             <Swiper
@@ -97,9 +97,9 @@ const Testimonials = () => {
                         />
                       </div>
                       <div className="flex flex-col">
-                        <h1 className="text-black text-xl font-bold">
+                        <h2 className="text-black text-xl font-bold">
                           {card.name}
-                        </h1>
+                        </h2>
                         <div className="flex items-center gap-1">
                           {[1, 2, 3, 4, 5].map((item, index) => (
                             <FaStar

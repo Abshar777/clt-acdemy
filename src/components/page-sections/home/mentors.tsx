@@ -159,9 +159,9 @@ export default function OurTeam() {
               CLT ACADEMY Mentors
             </p>
           </div>
-          <h1 className="md:text-5xl text-4xl text-center md:text-start text-black/90 font-bold">
+          <h2 className="md:text-5xl text-4xl text-center md:text-start text-black/90 font-bold">
             Collaboration at the core of innovation
-          </h1>
+          </h2>
         </div>
 
         {/* Swiper Slider */}

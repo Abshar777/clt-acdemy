@@ -112,14 +112,14 @@ const Journey = () => {
         {/* Content Container */}
         <div className="relative py-15 z-10 w-full h-full flex items-center justify-center flex-col gap-4">
           <div className="flex-col flex gap-2 mt-10 md:mt-0">
-            <motion.h1
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={isContainerInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6 }}
               className="text-white md:text-start text-center md:text-5xl text-4xl uppercase font-bold"
             >
               Our Journey
-            </motion.h1>
+            </motion.h2>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={isContainerInView ? { opacity: 1, y: 0 } : {}}
@@ -140,10 +140,10 @@ const Journey = () => {
                 className={`bg-white/5 cursor-pointer hover:-translate-y-1 duration-500 group flex items-center justify-center gap-4 py-10 backdrop-blur-sm md:px-6 px-3 rounded-lg ${item.class}`}
               >
                 <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                  <h1 className="md:text-4xl text-2xl text-nowrap text-white font-bold flex flex-row items-center">
+                  <h2 className="md:text-4xl text-2xl text-nowrap text-white font-bold flex flex-row items-center">
                     <AnimatedCounter value={item.number} />
                     <span>+</span>
-                  </h1>
+                  </h2>
                   <p className="text-sm text-white/90">{item.description}</p>
                 </div>
               </motion.div>

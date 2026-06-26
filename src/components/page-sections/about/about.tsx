@@ -25,11 +25,11 @@ const About = () => {
             About CLT Academy
           </p>
         </div>
-        <h1 className="mb-2 md:text-5xl text-4xl md:text-start text-center  font-bold">
+        <h2 className="mb-2 md:text-5xl text-4xl md:text-start text-center  font-bold">
           {" "}
           Our values reflect the mindset we instill in every successful trader
           we build.
-        </h1>
+        </h2>
         <div className="flex flex-col gap-1">
           <p className="text-black/60 md:text-start text-center md:text-base text-sm font-semibold">
             We’re not just an academy — we are a movement.
