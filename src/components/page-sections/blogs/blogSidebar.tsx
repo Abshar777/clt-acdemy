@@ -95,7 +95,7 @@ export const BlogSidebar: React.FC = () => {
             <li key={index} className="group">
               <a
                 href={`?category=${cat}`}
-                className="flex items-center justify-between text-gray-600 group-hover:text-red-600 transition-colors"
+                className="flex items-center justify-between font-medium text-gray-700 group-hover:text-red-600 transition-colors"
               >
                 <span className="flex items-center gap-2">
                   <ChevronRight
@@ -131,7 +131,7 @@ export const BlogSidebar: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col justify-center">
-                <div className="flex items-center gap-1.5 text-xs text-gray-500 mb-1.5">
+                <div className="flex items-center gap-1.5 text-xs font-medium text-gray-600 mb-1.5">
                   <Calendar size={12} className="text-red-500" />
                   <span>{news.createdAt}</span>
                 </div>

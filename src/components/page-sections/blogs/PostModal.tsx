@@ -166,8 +166,11 @@ const PostModal: React.FC<PostModalProps> = ({ post, onClose }) => {
               <p className="text-zinc-100 font-black text-lg sm:text-xl uppercase tracking-tighter">
                 {post.authorDetails?.name || post.author}
               </p>
-              <p className="text-zinc-600 text-[10px] sm:text-xs font-black uppercase tracking-widest mt-1">
-                {post.authorDetails?.profession || "Admin"} • Node Synced:{" "}
+              <p className="text-zinc-500 text-[10px] sm:text-xs font-black uppercase tracking-widest mt-1">
+                <span className="text-primary">
+                  {post.authorDetails?.profession || "Admin"}
+                </span>{" "}
+                • Node Synced:{" "}
                 {new Date(post.createdAt).toLocaleDateString("en-US", {
                   month: "long",
                   day: "numeric",
