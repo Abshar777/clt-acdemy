@@ -13,6 +13,9 @@ import t20_1 from "@/../public/team/t20-1.png";
 import t45 from "@/../public/team/t45.jpeg";
 import t40 from "@/../public/team/t40.jpeg";
 import t50 from "@/../public/team/t50.jpeg";
+import kiran from "@/../public/team/Kiran-V-R.jpeg";
+import amal from "@/../public/team/Amal.jpeg";
+import adhil from "@/../public/team/Adhil.jpeg";
 import {
   Sheet,
   SheetContent,
@@ -144,9 +147,29 @@ export default function OurTeam() {
           qualifications: "NISM Certified, Technical & Price Action Trading Certification, Risk & Capital Management Training",
           experience: "5+ years in trading and personalized mentoring",
           achievements: "Practical market execution, beginner-to-intermediate trader development, disciplined trading habits, confidence building",
-          imageUrl: t20_1, 
+          imageUrl: t20_1,
         },
-       
+    {
+      id: 59,
+      name: "Kiran V R",
+      type: "Mentors",
+      role: "Junior Mentor",
+      imageUrl: kiran,
+    },
+    {
+      id: 60,
+      name: "Amal",
+      type: "Mentors",
+      role: "Junior Mentor",
+      imageUrl: amal,
+    },
+    {
+      id: 61,
+      name: "Adhil",
+      type: "Mentors",
+      role: "Junior Mentor",
+      imageUrl: adhil,
+    },
   ];
 
   return (

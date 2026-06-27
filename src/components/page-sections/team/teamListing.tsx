@@ -8,7 +8,6 @@ import t2 from "@/../public/team/t2.png";
 import t4 from "@/../public/team/t4.png";
 import t5 from "@/../public/team/t5.png";
 import t6 from "@/../public/team/t6.png";
-import t7 from "@/../public/team/t7.png";
 import t8 from "@/../public/team/t8.png";
 import t10 from "@/../public/team/t10.png";
 import t11 from "@/../public/team/t11.png";
@@ -55,12 +54,18 @@ import t9 from "@/../public/team/t9.jpeg";
 import t19 from "@/../public/team/t19.png";
 
 
-
 import t24 from "@/../public/team/t24.jpeg";
 import t50 from "@/../public/team/t50.jpeg";
 import t56 from "@/../public/team/t56.png";
 import t57 from "@/../public/team/t57.png";
 import t58 from "@/../public/team/t58.jpeg";
+
+import simsarul_haq from "@/../public/team/Simsarul-Haq.jpeg";
+import adhil from "@/../public/team/Adhil.jpeg";
+import amal from "@/../public/team/Amal.jpeg";
+import kiran from "@/../public/team/Kiran-V-R.jpeg";
+
+
 const TeamListing = () => {
   const teamData = [
     // {
@@ -142,10 +147,34 @@ const TeamListing = () => {
         {
       id: 17,
       name: "Muneera",
-      type: "Advisorssss",
+      type: "Advisors",
       role: "Sales Team Leader",
       bio: "Sales Team Leader",
       imageUrl: t17,
+    },
+    {
+      id: 23,
+      name: "Mohamadaffan Memon",
+      type: "Advisors",
+      role: "Sales Team Leader",
+      bio: "Sales Team Leader",
+      imageUrl: t23,
+    },
+    {
+      id: 3,
+      name: "Rashida Pudhuveettil",
+      type: "Advisors",
+      role: "Business Development Manager",
+      bio: "Business Development Manager",
+      imageUrl: t3,
+    },
+    {
+      id: 5,
+      name: "Farsana Sirajudheen",
+      type: "Advisors",
+      role: "Business Development Manager",
+      bio: "Business Development Manager",
+      imageUrl: t5,
     },
     {
       id: 32,
@@ -189,7 +218,31 @@ const TeamListing = () => {
       bio: "Junior Mentor",
       imageUrl: t45,
     },
-   
+    {
+      id: 59,
+      name: "Kiran V R",
+      type: "Mentors",
+      role: "Junior Mentor",
+      bio: "Junior Mentor",
+      imageUrl: kiran,
+    },
+    {
+      id: 60,
+      name: "Amal",
+      type: "Mentors",
+      role: "Junior Mentor",
+      bio: "Junior Mentor",
+      imageUrl: amal,
+    },
+    {
+      id: 61,
+      name: "Adhil",
+      type: "Mentors",
+      role: "Junior Mentor",
+      bio: "Junior Mentor",
+      imageUrl: adhil,
+    },
+
     {
       id: 6,
       name: "Alwin Bose",
@@ -199,14 +252,6 @@ const TeamListing = () => {
       imageUrl: t6,
     },
     {
-      id: 7,
-      name: "Kiran",
-      type: "Advisors",
-      role: "Academic Counsellor",
-      bio: "Academic Counsellor",
-      imageUrl: t7,
-    },
-    {
       id: 14,
       name: "Bindhyasree",
       type: "Advisors",
@@ -214,15 +259,6 @@ const TeamListing = () => {
       bio: "Academic Counsellor",
       imageUrl: t14,
     },
-    {
-      id: 23,
-      name: "Mohamadaffan Memon",
-      type: "Operations",
-      role: "PR& Communication Executive",
-      bio: "PR& Communication Executive",
-      imageUrl: t23,
-    },
-
     {
       id: 24,
       name: "Della Mariyam",
@@ -256,24 +292,6 @@ const TeamListing = () => {
       bio: "Full Stack Developer",
       imageUrl: t58,
     },
-    {
-      id: 3,
-      name: "Rashida Pudhuveettil",
-      type: "Advisors",
-      role: "Business Development Manager",
-      bio: "Business Development Manager",
-      imageUrl: t3,
-    },
-
-    {
-      id: 5,
-      name: "Farsana Sirajudheen",
-      type: "Advisors",
-      role: "Business Development Manager",
-      bio: "Business Development Manager",
-      imageUrl: t5,
-    },
-
     {
       id: 8,
       name: "Neha",
@@ -401,6 +419,14 @@ const TeamListing = () => {
       role: "Academic Counsellor",
       bio: "Academic Counsellor",
       imageUrl: t52,
+    },
+    {
+      id: 62,
+      name: "Simsarul Haq",
+      type: "Operations",
+      role: "Social Media Coordinator",
+      bio: "Social Media Coordinator",
+      imageUrl: simsarul_haq,
     },
     {
       id: 33,
