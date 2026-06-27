@@ -3,10 +3,15 @@ import React, { useEffect, useState } from "react";
 import { Search, ChevronRight, Calendar } from "lucide-react";
 import { BLOG_POSTS, CATEGORIES, RECENT_NEWS } from "@/const/data";
 import { Post } from "@/types";
+import { useRouter } from "next/navigation";
+import { slugify } from "@/lib/getBlogPosts";
 
-export const BlogSidebar: React.FC = () => {
+export const BlogSidebar: React.FC<{ posts?: Post[] }> = ({ posts }) => {
+  const router = useRouter();
   const [tags, setTags] = useState<Record<string, number>>({});
-  const [recentPosts, setRecentPosts] = useState<Post[]>([]);
+  const [recentPosts, setRecentPosts] = useState<Post[]>(
+    posts ? posts.slice(0, 3) : [],
+  );
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedTag, setSelectedTag] = useState("");
@@ -62,8 +67,10 @@ export const BlogSidebar: React.FC = () => {
   };
 
   useEffect(() => {
-    fetchPosts();
+    // Use server-provided posts when available; only client-fetch as fallback.
+    if (!posts || posts.length === 0) fetchPosts();
     fetchTags();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <aside className="w-full space-y-10">
@@ -120,7 +127,13 @@ export const BlogSidebar: React.FC = () => {
         </div>
         <div className="space-y-6">
           {recentPosts.map((news) => (
-            <div key={news._id} className="flex gap-4 group cursor-pointer">
+            <div
+              key={news._id}
+              onClick={() =>
+                router.push(`/blogs/${slugify(news.title)}`)
+              }
+              className="flex gap-4 group cursor-pointer"
+            >
               <div className="flex-shrink-0 w-24 h-24 overflow-hidden rounded-lg">
                 <img
                   src={news.photo}
@@ -133,7 +146,9 @@ export const BlogSidebar: React.FC = () => {
               <div className="flex flex-col justify-center">
                 <div className="flex items-center gap-1.5 text-xs font-medium text-gray-600 mb-1.5">
                   <Calendar size={12} className="text-red-500" />
-                  <span>{news.createdAt}</span>
+                  <span>
+                    {new Date(news.createdAt).toLocaleDateString()}
+                  </span>
                 </div>
                 <h4 className="text-sm font-semibold text-gray-800 leading-snug group-hover:text-red-600 transition-colors line-clamp-2">
                   {news.title}

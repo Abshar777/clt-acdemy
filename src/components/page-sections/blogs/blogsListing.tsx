@@ -7,9 +7,11 @@ import { Post, User } from "@/types";
 import PostModal from "./PostModal";
 import { useRouter } from "next/navigation";
 import { useUIStore } from "@/store/uiStore";
+import { slugify } from "@/lib/getBlogPosts";
 
-const BlogsListing = () => {
-  const [posts, setPosts] = useState<Post[]>([]);
+const BlogsListing = ({ initialPosts }: { initialPosts?: Post[] }) => {
+  // Seed with server-fetched posts so they render in the SSR HTML (SEO).
+  const [posts, setPosts] = useState<Post[]>(initialPosts ?? []);
 
   const [selectedPost, setSelectedPost] = useState<Post | null>(null);
   const [editingPost, setEditingPost] = useState<Post | null>(null);
@@ -42,7 +44,10 @@ const BlogsListing = () => {
   };
 
   useEffect(() => {
-    fetchPosts();
+    // Server already provided posts; only fetch client-side if none came through.
+    if (!initialPosts || initialPosts.length === 0) fetchPosts();
+    else setIsLoading(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
@@ -53,7 +58,7 @@ const BlogsListing = () => {
               <BlogPostCard
                 onClick={() => {
                   setPost(post);
-                  router.push(`/blogs/${post.title}?id=${post._id}`);
+                  router.push(`/blogs/${slugify(post.title)}`);
                 }}
                 key={post._id}
                 post={post}
@@ -63,7 +68,7 @@ const BlogsListing = () => {
 
           <div className="lg:w-1/3">
             <div className="sticky top-28">
-              <BlogSidebar />
+              <BlogSidebar posts={posts} />
             </div>
           </div>
         </div>

@@ -1,12 +1,14 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/const/seo";
+import { getBlogPosts, slugify } from "@/lib/getBlogPosts";
 
-/**
- * Static sitemap. Served at /sitemap.xml.
- * Add dynamic routes (blogs/courses) here once they read from the API.
- */
-export default function sitemap(): MetadataRoute.Sitemap {
-  const routes: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
+/** Served at /sitemap.xml. Static routes + dynamic blog posts. */
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const routes: {
+    path: string;
+    priority: number;
+    changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+  }[] = [
     { path: "/", priority: 1.0, changeFrequency: "weekly" },
     { path: "/about", priority: 0.8, changeFrequency: "monthly" },
     { path: "/courses", priority: 0.9, changeFrequency: "weekly" },
@@ -22,10 +24,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const lastModified = new Date();
 
-  return routes.map((r) => ({
+  const staticEntries: MetadataRoute.Sitemap = routes.map((r) => ({
     url: `${SITE.url}${r.path === "/" ? "" : r.path}`,
     lastModified,
     changeFrequency: r.changeFrequency,
     priority: r.priority,
   }));
+
+  const posts = await getBlogPosts();
+  const postEntries: MetadataRoute.Sitemap = posts.map((p) => ({
+    url: `${SITE.url}/blogs/${slugify(p.title)}`,
+    lastModified: p.updatedAt || p.createdAt || lastModified,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...staticEntries, ...postEntries];
 }

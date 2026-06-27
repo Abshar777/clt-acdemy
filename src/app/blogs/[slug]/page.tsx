@@ -1,49 +1,74 @@
+import BlogPostView from "@/components/page-sections/blogs/BlogPostView";
+import { SITE } from "@/const/seo";
+import { getBlogPostBySlug } from "@/lib/getBlogPosts";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import React from "react";
 
-"use client"
-import PostModal from '@/components/page-sections/blogs/PostModal';
-import { useUIStore } from '@/store/uiStore';
-import React, { useState } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation';
-
-const page = () => {
-    const { post, setPost } = useUIStore();
-    const router = useRouter();
-    const [isLoading, setIsLoading] = useState(true);
-    const serachParams = useSearchParams();
-    const id = serachParams.get('id');
-    const fetchPosts = async () => {
-        setIsLoading(true);
-        try {
-            const response = await fetch(
-                `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blogs/${id}`,
-            );
-            if (response.ok) {
-                const data = await response.json();
-                setPost(data);
-            } else {
-                router.push('/blogs');
-            }
-        } catch (error) {
-            console.error("Fetch Error:", error);
-            router.push('/blogs');
-        } finally {
-            setIsLoading(false);
-        }
-    };
-    if (!post) {
-        if (id) {
-            fetchPosts();
-        } else {
-            router.push('/blogs');
-        }
-
-    }
-    return (
-        <PostModal post={post} onClose={() => {
-            router.back()
-            // setPost(null);
-        }} />
-    )
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getBlogPostBySlug(slug);
+  const url = `${SITE.url}/blogs/${slug}`;
+  if (!post) return { title: "Blog Post", alternates: { canonical: url } };
+  const images = post.photo ? [{ url: post.photo }] : undefined;
+  return {
+    title: post.title,
+    description: post.description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url,
+      type: "article",
+      images,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: post.photo ? [post.photo] : undefined,
+    },
+  };
 }
 
-export default page
+const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
+  const post = await getBlogPostBySlug(slug);
+  if (!post) notFound();
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    image: post.photo ? [post.photo] : undefined,
+    datePublished: post.createdAt,
+    dateModified: post.updatedAt || post.createdAt,
+    author: {
+      "@type": "Person",
+      name: post.authorDetails?.name || post.author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE.name,
+      logo: { "@type": "ImageObject", url: `${SITE.url}/logo.png` },
+    },
+    mainEntityOfPage: `${SITE.url}/blogs/${slug}`,
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <BlogPostView post={post} />
+    </>
+  );
+};
+
+export default Page;

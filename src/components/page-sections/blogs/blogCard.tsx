@@ -2,6 +2,7 @@ import React from "react";
 import { Calendar, User, Folder, Clock, ArrowRight } from "lucide-react";
 import { Post } from "@/types";
 import { getReadTime } from "@/lib/readTime";
+import { slugify } from "@/lib/getBlogPosts";
 
 
 interface BlogPostCardProps {
@@ -45,9 +46,15 @@ export const BlogPostCard: React.FC<BlogPostCardProps> = ({ post, onClick }) => 
         </div>
       </div>
 
-      {/* Title */}
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 hover:text-red-600 transition-colors cursor-pointer leading-tight">
-        {post.title}
+      {/* Title — real link so search engines can crawl to the post */}
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+        <a
+          href={`/blogs/${slugify(post.title)}`}
+          onClick={(e) => e.preventDefault()}
+          className="hover:text-red-600 transition-colors cursor-pointer"
+        >
+          {post.title}
+        </a>
       </h2>
 
       {/* Excerpt */}
